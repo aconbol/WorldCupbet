@@ -1,0 +1,8 @@
+{
+  "name": "WorldCupbet",
+  "app_id": "io.solstud.worldcupbet",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,74 @@
+<ion-header no-border no-margin>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>{{eq_name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides>
+    <ion-slide *ngFor="let jugador of datosJugadoresEq">
+      <ion-title text-center text-wrap>{{jugador['fullname']}}</ion-title>
+      <ion-card>
+        <ion-fab top right >
+          <button ion-fab mini color="botones" (click)="openEstadisticas(jugador)" >
+            <ion-icon name="stats"></ion-icon>
+          </button>
+        </ion-fab>
+        <div class="centrado">
+          <img src="{{jugador['image_path']}}">
+        </div>
+        <div padding-vertical>
+          <ion-row>
+            <ion-col col-7 text-right>
+              <h2 style="font-weight: bold;" no-margin no-border>País de Nacimiento:</h2>
+            </ion-col>
+            <ion-col col-5 text-left>{{jugador['birthcountry']}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-7 text-right>
+              <h2 style="font-weight: bold;" no-margin no-border>Fecha de Nacimiento:</h2>
+            </ion-col>
+            <ion-col col-5 text-left>{{jugador['birthdate']}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-7 text-right>
+              <h2 style="font-weight: bold;" no-margin no-border>Lugar de Nacimiento:</h2>
+            </ion-col>
+            <ion-col col-5 text-left>{{jugador['birthplace']}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-7 text-right>
+              <h2 style="font-weight: bold;" no-margin no-border>Nacionalidad:</h2>
+            </ion-col>
+            <ion-col col-5 text-left>{{jugador['nationality']}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6 text-center>
+              <h2 style="font-weight: bold;" no-margin no-border>Estatura:</h2>
+            </ion-col>
+            <ion-col col-6 text-center>
+              <h2 style="font-weight: bold;" no-margin no-border>Peso:</h2>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6 text-center>{{jugador['height']}}</ion-col>
+            <ion-col col-6 text-center>{{jugador['weight']}}</ion-col>
+          </ion-row>
+        </div>
+      </ion-card>
+      <ion-card *ngIf="jugador['equipo_origen']">
+        <ion-title>Equipo de Origen</ion-title>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="{{jugador['equipo_logo_path']}}">
+          </ion-thumbnail>
+          <h2 style="font-weight: bold;">Equipo</h2>{{jugador['equipo_origen']}}
+          <h2 style="font-weight: bold;">Pais</h2>{{jugador['equipo_pais_name']}}
+        </ion-item>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
