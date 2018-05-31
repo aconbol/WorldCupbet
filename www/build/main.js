@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 102:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -395,7 +395,7 @@ var EquiposMonks = [
 
 /***/ }),
 
-/***/ 103:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -566,8 +566,64 @@ var Venues = [
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_config__ = __webpack_require__(295);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var RestServiceProvider = /** @class */ (function () {
+    function RestServiceProvider(http) {
+        this.http = http;
+        console.log('RestServiceProvider Provider');
+    }
+    RestServiceProvider.prototype.getSquad = function (team) {
+        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["d" /* URL_SQUAD */] + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["a" /* TEMPORADA */] + '/team/' + team + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
+        console.log('Ver SQUAD Url Rest', url);
+        return this.http.get(url);
+    };
+    RestServiceProvider.prototype.getJugador = function (id_jug) {
+        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["c" /* URL_PLAYERS */] + id_jug + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
+        console.log('Ver Jugador Url Rest', url);
+        return this.http.get(url);
+    };
+    RestServiceProvider.prototype.getEquipo = function (id_equipo) {
+        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["f" /* URL_TEAMS */] + id_equipo + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
+        console.log('Ver TEAM Url Rest', url);
+        return this.http.get(url);
+    };
+    RestServiceProvider.prototype.getStandingGrupos = function () {
+        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["e" /* URL_STANDINGS */] + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["a" /* TEMPORADA */] + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
+        console.log('Ver TEAM Url Rest', url);
+        return this.http.get(url);
+    };
+    RestServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], RestServiceProvider);
+    return RestServiceProvider;
+}());
+
+//# sourceMappingURL=rest-service.js.map
+
+/***/ }),
+
+/***/ 106:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AutenticacionServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
@@ -608,7 +664,7 @@ var AutenticacionServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 118:
+/***/ 119:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -621,11 +677,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 118;
+webpackEmptyAsyncContext.id = 119;
 
 /***/ }),
 
-/***/ 160:
+/***/ 161:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -638,11 +694,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 160;
+webpackEmptyAsyncContext.id = 161;
 
 /***/ }),
 
-/***/ 204:
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -677,16 +733,16 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PartidosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_fixtures__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_equiposMonks__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_venues__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_fixtures__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_equiposMonks__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_venues__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -785,7 +841,7 @@ var PartidosPage = /** @class */ (function () {
     };
     PartidosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-partidos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/'<ion-header no-border no-margin>\n  <ion-toolbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-buttons left>-->\n      <!--<button ion-button icon-only small >-->\n        <!--<ion-icon name="arrow-dropleft"></ion-icon>-->\n      <!--</button>-->\n    <!--</ion-buttons>-->\n\n    <ion-title text-center>Junio/Julio</ion-title>\n\n    <!--<ion-buttons right>-->\n      <!--<button ion-button icon-only small (click)="navigateJulio()">-->\n        <!--<ion-icon name="arrow-dropright"></ion-icon>-->\n      <!--</button>-->\n    <!--</ion-buttons>-->\n  </ion-toolbar>\n<div color="primary">\n  <ion-segment [(ngModel)]="fechas" color="light" mode="ios">\n    <ion-segment-button\n                        *ngFor ="let dia of dias"\n                        value="{{getDiaD(dia)}}">\n      {{diaSemana[dia.getDay()]}}<br>{{dia.getDate()}}\n    </ion-segment-button>\n  </ion-segment>\n</div>\n</ion-header>\n\n<ion-content>\n  <div *ngFor="let fixture of fixtures">\n    <div [hidden]="fechas !== getDia(fixture)">\n      <ion-list>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-5 no-padding no-margin>\n              <ion-item text-right text-wrap no-padding no-margin no-lines>\n                <ion-avatar item-end>\n                  <img src="{{getSrcBanderaEquipo(fixture.localteam_id)}}">\n                </ion-avatar>\n                <p>{{getNombreEquipo(fixture.localteam_id)}}</p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-2 no-padding no-margin>\n              <ion-item text-center no-padding no-margin no-lines>\n                <h3>{{fixture.scores.localteam_score + \' - \' + fixture.scores.visitorteam_score}}</h3>\n                <h5>{{getHoraLocal(fixture.time.starting_at.time)}}</h5>\n              </ion-item>\n            </ion-col>\n            <ion-col col-5 no-padding no-margin>\n              <ion-item text-left text-wrap no-padding no-margin no-lines>\n                <ion-avatar item-start="">\n                  <img src="{{getSrcBanderaEquipo(fixture.visitorteam_id)}}">\n                </ion-avatar>\n                <p>{{getNombreEquipo(fixture.visitorteam_id)}}</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-list>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/,
+            selector: 'page-partidos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/'<ion-header no-border no-margin>\n  <ion-toolbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-buttons left>-->\n      <!--<button ion-button icon-only small >-->\n        <!--<ion-icon name="arrow-dropleft"></ion-icon>-->\n      <!--</button>-->\n    <!--</ion-buttons>-->\n\n    <ion-title text-center>Junio/Julio</ion-title>\n\n    <!--<ion-buttons right>-->\n      <!--<button ion-button icon-only small (click)="navigateJulio()">-->\n        <!--<ion-icon name="arrow-dropright"></ion-icon>-->\n      <!--</button>-->\n    <!--</ion-buttons>-->\n  </ion-toolbar>\n<div color="primary">\n  <ion-segment [(ngModel)]="fechas" color="light" mode="ios">\n    <ion-segment-button\n                        *ngFor ="let dia of dias"\n                        value="{{getDiaD(dia)}}">\n      {{diaSemana[dia.getDay()]}}<br>{{dia.getDate()}}\n    </ion-segment-button>\n  </ion-segment>\n</div>\n</ion-header>\n\n<ion-content class="background" no-padding no-margin>\n  <br>\n  <div *ngFor="let fixture of fixtures">\n    <div [hidden]="fechas !== getDia(fixture)">\n      <ion-list no-padding no-margin\n                no-lines>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-right no-padding no-margin>\n                <ion-avatar item-end>\n                  <img src="{{getSrcBanderaEquipo(fixture.localteam_id)}}">\n                </ion-avatar>\n                <p text-wrap>{{getNombreEquipo(fixture.localteam_id)}} </p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-4 no-padding no-margin>\n              <ion-item text-center no-padding no-margin>\n                <p>{{fixture.scores.localteam_score + \' - \' + fixture.scores.visitorteam_score}}</p>\n                <p>{{getHoraLocal(fixture.time.starting_at.time)}}</p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-left no-padding no-margin>\n                <ion-avatar item-start>\n                  <img src="{{getSrcBanderaEquipo(fixture.visitorteam_id)}}">\n                </ion-avatar>\n                <p margin-left="1px" text-wrap> {{getNombreEquipo(fixture.visitorteam_id)}}</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-list>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], PartidosPage);
@@ -796,7 +852,7 @@ var PartidosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3447,15 +3503,15 @@ var Fixtures = [
 
 /***/ }),
 
-/***/ 207:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadiosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_venues__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_venues__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__ = __webpack_require__(209);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3486,7 +3542,7 @@ var EstadiosPage = /** @class */ (function () {
     };
     EstadiosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-estadios',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Estadios</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg">\n  <ion-fab bottom right>\n    <button color="botones" ion-fab (click)="pushUbicaciones()">\n      <ion-icon name="pin"></ion-icon>\n    </button>\n  </ion-fab>\n  <div>\n    <ion-card *ngFor ="let campo of estadiums">\n      <ion-card-title text-center color="primary">\n        <h1>{{campo.name}}</h1>\n      </ion-card-title>\n      <img src="{{campo.image_path}}"/>\n      <ion-card-content>\n        <ion-grid text-left>\n          <ion-row no-margin nowrap>\n            <ion-col col-4>Ciudad: </ion-col>\n            <ion-col>{{campo.city}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-4>Dirección: </ion-col>\n            <ion-col>{{campo.address}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-4>Capacidad: </ion-col>\n            <ion-col>{{campo.capacity}} personas</ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card-content>\n    </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/
+            selector: 'page-estadios',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Estadios</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg">\n  <ion-fab bottom right>\n    <button color="botones" ion-fab (click)="pushUbicaciones()">\n      <ion-icon name="pin"></ion-icon>\n    </button>\n  </ion-fab>\n  <div>\n    <ion-card *ngFor ="let campo of estadiums">\n      <ion-card-title text-center color="primary">\n        <h1>{{campo.name}}</h1>\n      </ion-card-title>\n      <img src="{{campo.image_path}}"/>\n      <ion-card-content>\n        <ion-grid text-left>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Ciudad: </ion-col>\n            <ion-col>{{campo.city}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Dirección: </ion-col>\n            <ion-col>{{campo.address}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Capacidad: </ion-col>\n            <ion-col>{{campo.capacity}} personas</ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card-content>\n    </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], EstadiosPage);
@@ -3497,15 +3553,15 @@ var EstadiosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 208:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadioGeoposPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_venues__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_venues__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3588,15 +3644,15 @@ var EstadioGeoposPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 210:
+/***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jugadores_jugadores__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jugadores_jugadores__ = __webpack_require__(212);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3657,15 +3713,15 @@ var EquipoPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 211:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JugadoresPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_countries__ = __webpack_require__(289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_countries__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__estadisticas_estadisticas__ = __webpack_require__(213);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3763,7 +3819,7 @@ var JugadoresPage = /** @class */ (function () {
     };
     JugadoresPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-jugadores',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\jugadores\jugadores.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>{{eq_name}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides>\n    <ion-slide *ngFor="let jugador of datosJugadoresEq">\n      <ion-title text-center text-wrap>{{jugador[\'fullname\']}}</ion-title>\n      <ion-card>\n        <ion-fab top right >\n          <button ion-fab mini color="botones" (click)="openEstadisticas(jugador)" >\n            <ion-icon name="stats"></ion-icon>\n          </button>\n        </ion-fab>\n        <div class="centrado">\n          <img src="{{jugador[\'image_path\']}}">\n        </div>\n        <div padding-vertical>\n          <ion-row>\n            <ion-col col-7 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>País de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-5 text-left>{{jugador[\'birthcountry\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-7 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Fecha de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-5 text-left>{{jugador[\'birthdate\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-7 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Lugar de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-5 text-left>{{jugador[\'birthplace\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-7 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Nacionalidad:</h2>\n            </ion-col>\n            <ion-col col-5 text-left>{{jugador[\'nationality\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-6 text-center>\n              <h2 style="font-weight: bold;" no-margin no-border>Estatura:</h2>\n            </ion-col>\n            <ion-col col-6 text-center>\n              <h2 style="font-weight: bold;" no-margin no-border>Peso:</h2>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-6 text-center>{{jugador[\'height\']}}</ion-col>\n            <ion-col col-6 text-center>{{jugador[\'weight\']}}</ion-col>\n          </ion-row>\n        </div>\n      </ion-card>\n      <ion-card *ngIf="jugador[\'equipo_origen\']">\n        <ion-title>Equipo de Origen</ion-title>\n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="{{jugador[\'equipo_logo_path\']}}">\n          </ion-thumbnail>\n          <h2 style="font-weight: bold;">Equipo</h2>{{jugador[\'equipo_origen\']}}\n          <h2 style="font-weight: bold;">Pais</h2>{{jugador[\'equipo_pais_name\']}}\n        </ion-item>\n      </ion-card>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\jugadores\jugadores.html"*/,
+            selector: 'page-jugadores',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\jugadores\jugadores.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>{{eq_name}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides>\n    <ion-slide *ngFor="let jugador of datosJugadoresEq">\n      <ion-title text-center text-wrap>{{jugador[\'fullname\']}}</ion-title>\n      <ion-card>\n        <ion-fab top right >\n          <button ion-fab mini color="botones" (click)="openEstadisticas(jugador)" >\n            <ion-icon name="stats"></ion-icon>\n          </button>\n        </ion-fab>\n        <div class="centrado">\n          <img src="{{jugador[\'image_path\']}}">\n        </div>\n        <div padding-vertical>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>País de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'birthcountry\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Fecha de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'birthdate\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Lugar de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'birthplace\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Nacionalidad:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'nationality\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-12 text-center>\n              <h2 style="font-weight: bold;" no-margin no-border>Estatura:</h2>\n            </ion-col>\n            <ion-col col-12 text-center>\n              <h2 style="font-weight: bold;" no-margin no-border>Peso:</h2>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-12 text-center>{{jugador[\'height\']}}</ion-col>\n            <ion-col col-12 text-center>{{jugador[\'weight\']}}</ion-col>\n          </ion-row>\n        </div>\n      </ion-card>\n      <ion-card *ngIf="jugador[\'equipo_origen\']">\n        <ion-title>Equipo de Origen</ion-title>\n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="{{jugador[\'equipo_logo_path\']}}">\n          </ion-thumbnail>\n          <h2 style="font-weight: bold;">Equipo</h2>{{jugador[\'equipo_origen\']}}\n          <h2 style="font-weight: bold;">Pais</h2>{{jugador[\'equipo_pais_name\']}}\n        </ion-item>\n      </ion-card>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\jugadores\jugadores.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -3773,57 +3829,6 @@ var JugadoresPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=jugadores.js.map
-
-/***/ }),
-
-/***/ 212:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_config__ = __webpack_require__(295);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var RestServiceProvider = /** @class */ (function () {
-    function RestServiceProvider(http) {
-        this.http = http;
-        console.log('RestServiceProvider Provider');
-    }
-    RestServiceProvider.prototype.getSquad = function (team) {
-        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["d" /* URL_SQUAD */] + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["a" /* TEMPORADA */] + '/team/' + team + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver SQUAD Url Rest', url);
-        return this.http.get(url);
-    };
-    RestServiceProvider.prototype.getJugador = function (id_jug) {
-        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["c" /* URL_PLAYERS */] + id_jug + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver Jugador Url Rest', url);
-        return this.http.get(url);
-    };
-    RestServiceProvider.prototype.getEquipo = function (id_equipo) {
-        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["e" /* URL_TEAMS */] + id_equipo + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver TEAM Url Rest', url);
-        return this.http.get(url);
-    };
-    RestServiceProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
-    ], RestServiceProvider);
-    return RestServiceProvider;
-}());
-
-//# sourceMappingURL=rest-service.js.map
 
 /***/ }),
 
@@ -3858,7 +3863,7 @@ var EstadisticasPage = /** @class */ (function () {
     };
     EstadisticasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-estadisticas',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadisticas\estadisticas.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <ion-title text-center>Estadísticas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-list no-lines>\n      <ion-item>\n        <ion-avatar item-start>\n          <img src="{{jugador[\'image_path\']}}">\n        </ion-avatar>\n        <h2 text-center>{{jugador[\'fullname\']}}</h2>\n        <h2 text-center>{{seleccion}}</h2>\n        <h3 text-center *ngIf="jugador[\'number\']">{{\'Número: \' + jugador[\'number\']}}</h3>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n  <div padding>\n    <div class="row header">\n      <div class="col">Datos</div>\n    </div>\n    <div class="row">\n      <div class="col">Apariciones</div>\n      <div class="col">{{jugador[\'appearences\']}}</div>\n    </div>\n    <div class="row">\n      <div class="col">Minutos jugados</div>\n      <div class="col">{{jugador[\'minutes\']}}</div>\n    </div>\n    <div class="row">\n      <div class="col">Goles</div>\n      <div class="col">{{jugador[\'goals\']}}</div>\n    </div>\n    <div class="row">\n      <div class="col">Asistencias</div>\n      <div class="col">{{jugador[\'assists\']}}</div>\n    </div>\n    <div class="row">\n      <div class="col">Fueras de Juego</div>\n      <div class="col">{{jugador[\'lineups\']}}</div>\n    </div>\n    <div class="row header">\n      <div class="col">Tarjetas</div>\n    </div>\n    <div class="row">\n      <div class="col">Amarillas</div>\n      <div class="col">{{jugador[\'yellowcards\']}}</div>\n    </div>\n    <div class="row">\n      <div class="col">Doble Amarilla</div>\n      <div class="col">{{jugador[\'yellowred\']}}</div>\n    </div>\n    <div class="row">\n      <div class="col">Rojas</div>\n      <div class="col">{{jugador[\'redcards\']}}</div>\n    </div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadisticas\estadisticas.html"*/,
+            selector: 'page-estadisticas',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadisticas\estadisticas.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <ion-title text-center>Estadísticas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-list no-lines>\n      <ion-item>\n        <ion-avatar item-start>\n          <img src="{{jugador[\'image_path\']}}">\n        </ion-avatar>\n        <h2 text-center>{{jugador[\'fullname\']}}</h2>\n        <h2 text-center>{{seleccion}}</h2>\n        <h3 text-center *ngIf="jugador[\'number\']">{{\'Número: \' + jugador[\'number\']}}</h3>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n  <div padding margin-vertical="5px">\n    <ion-grid>\n      <ion-row>\n        <ion-col class="header" text-center>\n          <h3 ion-text no-margin\n              no-padding\n              color="primary">Datos</h3>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Apariciones</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'appearences\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Minutos jugados</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'minutes\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Goles</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'goals\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Asistencias</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'assists\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Fueras de Juego</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'lineups\']}}</ion-col>\n      </ion-row>\n    </ion-grid>\n                <hr>\n    <ion-grid>\n      <ion-row>\n        <ion-col class="header" text-center>\n          <h3 ion-text no-margin\n              no-padding\n              color="primary">Tarjetas</h3>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Amarillas</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'yellowcards\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Dobles Amarillas</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'yellowred\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Rojas</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'redcards\']}}</ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadisticas\estadisticas.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -3877,6 +3882,7 @@ var EstadisticasPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GruposPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3888,19 +3894,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var GruposPage = /** @class */ (function () {
-    function GruposPage(navCtrl, navParams) {
+    function GruposPage(navCtrl, navParams, restService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.restService = restService;
+        this.getStandingGrupos();
     }
     GruposPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad GruposPage');
     };
+    GruposPage.prototype.getStandingGrupos = function () {
+        var _this = this;
+        this.restService.getStandingGrupos()
+            .subscribe(function (puestosAllGroup) {
+            _this.puestosTodosGrupos = puestosAllGroup['data'];
+            console.log('JSON getAllGroups en subscribe - grupos.ts', _this.puestosTodosGrupos);
+            _this.groupLoaded = Promise.resolve(true);
+        });
+    };
     GruposPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-grupos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\grupos\grupos.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Fase Grupos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n	<br><br>\n  <ion-grid nopadding>\n	  <ion-row style="background:#456ba5; color: white;">\n	    <ion-col col-12 text-center color="light"><h6>Grupo A</h6></ion-col>\n	  </ion-row>\n	  <ion-row style="background:#456ba5; color: white;">\n	    <ion-col col-5>Equipos</ion-col>\n	    <ion-col col-1>J</ion-col>\n	    <ion-col col-1>G</ion-col>\n	    <ion-col col-1>E</ion-col>\n	    <ion-col col-1>P</ion-col>\n	    <ion-col col-2>Goles</ion-col>\n	    <ion-col col-1>P.</ion-col>\n	  </ion-row>\n    <ion-row>\n      <ion-col col-5>Rusia</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Arabia Saudí</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Egipto</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Uruguay</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n	</ion-grid>\n  <br>\n  <ion-grid nopadding>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-12 text-center><h6>Grupo B</h6></ion-col>\n    </ion-row>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-5>Equipos</ion-col>\n      <ion-col col-1>J</ion-col>\n      <ion-col col-1>G</ion-col>\n      <ion-col col-1>E</ion-col>\n      <ion-col col-1>P</ion-col>\n      <ion-col col-2>Goles</ion-col>\n      <ion-col col-1>P.</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Portugal</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>España</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Marruecos</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>RI de Irán</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n  </ion-grid>\n  <br>\n  <ion-grid nopadding>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-12 text-center><h6>Grupo C</h6></ion-col>\n    </ion-row>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-5>Equipos</ion-col>\n      <ion-col col-1>J</ion-col>\n      <ion-col col-1>G</ion-col>\n      <ion-col col-1>E</ion-col>\n      <ion-col col-1>P</ion-col>\n      <ion-col col-2>Goles</ion-col>\n      <ion-col col-1>P.</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Francia</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Australia</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Perú</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Dinamarca</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n  </ion-grid>\n  <br>\n  <ion-grid nopadding>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-12 text-center><h6>Grupo D</h6></ion-col>\n    </ion-row>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-5>Equipos</ion-col>\n      <ion-col col-1>J</ion-col>\n      <ion-col col-1>G</ion-col>\n      <ion-col col-1>E</ion-col>\n      <ion-col col-1>P</ion-col>\n      <ion-col col-2>Goles</ion-col>\n      <ion-col col-1>P.</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Argentina</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Islandia</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Croacia</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Nigeria</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n  </ion-grid>\n  <br>\n  <ion-grid nopadding>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-12 text-center><h6>Grupo E</h6></ion-col>\n    </ion-row>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-5>Equipos</ion-col>\n      <ion-col col-1>J</ion-col>\n      <ion-col col-1>G</ion-col>\n      <ion-col col-1>E</ion-col>\n      <ion-col col-1>P</ion-col>\n      <ion-col col-2>Goles</ion-col>\n      <ion-col col-1>P.</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Brasil</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Suiza</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Costa Rica</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Serbia</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n  </ion-grid>\n  <br>\n  <ion-grid nopadding>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-12 text-center><h6>Grupo F</h6></ion-col>\n    </ion-row>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-5>Equipos</ion-col>\n      <ion-col col-1>J</ion-col>\n      <ion-col col-1>G</ion-col>\n      <ion-col col-1>E</ion-col>\n      <ion-col col-1>P</ion-col>\n      <ion-col col-2>Goles</ion-col>\n      <ion-col col-1>P.</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Alemania</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>México</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Suecia</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>República de Corea</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n  </ion-grid>\n  <br>\n  <ion-grid nopadding>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-12 text-center><h6>Grupo G</h6></ion-col>\n    </ion-row>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-5>Equipos</ion-col>\n      <ion-col col-1>J</ion-col>\n      <ion-col col-1>G</ion-col>\n      <ion-col col-1>E</ion-col>\n      <ion-col col-1>P</ion-col>\n      <ion-col col-2>Goles</ion-col>\n      <ion-col col-1>P.</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Bélgica</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Panamá</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Túnez</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Inglaterra</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n  </ion-grid>\n  <br>\n  <ion-grid nopadding>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-12 text-center><h6>Grupo H</h6></ion-col>\n    </ion-row>\n    <ion-row style="background:#456ba5; color: white;">\n      <ion-col col-5>Equipos</ion-col>\n      <ion-col col-1>J</ion-col>\n      <ion-col col-1>G</ion-col>\n      <ion-col col-1>E</ion-col>\n      <ion-col col-1>P</ion-col>\n      <ion-col col-2>Goles</ion-col>\n      <ion-col col-1>P.</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Polonia</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Senegal</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Colombia</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-5>Japón</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-1>0</ion-col>\n      <ion-col col-2>0</ion-col>\n      <ion-col col-1>0</ion-col>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\grupos\grupos.html"*/,
+            selector: 'page-grupos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\grupos\grupos.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Fase de Grupos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	<br>\n  <div no-padding no-margin>\n    <ion-list *ngFor="let allGroup of puestosTodosGrupos">\n      <h4 ion-text text-center color="primary">\n        {{allGroup[\'name\']}}\n      </h4>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-9 class="header" text-center></ion-col>\n          <ion-col col-8 class="header" text-center>Partidos</ion-col>\n          <ion-col col-5 class="header" text-center>Goles</ion-col>\n          <ion-col col-2 class="header" text-center></ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-9 class="header" text-center>Equipos</ion-col>\n          <ion-col col-2 class="header" text-center>J</ion-col>\n          <ion-col col-2 class="header" text-center>G</ion-col>\n          <ion-col col-2 class="header" text-center>E</ion-col>\n          <ion-col col-2 class="header" text-center>P</ion-col>\n          <ion-col col-5 class="header" text-center>F:C D</ion-col>\n          <ion-col col-2 class="header" text-center>P</ion-col>\n        </ion-row>\n        <ion-row *ngFor="let puestos of allGroup.standings.data">\n          <ion-col col-9>{{puestos.team_name}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.games_played}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.won}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.draw}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.lost}}</ion-col>\n          <ion-col col-5 text-center>\n            {{puestos.overall.goals_scored + \':\' + puestos.overall.goals_against + \' \' + puestos.total.goal_difference}}\n          </ion-col>\n          <ion-col col-2 text-center>{{puestos.total.points}}</ion-col>\n        </ion-row>\n      </ion-grid>\n      <br>\n    </ion-list>\n  </div>\n  <br><br>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\grupos\grupos.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */]])
     ], GruposPage);
     return GruposPage;
 }());
@@ -3916,7 +3936,7 @@ var GruposPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IniciarSesionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4001,24 +4021,24 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_google_maps__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_list_list__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_partidos_partidos__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_estadios_estadios__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_estadio_geopos_estadio_geopos__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_lista_partidos_lista_partidos__ = __webpack_require__(308);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_grupos_grupos__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_equipo_equipo__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_jugadores_jugadores__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_rest_service_rest_service__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_common_http__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_estadisticas_estadisticas__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_google_maps__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_rest_service_rest_service__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__ = __webpack_require__(213);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4052,48 +4072,48 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_list_list__["a" /* ListPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_partidos_partidos__["a" /* PartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_estadios_estadios__["a" /* EstadiosPage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_grupos_grupos__["a" /* GruposPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_equipo_equipo__["a" /* EquipoPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_jugadores_jugadores__["a" /* JugadoresPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */]
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__["a" /* PartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__["a" /* EstadiosPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__["a" /* GruposPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__["a" /* EquipoPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__["a" /* JugadoresPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__["a" /* BetsPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: []
                 }),
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_list_list__["a" /* ListPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_partidos_partidos__["a" /* PartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_estadios_estadios__["a" /* EstadiosPage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_grupos_grupos__["a" /* GruposPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_equipo_equipo__["a" /* EquipoPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_jugadores_jugadores__["a" /* JugadoresPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */]
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__["a" /* PartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__["a" /* EstadiosPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__["a" /* GruposPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__["a" /* EquipoPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__["a" /* JugadoresPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__["a" /* BetsPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__["a" /* SplashScreen */],
-                __WEBPACK_IMPORTED_MODULE_6__ionic_native_google_maps__["a" /* GoogleMaps */],
+                __WEBPACK_IMPORTED_MODULE_7__ionic_native_google_maps__["a" /* GoogleMaps */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_16__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_19__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */]
+                __WEBPACK_IMPORTED_MODULE_8__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_9__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */]
             ]
         })
     ], AppModule);
@@ -4104,24 +4124,24 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 281:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_partidos_partidos__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_estadios_estadios__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_equipo_equipo__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_partidos_partidos__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_estadios_estadios__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_equipo_equipo__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_grupos_grupos__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_firebase__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4155,11 +4175,10 @@ var MyApp = /** @class */ (function () {
         // used for an example of ngFor and navigation
         this.pages = [
             { title: 'Inicio', icono: 'home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-            // { title: 'List', icono: 'ii', component: ListPage },
             { title: 'Partidos', icono: 'football', component: __WEBPACK_IMPORTED_MODULE_5__pages_partidos_partidos__["a" /* PartidosPage */] },
             { title: 'Estadios', icono: 'map', component: __WEBPACK_IMPORTED_MODULE_6__pages_estadios_estadios__["a" /* EstadiosPage */] },
             { title: 'Equipos', icono: 'people', component: __WEBPACK_IMPORTED_MODULE_7__pages_equipo_equipo__["a" /* EquipoPage */] },
-            { title: 'Fase Grupos', icono: 'globe', component: __WEBPACK_IMPORTED_MODULE_8__pages_grupos_grupos__["a" /* GruposPage */] },
+            { title: 'Fase de Grupos', icono: 'globe', component: __WEBPACK_IMPORTED_MODULE_8__pages_grupos_grupos__["a" /* GruposPage */] },
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -4211,7 +4230,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\apptest\worldcupbet\src\app\app.html"*/'<ion-menu [content]="content">\n  <ion-header no-border no-margin>\n    <ion-toolbar color="primary">\n      <ion-title text-center>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content class="menubg">\n    <ion-list no-lines>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon name="{{p.icono}}" item-start></ion-icon>{{p.title}}\n      </button>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngIf="!usuarioConectado"\n              (click)="openPageLogin()">\n        <ion-icon name="log-in" item-start></ion-icon>\n        Iniciar Sesión</button>\n      <button menuClose ion-item\n              detail-none color="resaltar"\n              *ngIf="usuarioConectado"\n              (click)="terminarSesion()">\n        <ion-icon name="log-out"\n                  item-start></ion-icon>\n        Terminar Sesión</button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\apptest\worldcupbet\src\app\app.html"*/'<ion-menu [content]="content">\n  <ion-header no-border no-margin>\n    <ion-toolbar color="primary">\n      <ion-title text-center>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content class="menubg">\n    <ion-list no-lines>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon name="{{p.icono}}" item-start></ion-icon>{{p.title}}\n      </button>\n      <hr>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngIf="usuarioConectado"\n              (click)="openPageBets()">\n        <ion-icon name="cash" item-start></ion-icon>\n        Participa!!!\n      </button>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngIf="!usuarioConectado"\n              (click)="openPageLogin()">\n        <ion-icon name="log-in" item-start></ion-icon>\n        Iniciar Sesión</button>\n      <button menuClose ion-item\n              detail-none color="resaltar"\n              *ngIf="usuarioConectado"\n              (click)="terminarSesion()">\n        <ion-icon name="log-out"\n                  item-start></ion-icon>\n        Terminar Sesión</button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
@@ -4225,7 +4244,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 289:
+/***/ 294:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4879,8 +4898,9 @@ var Countries = [
 /* unused harmony export LIGA_ID */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return URL_SQUAD; });
 /* unused harmony export URL_VENUES */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return URL_TEAMS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return URL_TEAMS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return URL_PLAYERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return URL_STANDINGS; });
 var TOKEN = 'PNXpSNzfU3uJ1x2IItfvTrIG7Ogxz55fPBLIkXDzkzwF7rlK85zCzK92z0WJ';
 var TEMPORADA = '892';
 var LIGA_ID = '732';
@@ -4888,6 +4908,7 @@ var URL_SQUAD = 'https://soccer.sportmonks.com/api/v2.0/squad/season/';
 var URL_VENUES = 'https://soccer.sportmonks.com/api/v2.0/venues/';
 var URL_TEAMS = 'https://soccer.sportmonks.com/api/v2.0/teams/';
 var URL_PLAYERS = 'https://soccer.sportmonks.com/api/v2.0/players/';
+var URL_STANDINGS = "https://soccer.sportmonks.com/api/v2.0/standings/season/";
 //# sourceMappingURL=config.js.map
 
 /***/ }),
@@ -4896,69 +4917,12 @@ var URL_PLAYERS = 'https://soccer.sportmonks.com/api/v2.0/players/';
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var ListPage = /** @class */ (function () {
-    function ListPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        // If we navigated to this page, we will have an item available as a nav param
-        this.selectedItem = navParams.get('item');
-        // Let's populate this page with some filler content for funzies
-        this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-            'american-football', 'boat', 'bluetooth', 'build'];
-        this.items = [];
-        for (var i = 1; i < 11; i++) {
-            this.items.push({
-                title: 'Item ' + i,
-                note: 'This is item #' + i,
-                icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-            });
-        }
-    }
-    ListPage_1 = ListPage;
-    ListPage.prototype.itemTapped = function (event, item) {
-        // That's right, we're pushing to ourselves!
-        this.navCtrl.push(ListPage_1, {
-            item: item
-        });
-    };
-    ListPage = ListPage_1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\list\list.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\list\list.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], ListPage);
-    return ListPage;
-    var ListPage_1;
-}());
-
-//# sourceMappingURL=list.js.map
-
-/***/ }),
-
-/***/ 308:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaPartidosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_fixtures__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_equiposMonks__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_fixtures__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_equiposMonks__ = __webpack_require__(103);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5015,7 +4979,7 @@ var ListaPartidosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 309:
+/***/ 308:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5028,6 +4992,51 @@ var Fechas = { "Junio": [
     ]
 };
 //# sourceMappingURL=fechas.js.map
+
+/***/ }),
+
+/***/ 309:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BetsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the BetsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var BetsPage = /** @class */ (function () {
+    function BetsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    BetsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad BetsPage');
+    };
+    BetsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-bets',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Apuestas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], BetsPage);
+    return BetsPage;
+}());
+
+//# sourceMappingURL=bets.js.map
 
 /***/ })
 

@@ -36121,56 +36121,40 @@ page-estadios #map_canvas {
   height: 60%;
 }
 
-page-estadisticas .header .col {
-  background-color: #456ba5;
-  text-align: center;
-  color: #f4f4f4;
+page-estadisticas .header {
+  background-color: #dec180;
 }
 
 page-estadisticas .col {
-  border: solid 1px grey;
+  border: solid 1px #6c0601;
   border-bottom-style: none;
   border-right-style: none;
-}
-
-page-estadisticas .row .dato {
-  text-align: center;
 }
 
 page-estadisticas .col:last-child {
-  border-right: solid 1px grey;
+  border-right: solid 1px #6c0601;
 }
 
 page-estadisticas .row:last-child .col {
-  border-bottom: solid 1px grey;
+  border-bottom: solid 1px #6c0601;
 }
 
-page-grupos .header .col {
-  background-color: #456ba5;
-  text-align: center;
-  color: #f4f4f4;
+page-grupos .header {
+  background-color: #dec180;
 }
 
 page-grupos .col {
-  border: solid 1px grey;
+  border: solid 1px #6c0601;
   border-bottom-style: none;
   border-right-style: none;
 }
 
-page-grupos .row .equipo {
-  width: 50%;
-}
-
-page-grupos .row .dato {
-  text-align: center;
-}
-
 page-grupos .col:last-child {
-  border-right: solid 1px grey;
+  border-right: solid 1px #6c0601;
 }
 
 page-grupos .row:last-child .col {
-  border-bottom: solid 1px grey;
+  border-bottom: solid 1px #6c0601;
 }
 
 page-home .background {
@@ -36275,4 +36259,18 @@ page-partidos ion-segment br {
   margin-top: -12px;
   /* change this to whatever height you want it */
   line-height: 2px;
+}
+
+page-partidos ion-avatar {
+  margin: 0 !important;
+  padding: 0px;
+  font-size: 2px;
+}
+
+page-partidos ion-item {
+  height: 54px;
+}
+
+page-partidos .background {
+  background-color: #6c0601;
 }

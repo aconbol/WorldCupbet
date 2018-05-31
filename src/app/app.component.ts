@@ -3,15 +3,17 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import firebase from "firebase";
+
+import { AutenticacionServiceProvider } from "../providers/autenticacion-service/autenticacion-service";
+
 import { HomePage } from '../pages/home/home';
 import { PartidosPage } from "../pages/partidos/partidos";
 import { EstadiosPage } from "../pages/estadios/estadios";
 import { EquipoPage } from "../pages/equipo/equipo";
 import { GruposPage } from "../pages/grupos/grupos";
 import { IniciarSesionPage } from "../pages/iniciar-sesion/iniciar-sesion";
-
-import firebase from "firebase";
-import { AutenticacionServiceProvider } from "../providers/autenticacion-service/autenticacion-service";
+import { BetsPage } from "../pages/bets/bets";
 
 @Component({
   templateUrl: 'app.html'
@@ -33,11 +35,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Inicio', icono: 'home', component: HomePage },
-      // { title: 'List', icono: 'ii', component: ListPage },
       { title: 'Partidos', icono: 'football', component: PartidosPage },
       { title: 'Estadios', icono: 'map', component: EstadiosPage },
       { title: 'Equipos', icono: 'people', component: EquipoPage },
-      { title: 'Fase Grupos', icono: 'globe', component: GruposPage },
+      { title: 'Fase de Grupos', icono: 'globe', component: GruposPage },
     ];
 
   }
@@ -85,6 +86,10 @@ export class MyApp {
 
   openPageLogin() {
     this.nav.setRoot(IniciarSesionPage);
+  }
+
+  openPageBets() {
+    this.nav.setRoot(BetsPage);
   }
 
   terminarSesion(){

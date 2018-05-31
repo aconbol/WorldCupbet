@@ -1,27 +1,20 @@
 page-estadisticas {
 
-	.header .col {
-	    background-color: #456ba5;
-	    text-align: center;
-	    color: #f4f4f4;
-	  }
+	.header {
+	    background-color: #dec180;
+  }
 
-	  .col {
-	    border: solid 1px grey;
-	    border-bottom-style: none;
-	    border-right-style: none;
-	  }
+  .col {
+    border: solid 1px #6c0601;
+    border-bottom-style: none;
+    border-right-style: none;
+  }
 
-	  .row .dato{
-	    text-align: center;
-	  }
+  .col:last-child {
+    border-right: solid 1px #6c0601;
+  }
 
-	  .col:last-child {
-	    border-right: solid 1px grey;
-	  }
-
-	  .row:last-child .col {
-	    border-bottom: solid 1px grey;
-	}
-
+  .row:last-child .col {
+    border-bottom: solid 1px #6c0601;
+  }
 }

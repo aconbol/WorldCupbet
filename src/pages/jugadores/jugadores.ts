@@ -12,6 +12,7 @@ import { EstadisticasPage } from "../estadisticas/estadisticas";
   templateUrl: 'jugadores.html',
 })
 export class JugadoresPage {
+
   public squadJson: any;
   public squadLoaded: Promise<boolean>;
   public jugadorLoaded: Promise<boolean>;

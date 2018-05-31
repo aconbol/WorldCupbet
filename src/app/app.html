@@ -12,6 +12,14 @@
               *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon name="{{p.icono}}" item-start></ion-icon>{{p.title}}
       </button>
+      <hr>
+      <button menuClose ion-item
+              detail-none color="botones"
+              *ngIf="usuarioConectado"
+              (click)="openPageBets()">
+        <ion-icon name="cash" item-start></ion-icon>
+        Participa!!!
+      </button>
       <button menuClose ion-item
               detail-none color="botones"
               *ngIf="!usuarioConectado"

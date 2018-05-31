@@ -29,6 +29,19 @@ page-partidos {
     }
   }
 
+  ion-avatar {
+    margin: 0 !important;
+    padding: 0px;
+    font-size: 2px;
+  }
+
+  ion-item {
+    height: 54px;
+  }
+
+  .background {
+    background-color: #6c0601;
+  }
 }
 
 

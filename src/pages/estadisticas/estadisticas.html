@@ -17,45 +17,57 @@
       </ion-item>
     </ion-list>
   </ion-card>
-  <div padding>
-    <div class="row header">
-      <div class="col">Datos</div>
-    </div>
-    <div class="row">
-      <div class="col">Apariciones</div>
-      <div class="col">{{jugador['appearences']}}</div>
-    </div>
-    <div class="row">
-      <div class="col">Minutos jugados</div>
-      <div class="col">{{jugador['minutes']}}</div>
-    </div>
-    <div class="row">
-      <div class="col">Goles</div>
-      <div class="col">{{jugador['goals']}}</div>
-    </div>
-    <div class="row">
-      <div class="col">Asistencias</div>
-      <div class="col">{{jugador['assists']}}</div>
-    </div>
-    <div class="row">
-      <div class="col">Fueras de Juego</div>
-      <div class="col">{{jugador['lineups']}}</div>
-    </div>
-    <div class="row header">
-      <div class="col">Tarjetas</div>
-    </div>
-    <div class="row">
-      <div class="col">Amarillas</div>
-      <div class="col">{{jugador['yellowcards']}}</div>
-    </div>
-    <div class="row">
-      <div class="col">Doble Amarilla</div>
-      <div class="col">{{jugador['yellowred']}}</div>
-    </div>
-    <div class="row">
-      <div class="col">Rojas</div>
-      <div class="col">{{jugador['redcards']}}</div>
-    </div>
+  <div padding margin-vertical="5px">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="header" text-center>
+          <h3 ion-text no-margin
+              no-padding
+              color="primary">Datos</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-16>Apariciones</ion-col>
+        <ion-col col-8 text-center>{{jugador['appearences']}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-16>Minutos jugados</ion-col>
+        <ion-col col-8 text-center>{{jugador['minutes']}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-16>Goles</ion-col>
+        <ion-col col-8 text-center>{{jugador['goals']}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-16>Asistencias</ion-col>
+        <ion-col col-8 text-center>{{jugador['assists']}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-16>Fueras de Juego</ion-col>
+        <ion-col col-8 text-center>{{jugador['lineups']}}</ion-col>
+      </ion-row>
+    </ion-grid>
+                <hr>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="header" text-center>
+          <h3 ion-text no-margin
+              no-padding
+              color="primary">Tarjetas</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-16>Amarillas</ion-col>
+        <ion-col col-8 text-center>{{jugador['yellowcards']}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-16>Dobles Amarillas</ion-col>
+        <ion-col col-8 text-center>{{jugador['yellowred']}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-16>Rojas</ion-col>
+        <ion-col col-8 text-center>{{jugador['redcards']}}</ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
-
 </ion-content>

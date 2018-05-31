@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 
-import {TEMPORADA, TOKEN, URL_PLAYERS, URL_SQUAD, URL_TEAMS} from "../../app/config/config";
+import {TEMPORADA, TOKEN,
+        URL_PLAYERS, URL_SQUAD,
+        URL_STANDINGS, URL_TEAMS
+  } from "../../app/config/config";
 
 @Injectable()
 export class RestServiceProvider {
@@ -29,4 +32,9 @@ export class RestServiceProvider {
     return this.http.get(url);
   }
 
+  getStandingGrupos() {
+    let url = URL_STANDINGS + TEMPORADA + '?api_token=' + TOKEN;
+    console.log('Ver TEAM Url Rest', url);
+    return this.http.get(url);
+  }
 }
