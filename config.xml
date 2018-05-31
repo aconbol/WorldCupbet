@@ -2,7 +2,7 @@
 <widget id="io.solstud.worldcupbet" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>WorldCupbet</name>
     <description>Información WorldCup Rusia 2018 - Seguimiento de Apuestas</description>
-    <author email="acontreras@it911.tech" href="http://it911.tech/">Solution Studio Developer Team</author>
+    <author email="acontreras@solstud.io" href="http://solstud.io/">Solution Studio Developer Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -84,10 +84,10 @@
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.0.5" />
     <allow-navigation href="http://192.168.0.19:8100" />
     <allow-navigation href="http://192.168.0.137:8100" />
-    <plugin name="cordova-plugin-googlemaps" spec="^2.3.4">
-        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyCeaQJwHfJm1ka7yA7JJYvAnNS4PQ27RTA" />
-        <variable name="API_KEY_FOR_IOS" value="AIzaSyCeaQJwHfJm1ka7yA7JJYvAnNS4PQ27RTA" />
-    </plugin>
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <engine name="android" spec="~7.0.0" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.3.4">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDuXpZ4hZ0zm6-1F8HDSKRxZOZTpwzC0q4" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyCm1W37rnNMDP76EH3CN_5aU_ls7TsxdG8" />
+    </plugin>
 </widget>

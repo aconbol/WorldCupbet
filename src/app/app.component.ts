@@ -8,6 +8,10 @@ import { PartidosPage } from "../pages/partidos/partidos";
 import { EstadiosPage } from "../pages/estadios/estadios";
 import { EquipoPage } from "../pages/equipo/equipo";
 import { GruposPage } from "../pages/grupos/grupos";
+import { IniciarSesionPage } from "../pages/iniciar-sesion/iniciar-sesion";
+
+import firebase from "firebase";
+import { AutenticacionServiceProvider } from "../providers/autenticacion-service/autenticacion-service";
 
 @Component({
   templateUrl: 'app.html'
@@ -15,11 +19,15 @@ import { GruposPage } from "../pages/grupos/grupos";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  usuarioConectado:boolean = false;
   rootPage: any = HomePage;
 
   pages: Array<{title: string, icono: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform,
+              public statusBar: StatusBar,
+              public splashScreen: SplashScreen,
+              public autenticacionService: AutenticacionServiceProvider) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -27,7 +35,7 @@ export class MyApp {
       { title: 'Inicio', icono: 'home', component: HomePage },
       // { title: 'List', icono: 'ii', component: ListPage },
       { title: 'Partidos', icono: 'football', component: PartidosPage },
-      { title: 'Estadios', icono: 'grid', component: EstadiosPage },
+      { title: 'Estadios', icono: 'map', component: EstadiosPage },
       { title: 'Equipos', icono: 'people', component: EquipoPage },
       { title: 'Fase Grupos', icono: 'globe', component: GruposPage },
     ];
@@ -35,6 +43,32 @@ export class MyApp {
   }
 
   initializeApp() {
+    /**
+     * Firebase Conexión
+     */
+    firebase.initializeApp({
+      apiKey: "AIzaSyCzW8yPu3Dlztw_A4uxjF26NoAsIKMP_OM",
+      authDomain: "worldcupbet-c1705.firebaseapp.com",
+      databaseURL: "https://worldcupbet-c1705.firebaseio.com",
+      projectId: "worldcupbet-c1705",
+      storageBucket: "worldcupbet-c1705.appspot.com",
+      messagingSenderId: "1043577611235"
+    });
+    /**
+     * Verificar el estado de la sesión
+     */
+    firebase.auth().onAuthStateChanged(
+      usuario => {
+        if (usuario != null){
+          this.usuarioConectado = true;
+          this.nav.setRoot(HomePage);
+        }
+        else {
+          this.usuarioConectado = false;
+          // this.contenido.setRoot(this.iniciarSesion);
+        }
+      }
+    );
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -48,4 +82,13 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+  openPageLogin() {
+    this.nav.setRoot(IniciarSesionPage);
+  }
+
+  terminarSesion(){
+    this.autenticacionService.terminarSesion();
+  }
+
 }

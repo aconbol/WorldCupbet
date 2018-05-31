@@ -11,6 +11,7 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
 $toolbar-md-height: 40px;
+$grid-columns: 24;
 
 
 @import "ionic.globals";
@@ -45,6 +46,10 @@ $colors: (
   botones: (
     base: #dec180,
     contrast: #6c0601
+  ),
+  resaltar:  (
+    base: #70928c,
+    contrast: #f4f4f4
   )
 );
 

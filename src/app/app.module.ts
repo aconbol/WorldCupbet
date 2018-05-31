@@ -20,8 +20,11 @@ import { EquipoPage } from "../pages/equipo/equipo";
 import { JugadoresPage } from "../pages/jugadores/jugadores";
 
 import { RestServiceProvider } from '../providers/rest-service/rest-service';
+
 import { HttpClientModule } from "@angular/common/http";
 import { EstadisticasPage } from "../pages/estadisticas/estadisticas";
+import { AutenticacionServiceProvider } from "../providers/autenticacion-service/autenticacion-service";
+import { IniciarSesionPage } from "../pages/iniciar-sesion/iniciar-sesion";
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { EstadisticasPage } from "../pages/estadisticas/estadisticas";
     GruposPage,
     EquipoPage,
     JugadoresPage,
-    EstadisticasPage
+    EstadisticasPage,
+    IniciarSesionPage
   ],
   imports: [
     BrowserModule,
@@ -54,14 +58,16 @@ import { EstadisticasPage } from "../pages/estadisticas/estadisticas";
     GruposPage,
     EquipoPage,
     JugadoresPage,
-    EstadisticasPage
+    EstadisticasPage,
+    IniciarSesionPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestServiceProvider
+    RestServiceProvider,
+    AutenticacionServiceProvider
   ]
 })
 export class AppModule {}
