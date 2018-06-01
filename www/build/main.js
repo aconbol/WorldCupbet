@@ -1,6 +1,52 @@
 webpackJsonp([0],{
 
-/***/ 103:
+/***/ 106:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AutenticacionServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AutenticacionServiceProvider = /** @class */ (function () {
+    function AutenticacionServiceProvider(http) {
+        this.http = http;
+        console.log('Hello AutenticacionServiceProvider Provider');
+    }
+    AutenticacionServiceProvider.prototype.registrarUsuario = function (correo, clave) {
+        return __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.auth().createUserWithEmailAndPassword(correo, clave);
+    };
+    AutenticacionServiceProvider.prototype.iniciarSesion = function (correo, clave) {
+        return __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.auth().signInWithEmailAndPassword(correo, clave);
+    };
+    AutenticacionServiceProvider.prototype.terminarSesion = function () {
+        return __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.auth().signOut();
+    };
+    AutenticacionServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], AutenticacionServiceProvider);
+    return AutenticacionServiceProvider;
+}());
+
+//# sourceMappingURL=autenticacion-service.js.map
+
+/***/ }),
+
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -395,7 +441,7 @@ var EquiposMonks = [
 
 /***/ }),
 
-/***/ 104:
+/***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -562,108 +608,6 @@ var Venues = [
 
 /***/ }),
 
-/***/ 105:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_config__ = __webpack_require__(295);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var RestServiceProvider = /** @class */ (function () {
-    function RestServiceProvider(http) {
-        this.http = http;
-        console.log('RestServiceProvider Provider');
-    }
-    RestServiceProvider.prototype.getSquad = function (team) {
-        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["d" /* URL_SQUAD */] + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["a" /* TEMPORADA */] + '/team/' + team + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver SQUAD Url Rest', url);
-        return this.http.get(url);
-    };
-    RestServiceProvider.prototype.getJugador = function (id_jug) {
-        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["c" /* URL_PLAYERS */] + id_jug + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver Jugador Url Rest', url);
-        return this.http.get(url);
-    };
-    RestServiceProvider.prototype.getEquipo = function (id_equipo) {
-        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["f" /* URL_TEAMS */] + id_equipo + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver TEAM Url Rest', url);
-        return this.http.get(url);
-    };
-    RestServiceProvider.prototype.getStandingGrupos = function () {
-        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["e" /* URL_STANDINGS */] + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["a" /* TEMPORADA */] + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver TEAM Url Rest', url);
-        return this.http.get(url);
-    };
-    RestServiceProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
-    ], RestServiceProvider);
-    return RestServiceProvider;
-}());
-
-//# sourceMappingURL=rest-service.js.map
-
-/***/ }),
-
-/***/ 106:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AutenticacionServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var AutenticacionServiceProvider = /** @class */ (function () {
-    function AutenticacionServiceProvider(http) {
-        this.http = http;
-        console.log('Hello AutenticacionServiceProvider Provider');
-    }
-    AutenticacionServiceProvider.prototype.registrarUsuario = function (correo, clave) {
-        return __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.auth().createUserWithEmailAndPassword(correo, clave);
-    };
-    AutenticacionServiceProvider.prototype.iniciarSesion = function (correo, clave) {
-        return __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.auth().signInWithEmailAndPassword(correo, clave);
-    };
-    AutenticacionServiceProvider.prototype.terminarSesion = function () {
-        return __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.auth().signOut();
-    };
-    AutenticacionServiceProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
-    ], AutenticacionServiceProvider);
-    return AutenticacionServiceProvider;
-}());
-
-//# sourceMappingURL=autenticacion-service.js.map
-
-/***/ }),
-
 /***/ 119:
 /***/ (function(module, exports) {
 
@@ -698,7 +642,7 @@ webpackEmptyAsyncContext.id = 161;
 
 /***/ }),
 
-/***/ 205:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -733,16 +677,16 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PartidosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_fixtures__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_equiposMonks__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_venues__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_equiposMonks__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_venues__ = __webpack_require__(108);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -758,23 +702,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var PartidosPage = /** @class */ (function () {
-    function PartidosPage(navCtrl, navParams) {
+    function PartidosPage(navCtrl, navParams, restService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.restService = restService;
         this.diaSemana = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
-        this.fixtures = __WEBPACK_IMPORTED_MODULE_2__app_config_fixtures__["a" /* Fixtures */];
         this.equipos = __WEBPACK_IMPORTED_MODULE_3__app_config_equiposMonks__["a" /* EquiposMonks */];
         this.stadiums = __WEBPACK_IMPORTED_MODULE_4__app_config_venues__["a" /* Venues */];
         this.dias = this.getDatesBetween();
+        this.getFixturesFromTo();
     }
     PartidosPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad PartidosPage');
     };
-    PartidosPage.prototype.navigateTo1 = function () {
-        this.navCtrl.push('SegmentPage', { param1: '1' });
-    };
-    PartidosPage.prototype.navigateTo2 = function () {
-        this.navCtrl.push('SegmentPage', { param1: '2' });
+    PartidosPage.prototype.getFixturesFromTo = function () {
+        var _this = this;
+        this.restService.getFixturesFromTo('2018-06-14', '2018-07-15')
+            .subscribe(function (programacion) {
+            _this.fixtures = programacion['data'];
+            console.log('JSON FIXTURES en subscribe - fixtures.ts', _this.fixtures);
+            _this.fixturesLoaded = Promise.resolve(true);
+        });
     };
     PartidosPage.prototype.getDatesBetween = function () {
         var from = new Date('2018/06/14');
@@ -843,7 +791,9 @@ var PartidosPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-partidos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/'<ion-header no-border no-margin>\n  <ion-toolbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-buttons left>-->\n      <!--<button ion-button icon-only small >-->\n        <!--<ion-icon name="arrow-dropleft"></ion-icon>-->\n      <!--</button>-->\n    <!--</ion-buttons>-->\n\n    <ion-title text-center>Junio/Julio</ion-title>\n\n    <!--<ion-buttons right>-->\n      <!--<button ion-button icon-only small (click)="navigateJulio()">-->\n        <!--<ion-icon name="arrow-dropright"></ion-icon>-->\n      <!--</button>-->\n    <!--</ion-buttons>-->\n  </ion-toolbar>\n<div color="primary">\n  <ion-segment [(ngModel)]="fechas" color="light" mode="ios">\n    <ion-segment-button\n                        *ngFor ="let dia of dias"\n                        value="{{getDiaD(dia)}}">\n      {{diaSemana[dia.getDay()]}}<br>{{dia.getDate()}}\n    </ion-segment-button>\n  </ion-segment>\n</div>\n</ion-header>\n\n<ion-content class="background" no-padding no-margin>\n  <br>\n  <div *ngFor="let fixture of fixtures">\n    <div [hidden]="fechas !== getDia(fixture)">\n      <ion-list no-padding no-margin\n                no-lines>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-right no-padding no-margin>\n                <ion-avatar item-end>\n                  <img src="{{getSrcBanderaEquipo(fixture.localteam_id)}}">\n                </ion-avatar>\n                <p text-wrap>{{getNombreEquipo(fixture.localteam_id)}} </p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-4 no-padding no-margin>\n              <ion-item text-center no-padding no-margin>\n                <p>{{fixture.scores.localteam_score + \' - \' + fixture.scores.visitorteam_score}}</p>\n                <p>{{getHoraLocal(fixture.time.starting_at.time)}}</p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-left no-padding no-margin>\n                <ion-avatar item-start>\n                  <img src="{{getSrcBanderaEquipo(fixture.visitorteam_id)}}">\n                </ion-avatar>\n                <p margin-left="1px" text-wrap> {{getNombreEquipo(fixture.visitorteam_id)}}</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-list>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */]])
     ], PartidosPage);
     return PartidosPage;
 }());
@@ -852,7 +802,1551 @@ var PartidosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 207:
+/***/ 209:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadiosPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_venues__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__ = __webpack_require__(210);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var EstadiosPage = /** @class */ (function () {
+    function EstadiosPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.estadiums = __WEBPACK_IMPORTED_MODULE_2__app_config_venues__["a" /* Venues */];
+    }
+    EstadiosPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EstadiosPage');
+    };
+    /**
+     * Funcion para poner en PUSH las ubicaciones
+     */
+    EstadiosPage.prototype.pushUbicaciones = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */]);
+    };
+    EstadiosPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-estadios',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Estadios</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg">\n  <ion-fab bottom right>\n    <button color="botones" ion-fab (click)="pushUbicaciones()">\n      <ion-icon name="pin"></ion-icon>\n    </button>\n  </ion-fab>\n  <div>\n    <ion-card *ngFor ="let campo of estadiums">\n      <ion-card-title text-center color="primary">\n        <h1>{{campo.name}}</h1>\n      </ion-card-title>\n      <img src="{{campo.image_path}}"/>\n      <ion-card-content>\n        <ion-grid text-left>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Ciudad: </ion-col>\n            <ion-col>{{campo.city}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Dirección: </ion-col>\n            <ion-col>{{campo.address}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Capacidad: </ion-col>\n            <ion-col>{{campo.capacity}} personas</ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card-content>\n    </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], EstadiosPage);
+    return EstadiosPage;
+}());
+
+//# sourceMappingURL=estadios.js.map
+
+/***/ }),
+
+/***/ 210:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadioGeoposPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_venues__ = __webpack_require__(108);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var EstadioGeoposPage = /** @class */ (function () {
+    function EstadioGeoposPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.estadiums = __WEBPACK_IMPORTED_MODULE_3__app_config_venues__["a" /* Venues */];
+    }
+    EstadioGeoposPage.prototype.ionViewDidLoad = function () {
+        setTimeout(this.loadMap.bind(this), 1000);
+        // this.loadMap();
+        console.log('ionViewDidLoad EstadioGeoposPage');
+    };
+    EstadioGeoposPage.prototype.loadMap = function () {
+        var _this = this;
+        console.log('Ingresando en loadMap');
+        // create a new map by passing HTMLElement
+        // let element: HTMLElement = document.getElementById('map_canvas');
+        var mapOptions = {
+            camera: {
+                target: {
+                    lat: 55.715765,
+                    lng: 37.5515217
+                },
+                zoom: 5,
+                tilt: 30
+            }
+        };
+        // Creacopn de Mapa
+        this.map = __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["a" /* GoogleMaps */].create('map_canvas', mapOptions);
+        console.log('Respuesta de Event', __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["b" /* GoogleMapsEvent */].MAP_READY);
+        this.map.one(__WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["b" /* GoogleMapsEvent */].MAP_READY)
+            .then(function () {
+            _this.cargarMarks();
+            console.log('Google Map esta listo', mapOptions);
+        })
+            .catch(function (error) {
+            console.log('Google Map no se cargo', error);
+        });
+    };
+    EstadioGeoposPage.prototype.cargarMarks = function () {
+        var _this = this;
+        this.estadiums.forEach(function (estadium) {
+            var position = new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["c" /* LatLng */](estadium.lat, estadium.lng);
+            var options = {
+                // icon: '#32db64',
+                icon: '#dec180',
+                title: estadium.name,
+                position: position
+            };
+            // let icon = rutaBase + this.estadiums[0].icon;
+            _this.map.addMarker(options)
+                .catch(function (error) {
+                console.log('Error en markers', error);
+            });
+        });
+    };
+    EstadioGeoposPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-estadio-geopos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadio-geopos\estadio-geopos.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Estadios Maps</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div id="map_canvas"></div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadio-geopos\estadio-geopos.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], EstadioGeoposPage);
+    return EstadioGeoposPage;
+}());
+
+//# sourceMappingURL=estadio-geopos.js.map
+
+/***/ }),
+
+/***/ 212:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipoPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jugadores_jugadores__ = __webpack_require__(213);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var EquipoPage = /** @class */ (function () {
+    function EquipoPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.equipos = __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__["a" /* EquiposMonks */];
+    }
+    EquipoPage.prototype.ionViewDidLoad = function () {
+        this.equipos = this.ordenarJson(this.equipos);
+        console.log('ionViewDidLoad EquipoPage');
+    };
+    EquipoPage.prototype.ordenarJson = function (items) {
+        items.sort(function (a, b) {
+            return a.name > b.name;
+        });
+        return items;
+    };
+    EquipoPage.prototype.getItems = function (ev) {
+        // set val to the value of the ev target
+        var val = ev.target.value;
+        // if the value is an empty string don't filter the items
+        if (val && val.trim() != '') {
+            this.equipos = this.equipos.filter(function (equipo) {
+                return (equipo.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+            });
+        }
+    };
+    EquipoPage.prototype.jugadores = function (equipo, id) {
+        console.log('Equipo:', equipo, id);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__jugadores_jugadores__["a" /* JugadoresPage */], {
+            equipo_name: equipo,
+            equipo_id: id
+        });
+    };
+    EquipoPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-equipo',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\equipo\equipo.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Equipos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item-sliding *ngFor="let equipo of equipos">\n      <ion-item>\n        <ion-avatar item-start small>\n          <img src="{{equipo.logo_path}}">\n        </ion-avatar>\n        <h3>{{equipo.name}}</h3>\n        <ion-icon item-end name="swap"\n                  icon-only disabled small></ion-icon>\n      </ion-item>\n      <ion-item-options>\n        <!--<button ion-button color="primary" >Datos</button>-->\n        <button ion-button color="botones" (click)="jugadores(equipo.name, equipo.id)">Jugadores</button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n</ion-content>\n\n<ion-footer>\n  <ion-navbar color="primary">\n    <ion-searchbar (ionInput)="getItems($event)">\n    </ion-searchbar>\n  </ion-navbar>\n</ion-footer>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\equipo\equipo.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], EquipoPage);
+    return EquipoPage;
+}());
+
+//# sourceMappingURL=equipo.js.map
+
+/***/ }),
+
+/***/ 213:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JugadoresPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_countries__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__estadisticas_estadisticas__ = __webpack_require__(214);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var JugadoresPage = /** @class */ (function () {
+    function JugadoresPage(navCtrl, navParams, restService) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.restService = restService;
+        this.paises = __WEBPACK_IMPORTED_MODULE_2__app_config_countries__["a" /* Countries */];
+        this.eq_id = this.navParams.get('equipo_id');
+        this.eq_name = this.navParams.get('equipo_name');
+        this.getSquad(this.eq_id);
+    }
+    JugadoresPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad JugadoresPage');
+    };
+    JugadoresPage.prototype.getSquad = function (id_eq) {
+        var _this = this;
+        this.restService.getSquad(id_eq)
+            .subscribe(function (plantel) {
+            _this.squadJson = plantel['data'];
+            _this.getJugadoresEq(plantel['data']);
+            _this.datosJugadoresEq = plantel['data'];
+            console.log('JSON getSquad en subscribe - jugadores.ts', _this.datosJugadoresEq);
+            _this.squadLoaded = Promise.resolve(true);
+        });
+    };
+    JugadoresPage.prototype.getJugador = function (id_jug) {
+        var _this = this;
+        this.restService.getJugador(id_jug)
+            .subscribe(function (juRest) {
+            // console.log('JSON dentro de subscribe - jugador.ts',
+            //   JSON.stringify(juRest['data']));
+            _this.datosJugador = juRest['data'];
+            _this.jugadorLoaded = Promise.resolve(true);
+        });
+    };
+    JugadoresPage.prototype.getJugadoresEq = function (squad) {
+        var _this = this;
+        squad.forEach(function (player) {
+            var datosPlayer;
+            _this.restService.getJugador(player['player_id'])
+                .subscribe(function (juRest) {
+                datosPlayer = juRest['data'];
+                // player['datoActual'] = datosPlayer;
+                //   player.datoActual = datosPlayer;
+                Object.assign(player, datosPlayer);
+                _this.getTeam(datosPlayer['player_id'], player);
+                console.log('En squad se encontro el jugdor', datosPlayer['player_id']);
+            }, function (error) {
+                console.log('error al encontrar jugadores por equipo');
+            });
+        });
+    };
+    JugadoresPage.prototype.getTeam = function (id_team, player) {
+        var _this = this;
+        this.restService.getEquipo(id_team)
+            .subscribe(function (teamRest) {
+            // console.log('JSON dentro de subscribe - jugador.ts',
+            //   JSON.stringify(juRest['data']));
+            var dato = teamRest['data'];
+            _this.eq_jug_name = dato.name;
+            _this.eq_img_path = dato.logo_path;
+            player.equipo_origen = _this.eq_jug_name;
+            player.equipo_logo_path = _this.eq_img_path;
+            _this.paises.forEach(function (pais) {
+                if (pais.id === dato.country_id)
+                    player.equipo_pais_name = pais.name;
+            });
+            console.log('Datos equipo actual', _this.eq_jug_name, _this.eq_img_path);
+            _this.jugadorLoaded = Promise.resolve(true);
+        }, function (error) {
+            _this.eq_jug_name = null;
+            _this.eq_img_path = null;
+            console.log('error al encontrar equipo');
+        });
+    };
+    JugadoresPage.prototype.openEstadisticas = function (jugador) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__estadisticas_estadisticas__["a" /* EstadisticasPage */], {
+            datos_jugador: jugador,
+            eq_name: this.eq_name
+        });
+    };
+    JugadoresPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-jugadores',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\jugadores\jugadores.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>{{eq_name}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides>\n    <ion-slide *ngFor="let jugador of datosJugadoresEq">\n      <ion-title text-center text-wrap>{{jugador[\'fullname\']}}</ion-title>\n      <ion-card>\n        <ion-fab top right >\n          <button ion-fab mini color="botones" (click)="openEstadisticas(jugador)" >\n            <ion-icon name="stats"></ion-icon>\n          </button>\n        </ion-fab>\n        <div class="centrado">\n          <img src="{{jugador[\'image_path\']}}">\n        </div>\n        <div padding-vertical>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>País de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'birthcountry\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Fecha de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'birthdate\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Lugar de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'birthplace\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Nacionalidad:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'nationality\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-12 text-center>\n              <h2 style="font-weight: bold;" no-margin no-border>Estatura:</h2>\n            </ion-col>\n            <ion-col col-12 text-center>\n              <h2 style="font-weight: bold;" no-margin no-border>Peso:</h2>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-12 text-center>{{jugador[\'height\']}}</ion-col>\n            <ion-col col-12 text-center>{{jugador[\'weight\']}}</ion-col>\n          </ion-row>\n        </div>\n      </ion-card>\n      <ion-card *ngIf="jugador[\'equipo_origen\']">\n        <ion-title>Equipo de Origen</ion-title>\n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="{{jugador[\'equipo_logo_path\']}}">\n          </ion-thumbnail>\n          <h2 style="font-weight: bold;">Equipo</h2>{{jugador[\'equipo_origen\']}}\n          <h2 style="font-weight: bold;">Pais</h2>{{jugador[\'equipo_pais_name\']}}\n        </ion-item>\n      </ion-card>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\jugadores\jugadores.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */]])
+    ], JugadoresPage);
+    return JugadoresPage;
+}());
+
+//# sourceMappingURL=jugadores.js.map
+
+/***/ }),
+
+/***/ 214:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadisticasPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var EstadisticasPage = /** @class */ (function () {
+    function EstadisticasPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.jugador = this.navParams.get('datos_jugador');
+        this.seleccion = this.navParams.get('eq_name');
+    }
+    EstadisticasPage.prototype.ionViewDidLoad = function () {
+        console.log('Ver informacion recibida por parametro', this.jugador);
+        console.log('ionViewDidLoad EstadisticasPage');
+    };
+    EstadisticasPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-estadisticas',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadisticas\estadisticas.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <ion-title text-center>Estadísticas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-list no-lines>\n      <ion-item>\n        <ion-avatar item-start>\n          <img src="{{jugador[\'image_path\']}}">\n        </ion-avatar>\n        <h2 text-center>{{jugador[\'fullname\']}}</h2>\n        <h2 text-center>{{seleccion}}</h2>\n        <h3 text-center *ngIf="jugador[\'number\']">{{\'Número: \' + jugador[\'number\']}}</h3>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n  <div padding margin-vertical="5px">\n    <ion-grid>\n      <ion-row>\n        <ion-col class="header" text-center>\n          <h3 ion-text no-margin\n              no-padding\n              color="primary">Datos</h3>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Apariciones</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'appearences\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Minutos jugados</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'minutes\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Goles</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'goals\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Asistencias</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'assists\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Fueras de Juego</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'lineups\']}}</ion-col>\n      </ion-row>\n    </ion-grid>\n                <hr>\n    <ion-grid>\n      <ion-row>\n        <ion-col class="header" text-center>\n          <h3 ion-text no-margin\n              no-padding\n              color="primary">Tarjetas</h3>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Amarillas</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'yellowcards\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Dobles Amarillas</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'yellowred\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Rojas</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'redcards\']}}</ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadisticas\estadisticas.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], EstadisticasPage);
+    return EstadisticasPage;
+}());
+
+//# sourceMappingURL=estadisticas.js.map
+
+/***/ }),
+
+/***/ 215:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GruposPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(52);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var GruposPage = /** @class */ (function () {
+    function GruposPage(navCtrl, navParams, restService) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.restService = restService;
+        this.getStandingGrupos();
+    }
+    GruposPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad GruposPage');
+    };
+    GruposPage.prototype.getStandingGrupos = function () {
+        var _this = this;
+        this.restService.getStandingGrupos()
+            .subscribe(function (puestosAllGroup) {
+            _this.puestosTodosGrupos = puestosAllGroup['data'];
+            console.log('JSON getAllGroups en subscribe - grupos.ts', _this.puestosTodosGrupos);
+            _this.groupLoaded = Promise.resolve(true);
+        });
+    };
+    GruposPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-grupos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\grupos\grupos.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Fase de Grupos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	<br>\n  <div no-padding no-margin>\n    <ion-list *ngFor="let allGroup of puestosTodosGrupos">\n      <h4 ion-text text-center color="primary">\n        {{allGroup[\'name\']}}\n      </h4>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-9 class="header" text-center></ion-col>\n          <ion-col col-8 class="header" text-center>Partidos</ion-col>\n          <ion-col col-5 class="header" text-center>Goles</ion-col>\n          <ion-col col-2 class="header" text-center></ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-9 class="header" text-center>Equipos</ion-col>\n          <ion-col col-2 class="header" text-center>J</ion-col>\n          <ion-col col-2 class="header" text-center>G</ion-col>\n          <ion-col col-2 class="header" text-center>E</ion-col>\n          <ion-col col-2 class="header" text-center>P</ion-col>\n          <ion-col col-5 class="header" text-center>F:C D</ion-col>\n          <ion-col col-2 class="header" text-center>P</ion-col>\n        </ion-row>\n        <ion-row *ngFor="let puestos of allGroup.standings.data">\n          <ion-col col-9>{{puestos.team_name}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.games_played}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.won}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.draw}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.lost}}</ion-col>\n          <ion-col col-5 text-center>\n            {{puestos.overall.goals_scored + \':\' + puestos.overall.goals_against + \' \' + puestos.total.goal_difference}}\n          </ion-col>\n          <ion-col col-2 text-center>{{puestos.total.points}}</ion-col>\n        </ion-row>\n      </ion-grid>\n      <br>\n    </ion-list>\n  </div>\n  <br><br>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\grupos\grupos.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */]])
+    ], GruposPage);
+    return GruposPage;
+}());
+
+//# sourceMappingURL=grupos.js.map
+
+/***/ }),
+
+/***/ 216:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IniciarSesionPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var IniciarSesionPage = /** @class */ (function () {
+    function IniciarSesionPage(navCtrl, navParams, autenticacionService, alertaCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.autenticacionService = autenticacionService;
+        this.alertaCtrl = alertaCtrl;
+    }
+    IniciarSesionPage.prototype.iniciarSesion = function (formLogin) {
+        var _this = this;
+        this.autenticacionService.iniciarSesion(formLogin.value.correo, formLogin.value.clave)
+            .then(function (info) { return console.log(info); })
+            .catch(function (error) {
+            var alerta = _this.alertaCtrl.create({
+                title: 'ERROR DE INICIO DE SESION',
+                subTitle: 'Revisar Usuario y Contraseña',
+                message: 'El Correo o Contraseña no son correctos' + error,
+                buttons: ['Ok']
+            });
+            alerta.present();
+        });
+    };
+    IniciarSesionPage.prototype.registrarUsuario = function (formulario) {
+        var _this = this;
+        this.autenticacionService.registrarUsuario(formulario.value.correo, formulario.value.clave)
+            .then(function (info) { return console.log(info); })
+            .catch(function (error) {
+            var alerta = _this.alertaCtrl.create({
+                title: 'ERROR DE INICIO DE SESION',
+                subTitle: 'Error en autenticación',
+                message: 'Error en autenticación' + error,
+                buttons: ['Ok']
+            });
+            alerta.present();
+        });
+    };
+    IniciarSesionPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-iniciar-sesion',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\iniciar-sesion\iniciar-sesion.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Inicio de Sesión</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="background">\n  <ion-col>\n    <ion-row>\n      <ion-title text-center>\n        <h3 ion-text color="botones"\n            no-margin no-padding no-border>\n          World Cupbet Rusia 2018\n        </h3>\n      </ion-title>\n    </ion-row>\n  </ion-col>\n  <form #formLogin="ngForm">\n    <ion-col>\n      <ion-row>\n        <ion-item>\n          <ion-label stacked>Correo Electrónico</ion-label>\n          <ion-input type="email"\n                     required\n                     name="correo"\n                     ngModel\n                     placeholder="Correo Electrónico"></ion-input>\n        </ion-item>\n      </ion-row>\n      <ion-row>\n        <ion-item>\n          <ion-label stacked>Contraseña</ion-label>\n          <ion-input type="password"\n                     required\n                     name="clave"\n                     ngModel\n                     [minlength]="8"\n                      placeholder="Contraseña"></ion-input>\n        </ion-item>\n      </ion-row>\n      <ion-row>\n        <button ion-button block color="botones"\n                (click)="iniciarSesion(formLogin)">\n          INICIAR SESION\n        </button>\n      </ion-row>\n      <ion-row>\n        <button ion-button block color="danger"\n                (click)="registrarUsuario(formLogin)">\n          REGISTRARSE\n        </button>\n      </ion-row>\n    </ion-col>\n  </form>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\iniciar-sesion\iniciar-sesion.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], IniciarSesionPage);
+    return IniciarSesionPage;
+}());
+
+//# sourceMappingURL=iniciar-sesion.js.map
+
+/***/ }),
+
+/***/ 217:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BetsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the BetsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var BetsPage = /** @class */ (function () {
+    function BetsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    BetsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad BetsPage');
+    };
+    BetsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-bets',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Apuestas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], BetsPage);
+    return BetsPage;
+}());
+
+//# sourceMappingURL=bets.js.map
+
+/***/ }),
+
+/***/ 218:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(239);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 239:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_google_maps__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_rest_service_rest_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__ = __webpack_require__(214);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__["a" /* PartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__["a" /* EstadiosPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__["a" /* GruposPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__["a" /* EquipoPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__["a" /* JugadoresPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__["a" /* BetsPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
+                    links: []
+                }),
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__["a" /* PartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__["a" /* EstadiosPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__["a" /* GruposPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__["a" /* EquipoPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__["a" /* JugadoresPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__["a" /* BetsPage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_7__ionic_native_google_maps__["a" /* GoogleMaps */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_8__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_9__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */]
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 293:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_partidos_partidos__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_estadios_estadios__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_equipo_equipo__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_grupos_grupos__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_bets_bets__ = __webpack_require__(217);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+var MyApp = /** @class */ (function () {
+    function MyApp(platform, statusBar, splashScreen, autenticacionService) {
+        this.platform = platform;
+        this.statusBar = statusBar;
+        this.splashScreen = splashScreen;
+        this.autenticacionService = autenticacionService;
+        this.usuarioConectado = false;
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */];
+        this.initializeApp();
+        // used for an example of ngFor and navigation
+        this.pages = [
+            { title: 'Inicio', icono: 'home', component: __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */] },
+            { title: 'Partidos', icono: 'football', component: __WEBPACK_IMPORTED_MODULE_7__pages_partidos_partidos__["a" /* PartidosPage */] },
+            { title: 'Estadios', icono: 'map', component: __WEBPACK_IMPORTED_MODULE_8__pages_estadios_estadios__["a" /* EstadiosPage */] },
+            { title: 'Equipos', icono: 'people', component: __WEBPACK_IMPORTED_MODULE_9__pages_equipo_equipo__["a" /* EquipoPage */] },
+            { title: 'Fase de Grupos', icono: 'globe', component: __WEBPACK_IMPORTED_MODULE_10__pages_grupos_grupos__["a" /* GruposPage */] },
+        ];
+    }
+    MyApp.prototype.initializeApp = function () {
+        var _this = this;
+        /**
+         * Firebase Conexión
+         */
+        __WEBPACK_IMPORTED_MODULE_4_firebase___default.a.initializeApp({
+            apiKey: "AIzaSyCzW8yPu3Dlztw_A4uxjF26NoAsIKMP_OM",
+            authDomain: "worldcupbet-c1705.firebaseapp.com",
+            databaseURL: "https://worldcupbet-c1705.firebaseio.com",
+            projectId: "worldcupbet-c1705",
+            storageBucket: "worldcupbet-c1705.appspot.com",
+            messagingSenderId: "1043577611235"
+        });
+        /**
+         * Verificar el estado de la sesión
+         */
+        __WEBPACK_IMPORTED_MODULE_4_firebase___default.a.auth().onAuthStateChanged(function (usuario) {
+            if (usuario != null) {
+                _this.usuarioConectado = true;
+                _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */]);
+            }
+            else {
+                _this.usuarioConectado = false;
+                // this.contenido.setRoot(this.iniciarSesion);
+            }
+        });
+        this.platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            _this.statusBar.styleDefault();
+            _this.splashScreen.hide();
+        });
+    };
+    MyApp.prototype.openPage = function (page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        this.nav.setRoot(page.component);
+    };
+    MyApp.prototype.openPageLogin = function () {
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_11__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */]);
+    };
+    MyApp.prototype.openPageBets = function () {
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_12__pages_bets_bets__["a" /* BetsPage */]);
+    };
+    MyApp.prototype.terminarSesion = function () {
+        this.autenticacionService.terminarSesion();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
+    ], MyApp.prototype, "nav", void 0);
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\apptest\worldcupbet\src\app\app.html"*/'<ion-menu [content]="content">\n  <ion-header no-border no-margin>\n    <ion-toolbar color="primary">\n      <ion-title text-center>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content class="menubg">\n    <ion-list no-lines>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon name="{{p.icono}}" item-start></ion-icon>{{p.title}}\n      </button>\n      <hr>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngIf="usuarioConectado"\n              (click)="openPageBets()">\n        <ion-icon name="cash" item-start></ion-icon>\n        Participa!!!\n      </button>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngIf="!usuarioConectado"\n              (click)="openPageLogin()">\n        <ion-icon name="log-in" item-start></ion-icon>\n        Iniciar Sesión</button>\n      <button menuClose ion-item\n              detail-none color="resaltar"\n              *ngIf="usuarioConectado"\n              (click)="terminarSesion()">\n        <ion-icon name="log-out"\n                  item-start></ion-icon>\n        Terminar Sesión</button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\app\app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 305:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TOKEN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TEMPORADA; });
+/* unused harmony export LIGA_ID */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return URL_SQUAD; });
+/* unused harmony export URL_VENUES */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return URL_TEAMS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return URL_PLAYERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return URL_STANDINGS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return URL_FIXTURES; });
+var TOKEN = 'PNXpSNzfU3uJ1x2IItfvTrIG7Ogxz55fPBLIkXDzkzwF7rlK85zCzK92z0WJ';
+var TEMPORADA = '892';
+var LIGA_ID = '732';
+var URL_SQUAD = 'https://soccer.sportmonks.com/api/v2.0/squad/season/';
+var URL_VENUES = 'https://soccer.sportmonks.com/api/v2.0/venues/';
+var URL_TEAMS = 'https://soccer.sportmonks.com/api/v2.0/teams/';
+var URL_PLAYERS = 'https://soccer.sportmonks.com/api/v2.0/players/';
+var URL_STANDINGS = "https://soccer.sportmonks.com/api/v2.0/standings/season/";
+var URL_FIXTURES = "https://soccer.sportmonks.com/api/v2.0/fixtures/between/";
+//# sourceMappingURL=config.js.map
+
+/***/ }),
+
+/***/ 306:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Countries; });
+var Countries = [
+    {
+        "id": 2,
+        "name": "Poland",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": "EMEA",
+            "fifa": "POL",
+            "iso": "POL",
+            "longitude": "19.37775993347168",
+            "latitude": "52.147850036621094"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Brazil",
+        "extra": {
+            "continent": "Americas",
+            "sub_region": "South America",
+            "world_region": "AMER",
+            "fifa": "BRA",
+            "iso": "BRA",
+            "longitude": "-52.97311782836914",
+            "latitude": "-10.81045150756836"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Germany",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Western Europe",
+            "world_region": "EMEA",
+            "fifa": "GER",
+            "iso": "DEU",
+            "longitude": "10.382203102111816",
+            "latitude": "51.20246505737305"
+        }
+    },
+    {
+        "id": 17,
+        "name": "France",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Western Europe",
+            "world_region": "EMEA",
+            "fifa": "FRA",
+            "iso": "FRA",
+            "longitude": "2.3382623195648193",
+            "latitude": "46.63727951049805"
+        }
+    },
+    {
+        "id": 20,
+        "name": "Portugal",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Southern Europe",
+            "world_region": "EMEA",
+            "fifa": "POR",
+            "iso": "PRT",
+            "longitude": "-8.009422302246094",
+            "latitude": "39.64200973510742"
+        }
+    },
+    {
+        "id": 23,
+        "name": "Côte d'Ivoire",
+        "extra": {
+            "continent": "Africa",
+            "sub_region": "Western Africa",
+            "world_region": "EMEA",
+            "fifa": "CIV",
+            "iso": "CIV",
+            "longitude": "-5.552574634552002",
+            "latitude": "7.598755359649658"
+        }
+    },
+    {
+        "id": 26,
+        "name": "Mali",
+        "extra": {
+            "continent": "Africa",
+            "sub_region": "Western Africa",
+            "world_region": "EMEA",
+            "fifa": "MLI",
+            "iso": "MLI",
+            "longitude": "-3.5273818969726562",
+            "latitude": "17.35776710510254"
+        }
+    },
+    {
+        "id": 32,
+        "name": "Spain",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Southern Europe",
+            "world_region": "EMEA",
+            "fifa": "ESP",
+            "iso": "ESP",
+            "longitude": "-3.550692558288574",
+            "latitude": "40.396026611328125"
+        }
+    },
+    {
+        "id": 38,
+        "name": "Netherlands",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Western Europe",
+            "world_region": "EMEA",
+            "fifa": "NED",
+            "iso": "NLD",
+            "longitude": "5.5281572341918945",
+            "latitude": "52.34225845336914"
+        }
+    },
+    {
+        "id": 41,
+        "name": "Europe",
+        "extra": null
+    },
+    {
+        "id": 44,
+        "name": "Argentina",
+        "extra": {
+            "continent": "Americas",
+            "sub_region": "South America",
+            "world_region": "AMER",
+            "fifa": "ARG",
+            "iso": "ARG",
+            "longitude": "-64.85450744628906",
+            "latitude": "-37.071964263916016"
+        }
+    },
+    {
+        "id": 47,
+        "name": "Sweden",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Northern Europe",
+            "world_region": "EMEA",
+            "fifa": "SWE",
+            "iso": "SWE",
+            "longitude": "16.798059463500977",
+            "latitude": "62.67497253417969"
+        }
+    },
+    {
+        "id": 62,
+        "name": "Switzerland",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Western Europe",
+            "world_region": "EMEA",
+            "fifa": "SUI",
+            "iso": "CHE",
+            "longitude": "8.222854614257812",
+            "latitude": "46.80379867553711"
+        }
+    },
+    {
+        "id": 80,
+        "name": "Chile",
+        "extra": {
+            "continent": "Americas",
+            "sub_region": "South America",
+            "world_region": "AMER",
+            "fifa": "CHI",
+            "iso": "CHL",
+            "longitude": "-71.67467498779297",
+            "latitude": "-35.78622817993164"
+        }
+    },
+    {
+        "id": 86,
+        "name": "Ukraine",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": "EMEA",
+            "fifa": "UKR",
+            "iso": "UKR",
+            "longitude": "31.47578239440918",
+            "latitude": "48.92656326293945"
+        }
+    },
+    {
+        "id": 98,
+        "name": "Australia",
+        "extra": {
+            "continent": "Oceania",
+            "sub_region": "Australia and New Zealand",
+            "world_region": "APAC",
+            "fifa": "AUS",
+            "iso": "AUS",
+            "longitude": "134.50411987304688",
+            "latitude": "-25.585241317749023"
+        }
+    },
+    {
+        "id": 107,
+        "name": "Iraq",
+        "extra": {
+            "continent": "Asia",
+            "sub_region": "Western Asia",
+            "world_region": "EMEA",
+            "fifa": "IRQ",
+            "iso": "IRQ",
+            "longitude": "43.77495574951172",
+            "latitude": "33.044586181640625"
+        }
+    },
+    {
+        "id": 116,
+        "name": "Cyprus",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": "EMEA",
+            "fifa": "CYP",
+            "iso": "CYP",
+            "longitude": "33.486717224121094",
+            "latitude": "35.11473846435547"
+        }
+    },
+    {
+        "id": 119,
+        "name": "Georgia",
+        "extra": {
+            "continent": "Asia",
+            "sub_region": "Western Asia",
+            "world_region": "EMEA",
+            "fifa": "GEO",
+            "iso": "GEO",
+            "longitude": "43.3713615",
+            "latitude": "42.3207845"
+        }
+    },
+    {
+        "id": 122,
+        "name": "Kosovo",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": null,
+            "fifa": null,
+            "iso": "UNK",
+            "longitude": null,
+            "latitude": null
+        }
+    },
+    {
+        "id": 125,
+        "name": "Greece",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Southern Europe",
+            "world_region": "EMEA",
+            "fifa": "GRE",
+            "iso": "GRC",
+            "longitude": "21.897409439086914",
+            "latitude": "39.68437194824219"
+        }
+    },
+    {
+        "id": 143,
+        "name": "Austria",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Western Europe",
+            "world_region": "EMEA",
+            "fifa": "AUT",
+            "iso": "AUT",
+            "longitude": "14.14021110534668",
+            "latitude": "47.58843994140625"
+        }
+    },
+    {
+        "id": 146,
+        "name": "South Africa",
+        "extra": {
+            "continent": "Africa",
+            "sub_region": "Southern Africa",
+            "world_region": "EMEA",
+            "fifa": "RSA",
+            "iso": "ZAF",
+            "longitude": "25.06287956237793",
+            "latitude": "-29.046184539794922"
+        }
+    },
+    {
+        "id": 155,
+        "name": "Romania",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": "EMEA",
+            "fifa": "ROU",
+            "iso": "ROU",
+            "longitude": "25.005935668945312",
+            "latitude": "45.83774185180664"
+        }
+    },
+    {
+        "id": 158,
+        "name": "Uruguay",
+        "extra": {
+            "continent": "Americas",
+            "sub_region": "South America",
+            "world_region": "AMER",
+            "fifa": "URU",
+            "iso": "URY",
+            "longitude": "-56.055908203125",
+            "latitude": "-32.96965408325195"
+        }
+    },
+    {
+        "id": 200,
+        "name": "Senegal",
+        "extra": {
+            "continent": "Africa",
+            "sub_region": "Western Africa",
+            "world_region": "EMEA",
+            "fifa": "SEN",
+            "iso": "SEN",
+            "longitude": "-14.531643867492676",
+            "latitude": "14.36251163482666"
+        }
+    },
+    {
+        "id": 212,
+        "name": "Belarus",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": "EMEA",
+            "fifa": "BLR",
+            "iso": "BLR",
+            "longitude": "28.054094314575195",
+            "latitude": "53.54347229003906"
+        }
+    },
+    {
+        "id": 224,
+        "name": "Bulgaria",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": "EMEA",
+            "fifa": "BUL",
+            "iso": "BGR",
+            "longitude": "25.283733367919922",
+            "latitude": "42.7661018371582"
+        }
+    },
+    {
+        "id": 227,
+        "name": "Russia",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": "EMEA",
+            "fifa": "RUS",
+            "iso": "RUS",
+            "longitude": "103.75398254394531",
+            "latitude": "63.125186920166016"
+        }
+    },
+    {
+        "id": 245,
+        "name": "Czech Republic",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": "EMEA",
+            "fifa": "CZE",
+            "iso": "CZE",
+            "longitude": "15.331501007080078",
+            "latitude": "49.739105224609375"
+        }
+    },
+    {
+        "id": 251,
+        "name": "Italy",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Southern Europe",
+            "world_region": "EMEA",
+            "fifa": "ITA",
+            "iso": "ITA",
+            "longitude": "12.493823051452637",
+            "latitude": "42.7669792175293"
+        }
+    },
+    {
+        "id": 266,
+        "name": "Croatia",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Southern Europe",
+            "world_region": "EMEA",
+            "fifa": "CRO",
+            "iso": "HRV",
+            "longitude": "15.734503746032715",
+            "latitude": "45.444305419921875"
+        }
+    },
+    {
+        "id": 275,
+        "name": "Venezuela",
+        "extra": {
+            "continent": "Americas",
+            "sub_region": "South America",
+            "world_region": "AMER",
+            "fifa": "VEN",
+            "iso": "VEN",
+            "longitude": "-66.14541625976562",
+            "latitude": "7.665388584136963"
+        }
+    },
+    {
+        "id": 296,
+        "name": "Serbia",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Southern Europe",
+            "world_region": "EMEA",
+            "fifa": "SRB",
+            "iso": "SRB",
+            "longitude": "20.797958374023438",
+            "latitude": "44.23297119140625"
+        }
+    },
+    {
+        "id": 311,
+        "name": "New Caledonia",
+        "extra": {
+            "continent": "Oceania",
+            "sub_region": "Melanesia",
+            "world_region": "APAC",
+            "fifa": "NCL",
+            "iso": "NCL",
+            "longitude": "165.298583984375",
+            "latitude": "-21.31782341003418"
+        }
+    },
+    {
+        "id": 320,
+        "name": "Denmark",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Northern Europe",
+            "world_region": "EMEA",
+            "fifa": "DEN",
+            "iso": "DNK",
+            "longitude": "9.555907249450684",
+            "latitude": "56.10176086425781"
+        }
+    },
+    {
+        "id": 338,
+        "name": "Peru",
+        "extra": {
+            "continent": "Americas",
+            "sub_region": "South America",
+            "world_region": "AMER",
+            "fifa": "PER",
+            "iso": "PER",
+            "longitude": "-74.422119140625",
+            "latitude": "-9.212532997131348"
+        }
+    },
+    {
+        "id": 353,
+        "name": "Colombia",
+        "extra": {
+            "continent": "Americas",
+            "sub_region": "South America",
+            "world_region": "AMER",
+            "fifa": "COL",
+            "iso": "COL",
+            "longitude": "-73.27796936035156",
+            "latitude": "3.9976072311401367"
+        }
+    },
+    {
+        "id": 401,
+        "name": "Slovakia",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Eastern Europe",
+            "world_region": "EMEA",
+            "fifa": "SVK",
+            "iso": "SVK",
+            "longitude": "19.48488998413086",
+            "latitude": "48.70748519897461"
+        }
+    },
+    {
+        "id": 404,
+        "name": "Turkey",
+        "extra": {
+            "continent": "Asia",
+            "sub_region": "Western Asia",
+            "world_region": "EMEA",
+            "fifa": "TUR",
+            "iso": "TUR",
+            "longitude": "34.93033981323242",
+            "latitude": "39.05101013183594"
+        }
+    },
+    {
+        "id": 455,
+        "name": "Republic of Ireland",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Northern Europe",
+            "world_region": "EMEA",
+            "fifa": "IRL",
+            "iso": "IRL",
+            "longitude": "-8.196102142333984",
+            "latitude": "53.1827278137207"
+        }
+    },
+    {
+        "id": 458,
+        "name": "Mexico",
+        "extra": {
+            "continent": "Americas",
+            "sub_region": "Central America",
+            "world_region": "AMER",
+            "fifa": "MEX",
+            "iso": "MEX",
+            "longitude": "-102.6333999633789",
+            "latitude": "23.909093856811523"
+        }
+    },
+    {
+        "id": 459,
+        "name": "Ecuador",
+        "extra": {
+            "continent": "Americas",
+            "sub_region": "South America",
+            "world_region": "AMER",
+            "fifa": "ECU",
+            "iso": "ECU",
+            "longitude": "-78.87104034423828",
+            "latitude": "-1.421528935432434"
+        }
+    },
+    {
+        "id": 462,
+        "name": "England",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Northern Europe",
+            "world_region": "EMEA",
+            "fifa": "ENG,NIR,SCO,WAL",
+            "iso": "GBR",
+            "longitude": "-2.2125117778778076",
+            "latitude": "54.56088638305664"
+        }
+    },
+    {
+        "id": 468,
+        "name": "Ghana",
+        "extra": {
+            "continent": "Africa",
+            "sub_region": "Western Africa",
+            "world_region": "EMEA",
+            "fifa": "GHA",
+            "iso": "GHA",
+            "longitude": "-1.2043862342834473",
+            "latitude": "7.921330451965332"
+        }
+    },
+    {
+        "id": 479,
+        "name": "Japan",
+        "extra": {
+            "continent": "Asia",
+            "sub_region": "Eastern Asia",
+            "world_region": "APAC",
+            "fifa": "JPN",
+            "iso": "JPN",
+            "longitude": "139.0772705078125",
+            "latitude": "36.281646728515625"
+        }
+    },
+    {
+        "id": 488,
+        "name": "Iran",
+        "extra": {
+            "continent": "Asia",
+            "sub_region": "Southern Asia",
+            "world_region": "EMEA",
+            "fifa": "IRN",
+            "iso": "IRN",
+            "longitude": "54.2942008972168",
+            "latitude": "32.50077819824219"
+        }
+    },
+    {
+        "id": 491,
+        "name": "Northern Ireland",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Northern Europe",
+            "world_region": "EMEA",
+            "fifa": "IRL",
+            "iso": "IRL",
+            "longitude": "-8.196102142333984",
+            "latitude": "53.1827278137207"
+        }
+    },
+    {
+        "id": 507,
+        "name": "Bosnia and Herzegovina",
+        "extra": {
+            "continent": "Europe",
+            "sub_region": "Southern Europe",
+            "world_region": "EMEA",
+            "fifa": "BIH",
+            "iso": "BIH",
+            "longitude": "17.790241241455078",
+            "latitude": "44.16533279418945"
+        }
+    },
+    {
+        "id": 515,
+        "name": "Wales",
+        "extra": null
+    }
+];
+//# sourceMappingURL=countries.js.map
+
+/***/ }),
+
+/***/ 307:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaPartidosPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_fixtures__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_equiposMonks__ = __webpack_require__(107);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ListaPartidosPage = /** @class */ (function () {
+    function ListaPartidosPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.junio = __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__["a" /* Fechas */].Junio;
+        this.julio = __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__["a" /* Fechas */].Julio;
+        this.mes = this.junio;
+        this.fixture = __WEBPACK_IMPORTED_MODULE_3__app_config_fixtures__["a" /* Fixtures */];
+        this.equipos = __WEBPACK_IMPORTED_MODULE_4__app_config_equiposMonks__["a" /* EquiposMonks */];
+    }
+    ListaPartidosPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ListaPartidosPage');
+    };
+    ListaPartidosPage.prototype.getDatesBetween = function () {
+        // getDatesBetween(from: Date, to: Date) : Date[] {
+        var from = new Date(2018, 6, 14);
+        console.log('from', from);
+        var to = new Date(2018, 7, 15);
+        var year = from.getFullYear();
+        var month = from.getMonth();
+        var day = from.getDate();
+        var dates = [from];
+        while (dates[dates.length - 1] < to) {
+            var dia = new Date(year, month, ++day);
+            console.log('Dia generado', dia);
+            dates.push(dia);
+        }
+        // return dates;
+    };
+    ListaPartidosPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-lista-partidos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\lista-partidos\lista-partidos.html"*/'<div>\n  <ion-segment [(ngModel)]="mes" color="light" mode="ios">\n    <ion-segment-button *ngFor ="let dia of mes" value="\'ju\' + {{dia}}">\n      {{dia}}\n    </ion-segment-button>\n  </ion-segment>\n</div>\n<div>\n  <button ion-button (onclick)="getDatesBetween()" >Ver</button>\n</div>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\lista-partidos\lista-partidos.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], ListaPartidosPage);
+    return ListaPartidosPage;
+}());
+
+//# sourceMappingURL=lista-partidos.js.map
+
+/***/ }),
+
+/***/ 308:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Fechas; });
+var Fechas = { "Junio": [
+        14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30
+    ],
+    "Julio": [
+        1, 2, 3, 6, 7, 10, 11, 14, 15
+    ]
+};
+//# sourceMappingURL=fechas.js.map
+
+/***/ }),
+
+/***/ 309:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3503,15 +4997,14 @@ var Fixtures = [
 
 /***/ }),
 
-/***/ 208:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadiosPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_venues__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_config__ = __webpack_require__(305);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3524,1519 +5017,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var EstadiosPage = /** @class */ (function () {
-    function EstadiosPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.estadiums = __WEBPACK_IMPORTED_MODULE_2__app_config_venues__["a" /* Venues */];
+var RestServiceProvider = /** @class */ (function () {
+    function RestServiceProvider(http) {
+        this.http = http;
+        console.log('RestServiceProvider Provider');
     }
-    EstadiosPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad EstadiosPage');
+    RestServiceProvider.prototype.getSquad = function (team) {
+        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["e" /* URL_SQUAD */] + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["a" /* TEMPORADA */] + '/team/' + team + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
+        console.log('Ver SQUAD Url Rest', url);
+        return this.http.get(url);
     };
-    /**
-     * Funcion para poner en PUSH las ubicaciones
-     */
-    EstadiosPage.prototype.pushUbicaciones = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */]);
+    RestServiceProvider.prototype.getJugador = function (id_jug) {
+        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["d" /* URL_PLAYERS */] + id_jug + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
+        console.log('Ver Jugador Url Rest', url);
+        return this.http.get(url);
     };
-    EstadiosPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-estadios',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Estadios</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg">\n  <ion-fab bottom right>\n    <button color="botones" ion-fab (click)="pushUbicaciones()">\n      <ion-icon name="pin"></ion-icon>\n    </button>\n  </ion-fab>\n  <div>\n    <ion-card *ngFor ="let campo of estadiums">\n      <ion-card-title text-center color="primary">\n        <h1>{{campo.name}}</h1>\n      </ion-card-title>\n      <img src="{{campo.image_path}}"/>\n      <ion-card-content>\n        <ion-grid text-left>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Ciudad: </ion-col>\n            <ion-col>{{campo.city}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Dirección: </ion-col>\n            <ion-col>{{campo.address}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Capacidad: </ion-col>\n            <ion-col>{{campo.capacity}} personas</ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card-content>\n    </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], EstadiosPage);
-    return EstadiosPage;
+    RestServiceProvider.prototype.getEquipo = function (id_equipo) {
+        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["g" /* URL_TEAMS */] + id_equipo + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
+        console.log('Ver TEAM Url Rest', url);
+        return this.http.get(url);
+    };
+    RestServiceProvider.prototype.getStandingGrupos = function () {
+        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["f" /* URL_STANDINGS */] + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["a" /* TEMPORADA */] + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
+        console.log('Ver TEAM Url Rest', url);
+        return this.http.get(url);
+    };
+    RestServiceProvider.prototype.getFixturesFromTo = function (fromD, toD) {
+        var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["c" /* URL_FIXTURES */] + fromD + '/' + toD + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
+        console.log('Ver FIXTURES Url Rest', url);
+        return this.http.get(url);
+    };
+    RestServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], RestServiceProvider);
+    return RestServiceProvider;
 }());
 
-//# sourceMappingURL=estadios.js.map
-
-/***/ }),
-
-/***/ 209:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadioGeoposPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_venues__ = __webpack_require__(104);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var EstadioGeoposPage = /** @class */ (function () {
-    function EstadioGeoposPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.estadiums = __WEBPACK_IMPORTED_MODULE_3__app_config_venues__["a" /* Venues */];
-    }
-    EstadioGeoposPage.prototype.ionViewDidLoad = function () {
-        setTimeout(this.loadMap.bind(this), 1000);
-        // this.loadMap();
-        console.log('ionViewDidLoad EstadioGeoposPage');
-    };
-    EstadioGeoposPage.prototype.loadMap = function () {
-        var _this = this;
-        console.log('Ingresando en loadMap');
-        // create a new map by passing HTMLElement
-        // let element: HTMLElement = document.getElementById('map_canvas');
-        var mapOptions = {
-            camera: {
-                target: {
-                    lat: 55.715765,
-                    lng: 37.5515217
-                },
-                zoom: 5,
-                tilt: 30
-            }
-        };
-        // Creacopn de Mapa
-        this.map = __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["a" /* GoogleMaps */].create('map_canvas', mapOptions);
-        console.log('Respuesta de Event', __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["b" /* GoogleMapsEvent */].MAP_READY);
-        this.map.one(__WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["b" /* GoogleMapsEvent */].MAP_READY)
-            .then(function () {
-            _this.cargarMarks();
-            console.log('Google Map esta listo', mapOptions);
-        })
-            .catch(function (error) {
-            console.log('Google Map no se cargo', error);
-        });
-    };
-    EstadioGeoposPage.prototype.cargarMarks = function () {
-        var _this = this;
-        this.estadiums.forEach(function (estadium) {
-            var position = new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["c" /* LatLng */](estadium.lat, estadium.lng);
-            var options = {
-                // icon: '#32db64',
-                icon: '#dec180',
-                title: estadium.name,
-                position: position
-            };
-            // let icon = rutaBase + this.estadiums[0].icon;
-            _this.map.addMarker(options)
-                .catch(function (error) {
-                console.log('Error en markers', error);
-            });
-        });
-    };
-    EstadioGeoposPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-estadio-geopos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadio-geopos\estadio-geopos.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Estadios Maps</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div id="map_canvas"></div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadio-geopos\estadio-geopos.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], EstadioGeoposPage);
-    return EstadioGeoposPage;
-}());
-
-//# sourceMappingURL=estadio-geopos.js.map
-
-/***/ }),
-
-/***/ 211:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipoPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jugadores_jugadores__ = __webpack_require__(212);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var EquipoPage = /** @class */ (function () {
-    function EquipoPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.equipos = __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__["a" /* EquiposMonks */];
-    }
-    EquipoPage.prototype.ionViewDidLoad = function () {
-        this.equipos = this.ordenarJson(this.equipos);
-        console.log('ionViewDidLoad EquipoPage');
-    };
-    EquipoPage.prototype.ordenarJson = function (items) {
-        items.sort(function (a, b) {
-            return a.name > b.name;
-        });
-        return items;
-    };
-    EquipoPage.prototype.getItems = function (ev) {
-        // set val to the value of the ev target
-        var val = ev.target.value;
-        // if the value is an empty string don't filter the items
-        if (val && val.trim() != '') {
-            this.equipos = this.equipos.filter(function (equipo) {
-                return (equipo.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
-            });
-        }
-    };
-    EquipoPage.prototype.jugadores = function (equipo, id) {
-        console.log('Equipo:', equipo, id);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__jugadores_jugadores__["a" /* JugadoresPage */], {
-            equipo_name: equipo,
-            equipo_id: id
-        });
-    };
-    EquipoPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-equipo',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\equipo\equipo.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Equipos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item-sliding *ngFor="let equipo of equipos">\n      <ion-item>\n        <ion-avatar item-start small>\n          <img src="{{equipo.logo_path}}">\n        </ion-avatar>\n        <h3>{{equipo.name}}</h3>\n        <ion-icon item-end name="swap"\n                  icon-only disabled small></ion-icon>\n      </ion-item>\n      <ion-item-options>\n        <!--<button ion-button color="primary" >Datos</button>-->\n        <button ion-button color="botones" (click)="jugadores(equipo.name, equipo.id)">Jugadores</button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n</ion-content>\n\n<ion-footer>\n  <ion-navbar color="primary">\n    <ion-searchbar (ionInput)="getItems($event)">\n    </ion-searchbar>\n  </ion-navbar>\n</ion-footer>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\equipo\equipo.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], EquipoPage);
-    return EquipoPage;
-}());
-
-//# sourceMappingURL=equipo.js.map
-
-/***/ }),
-
-/***/ 212:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JugadoresPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_countries__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__estadisticas_estadisticas__ = __webpack_require__(213);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var JugadoresPage = /** @class */ (function () {
-    function JugadoresPage(navCtrl, navParams, restService) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.restService = restService;
-        this.paises = __WEBPACK_IMPORTED_MODULE_2__app_config_countries__["a" /* Countries */];
-        this.eq_id = this.navParams.get('equipo_id');
-        this.eq_name = this.navParams.get('equipo_name');
-        this.getSquad(this.eq_id);
-    }
-    JugadoresPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad JugadoresPage');
-    };
-    JugadoresPage.prototype.getSquad = function (id_eq) {
-        var _this = this;
-        this.restService.getSquad(id_eq)
-            .subscribe(function (plantel) {
-            _this.squadJson = plantel['data'];
-            _this.getJugadoresEq(plantel['data']);
-            _this.datosJugadoresEq = plantel['data'];
-            console.log('JSON getSquad en subscribe - jugadores.ts', _this.datosJugadoresEq);
-            _this.squadLoaded = Promise.resolve(true);
-        });
-    };
-    JugadoresPage.prototype.getJugador = function (id_jug) {
-        var _this = this;
-        this.restService.getJugador(id_jug)
-            .subscribe(function (juRest) {
-            // console.log('JSON dentro de subscribe - jugador.ts',
-            //   JSON.stringify(juRest['data']));
-            _this.datosJugador = juRest['data'];
-            _this.jugadorLoaded = Promise.resolve(true);
-        });
-    };
-    JugadoresPage.prototype.getJugadoresEq = function (squad) {
-        var _this = this;
-        squad.forEach(function (player) {
-            var datosPlayer;
-            _this.restService.getJugador(player['player_id'])
-                .subscribe(function (juRest) {
-                datosPlayer = juRest['data'];
-                // player['datoActual'] = datosPlayer;
-                //   player.datoActual = datosPlayer;
-                Object.assign(player, datosPlayer);
-                _this.getTeam(datosPlayer['player_id'], player);
-                console.log('En squad se encontro el jugdor', datosPlayer['player_id']);
-            }, function (error) {
-                console.log('error al encontrar jugadores por equipo');
-            });
-        });
-    };
-    JugadoresPage.prototype.getTeam = function (id_team, player) {
-        var _this = this;
-        this.restService.getEquipo(id_team)
-            .subscribe(function (teamRest) {
-            // console.log('JSON dentro de subscribe - jugador.ts',
-            //   JSON.stringify(juRest['data']));
-            var dato = teamRest['data'];
-            _this.eq_jug_name = dato.name;
-            _this.eq_img_path = dato.logo_path;
-            player.equipo_origen = _this.eq_jug_name;
-            player.equipo_logo_path = _this.eq_img_path;
-            _this.paises.forEach(function (pais) {
-                if (pais.id === dato.country_id)
-                    player.equipo_pais_name = pais.name;
-            });
-            console.log('Datos equipo actual', _this.eq_jug_name, _this.eq_img_path);
-            _this.jugadorLoaded = Promise.resolve(true);
-        }, function (error) {
-            _this.eq_jug_name = null;
-            _this.eq_img_path = null;
-            console.log('error al encontrar equipo');
-        });
-    };
-    JugadoresPage.prototype.openEstadisticas = function (jugador) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__estadisticas_estadisticas__["a" /* EstadisticasPage */], {
-            datos_jugador: jugador,
-            eq_name: this.eq_name
-        });
-    };
-    JugadoresPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-jugadores',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\jugadores\jugadores.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>{{eq_name}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-slides>\n    <ion-slide *ngFor="let jugador of datosJugadoresEq">\n      <ion-title text-center text-wrap>{{jugador[\'fullname\']}}</ion-title>\n      <ion-card>\n        <ion-fab top right >\n          <button ion-fab mini color="botones" (click)="openEstadisticas(jugador)" >\n            <ion-icon name="stats"></ion-icon>\n          </button>\n        </ion-fab>\n        <div class="centrado">\n          <img src="{{jugador[\'image_path\']}}">\n        </div>\n        <div padding-vertical>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>País de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'birthcountry\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Fecha de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'birthdate\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Lugar de Nacimiento:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'birthplace\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-14 text-right>\n              <h2 style="font-weight: bold;" no-margin no-border>Nacionalidad:</h2>\n            </ion-col>\n            <ion-col col-10 text-left>{{jugador[\'nationality\']}}</ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-12 text-center>\n              <h2 style="font-weight: bold;" no-margin no-border>Estatura:</h2>\n            </ion-col>\n            <ion-col col-12 text-center>\n              <h2 style="font-weight: bold;" no-margin no-border>Peso:</h2>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-12 text-center>{{jugador[\'height\']}}</ion-col>\n            <ion-col col-12 text-center>{{jugador[\'weight\']}}</ion-col>\n          </ion-row>\n        </div>\n      </ion-card>\n      <ion-card *ngIf="jugador[\'equipo_origen\']">\n        <ion-title>Equipo de Origen</ion-title>\n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="{{jugador[\'equipo_logo_path\']}}">\n          </ion-thumbnail>\n          <h2 style="font-weight: bold;">Equipo</h2>{{jugador[\'equipo_origen\']}}\n          <h2 style="font-weight: bold;">Pais</h2>{{jugador[\'equipo_pais_name\']}}\n        </ion-item>\n      </ion-card>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\jugadores\jugadores.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__["a" /* RestServiceProvider */]])
-    ], JugadoresPage);
-    return JugadoresPage;
-}());
-
-//# sourceMappingURL=jugadores.js.map
-
-/***/ }),
-
-/***/ 213:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadisticasPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var EstadisticasPage = /** @class */ (function () {
-    function EstadisticasPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.jugador = this.navParams.get('datos_jugador');
-        this.seleccion = this.navParams.get('eq_name');
-    }
-    EstadisticasPage.prototype.ionViewDidLoad = function () {
-        console.log('Ver informacion recibida por parametro', this.jugador);
-        console.log('ionViewDidLoad EstadisticasPage');
-    };
-    EstadisticasPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-estadisticas',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadisticas\estadisticas.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <ion-title text-center>Estadísticas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-list no-lines>\n      <ion-item>\n        <ion-avatar item-start>\n          <img src="{{jugador[\'image_path\']}}">\n        </ion-avatar>\n        <h2 text-center>{{jugador[\'fullname\']}}</h2>\n        <h2 text-center>{{seleccion}}</h2>\n        <h3 text-center *ngIf="jugador[\'number\']">{{\'Número: \' + jugador[\'number\']}}</h3>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n  <div padding margin-vertical="5px">\n    <ion-grid>\n      <ion-row>\n        <ion-col class="header" text-center>\n          <h3 ion-text no-margin\n              no-padding\n              color="primary">Datos</h3>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Apariciones</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'appearences\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Minutos jugados</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'minutes\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Goles</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'goals\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Asistencias</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'assists\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Fueras de Juego</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'lineups\']}}</ion-col>\n      </ion-row>\n    </ion-grid>\n                <hr>\n    <ion-grid>\n      <ion-row>\n        <ion-col class="header" text-center>\n          <h3 ion-text no-margin\n              no-padding\n              color="primary">Tarjetas</h3>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Amarillas</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'yellowcards\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Dobles Amarillas</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'yellowred\']}}</ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-16>Rojas</ion-col>\n        <ion-col col-8 text-center>{{jugador[\'redcards\']}}</ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadisticas\estadisticas.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], EstadisticasPage);
-    return EstadisticasPage;
-}());
-
-//# sourceMappingURL=estadisticas.js.map
-
-/***/ }),
-
-/***/ 214:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GruposPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(105);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var GruposPage = /** @class */ (function () {
-    function GruposPage(navCtrl, navParams, restService) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.restService = restService;
-        this.getStandingGrupos();
-    }
-    GruposPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad GruposPage');
-    };
-    GruposPage.prototype.getStandingGrupos = function () {
-        var _this = this;
-        this.restService.getStandingGrupos()
-            .subscribe(function (puestosAllGroup) {
-            _this.puestosTodosGrupos = puestosAllGroup['data'];
-            console.log('JSON getAllGroups en subscribe - grupos.ts', _this.puestosTodosGrupos);
-            _this.groupLoaded = Promise.resolve(true);
-        });
-    };
-    GruposPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-grupos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\grupos\grupos.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Fase de Grupos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	<br>\n  <div no-padding no-margin>\n    <ion-list *ngFor="let allGroup of puestosTodosGrupos">\n      <h4 ion-text text-center color="primary">\n        {{allGroup[\'name\']}}\n      </h4>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-9 class="header" text-center></ion-col>\n          <ion-col col-8 class="header" text-center>Partidos</ion-col>\n          <ion-col col-5 class="header" text-center>Goles</ion-col>\n          <ion-col col-2 class="header" text-center></ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-9 class="header" text-center>Equipos</ion-col>\n          <ion-col col-2 class="header" text-center>J</ion-col>\n          <ion-col col-2 class="header" text-center>G</ion-col>\n          <ion-col col-2 class="header" text-center>E</ion-col>\n          <ion-col col-2 class="header" text-center>P</ion-col>\n          <ion-col col-5 class="header" text-center>F:C D</ion-col>\n          <ion-col col-2 class="header" text-center>P</ion-col>\n        </ion-row>\n        <ion-row *ngFor="let puestos of allGroup.standings.data">\n          <ion-col col-9>{{puestos.team_name}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.games_played}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.won}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.draw}}</ion-col>\n          <ion-col col-2 text-center>{{puestos.overall.lost}}</ion-col>\n          <ion-col col-5 text-center>\n            {{puestos.overall.goals_scored + \':\' + puestos.overall.goals_against + \' \' + puestos.total.goal_difference}}\n          </ion-col>\n          <ion-col col-2 text-center>{{puestos.total.points}}</ion-col>\n        </ion-row>\n      </ion-grid>\n      <br>\n    </ion-list>\n  </div>\n  <br><br>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\grupos\grupos.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */]])
-    ], GruposPage);
-    return GruposPage;
-}());
-
-//# sourceMappingURL=grupos.js.map
-
-/***/ }),
-
-/***/ 215:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IniciarSesionPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var IniciarSesionPage = /** @class */ (function () {
-    function IniciarSesionPage(navCtrl, navParams, autenticacionService, alertaCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.autenticacionService = autenticacionService;
-        this.alertaCtrl = alertaCtrl;
-    }
-    IniciarSesionPage.prototype.iniciarSesion = function (formLogin) {
-        var _this = this;
-        this.autenticacionService.iniciarSesion(formLogin.value.correo, formLogin.value.clave)
-            .then(function (info) { return console.log(info); })
-            .catch(function (error) {
-            var alerta = _this.alertaCtrl.create({
-                title: 'ERROR DE INICIO DE SESION',
-                subTitle: 'Revisar Usuario y Contraseña',
-                message: 'El Correo o Contraseña no son correctos' + error,
-                buttons: ['Ok']
-            });
-            alerta.present();
-        });
-    };
-    IniciarSesionPage.prototype.registrarUsuario = function (formulario) {
-        var _this = this;
-        this.autenticacionService.registrarUsuario(formulario.value.correo, formulario.value.clave)
-            .then(function (info) { return console.log(info); })
-            .catch(function (error) {
-            var alerta = _this.alertaCtrl.create({
-                title: 'ERROR DE INICIO DE SESION',
-                subTitle: 'Error en autenticación',
-                message: 'Error en autenticación' + error,
-                buttons: ['Ok']
-            });
-            alerta.present();
-        });
-    };
-    IniciarSesionPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-iniciar-sesion',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\iniciar-sesion\iniciar-sesion.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Inicio de Sesión</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="background">\n  <ion-col>\n    <ion-row>\n      <ion-title text-center>\n        <h3 ion-text color="botones"\n            no-margin no-padding no-border>\n          World Cupbet Rusia 2018\n        </h3>\n      </ion-title>\n    </ion-row>\n  </ion-col>\n  <form #formLogin="ngForm">\n    <ion-col>\n      <ion-row>\n        <ion-item>\n          <ion-label stacked>Correo Electrónico</ion-label>\n          <ion-input type="email"\n                     required\n                     name="correo"\n                     ngModel\n                     placeholder="Correo Electrónico"></ion-input>\n        </ion-item>\n      </ion-row>\n      <ion-row>\n        <ion-item>\n          <ion-label stacked>Contraseña</ion-label>\n          <ion-input type="password"\n                     required\n                     name="clave"\n                     ngModel\n                     [minlength]="8"\n                      placeholder="Contraseña"></ion-input>\n        </ion-item>\n      </ion-row>\n      <ion-row>\n        <button ion-button block color="botones"\n                (click)="iniciarSesion(formLogin)">\n          INICIAR SESION\n        </button>\n      </ion-row>\n      <ion-row>\n        <button ion-button block color="danger"\n                (click)="registrarUsuario(formLogin)">\n          REGISTRARSE\n        </button>\n      </ion-row>\n    </ion-col>\n  </form>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\iniciar-sesion\iniciar-sesion.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
-    ], IniciarSesionPage);
-    return IniciarSesionPage;
-}());
-
-//# sourceMappingURL=iniciar-sesion.js.map
-
-/***/ }),
-
-/***/ 218:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(239);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 239:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_google_maps__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_rest_service_rest_service__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__ = __webpack_require__(213);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var AppModule = /** @class */ (function () {
-    function AppModule() {
-    }
-    AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__["a" /* PartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__["a" /* EstadiosPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__["a" /* GruposPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__["a" /* EquipoPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__["a" /* JugadoresPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__["a" /* BetsPage */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
-                    links: []
-                }),
-            ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__["a" /* PartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__["a" /* EstadiosPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__["a" /* GruposPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__["a" /* EquipoPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__["a" /* JugadoresPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__["a" /* BetsPage */]
-            ],
-            providers: [
-                __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__["a" /* SplashScreen */],
-                __WEBPACK_IMPORTED_MODULE_7__ionic_native_google_maps__["a" /* GoogleMaps */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_8__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_9__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */]
-            ]
-        })
-    ], AppModule);
-    return AppModule;
-}());
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 293:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_partidos_partidos__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_estadios_estadios__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_equipo_equipo__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_grupos_grupos__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_firebase__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-var MyApp = /** @class */ (function () {
-    function MyApp(platform, statusBar, splashScreen, autenticacionService) {
-        this.platform = platform;
-        this.statusBar = statusBar;
-        this.splashScreen = splashScreen;
-        this.autenticacionService = autenticacionService;
-        this.usuarioConectado = false;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
-        this.initializeApp();
-        // used for an example of ngFor and navigation
-        this.pages = [
-            { title: 'Inicio', icono: 'home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-            { title: 'Partidos', icono: 'football', component: __WEBPACK_IMPORTED_MODULE_5__pages_partidos_partidos__["a" /* PartidosPage */] },
-            { title: 'Estadios', icono: 'map', component: __WEBPACK_IMPORTED_MODULE_6__pages_estadios_estadios__["a" /* EstadiosPage */] },
-            { title: 'Equipos', icono: 'people', component: __WEBPACK_IMPORTED_MODULE_7__pages_equipo_equipo__["a" /* EquipoPage */] },
-            { title: 'Fase de Grupos', icono: 'globe', component: __WEBPACK_IMPORTED_MODULE_8__pages_grupos_grupos__["a" /* GruposPage */] },
-        ];
-    }
-    MyApp.prototype.initializeApp = function () {
-        var _this = this;
-        /**
-         * Firebase Conexión
-         */
-        __WEBPACK_IMPORTED_MODULE_10_firebase___default.a.initializeApp({
-            apiKey: "AIzaSyCzW8yPu3Dlztw_A4uxjF26NoAsIKMP_OM",
-            authDomain: "worldcupbet-c1705.firebaseapp.com",
-            databaseURL: "https://worldcupbet-c1705.firebaseio.com",
-            projectId: "worldcupbet-c1705",
-            storageBucket: "worldcupbet-c1705.appspot.com",
-            messagingSenderId: "1043577611235"
-        });
-        /**
-         * Verificar el estado de la sesión
-         */
-        __WEBPACK_IMPORTED_MODULE_10_firebase___default.a.auth().onAuthStateChanged(function (usuario) {
-            if (usuario != null) {
-                _this.usuarioConectado = true;
-                _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */]);
-            }
-            else {
-                _this.usuarioConectado = false;
-                // this.contenido.setRoot(this.iniciarSesion);
-            }
-        });
-        this.platform.ready().then(function () {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            _this.statusBar.styleDefault();
-            _this.splashScreen.hide();
-        });
-    };
-    MyApp.prototype.openPage = function (page) {
-        // Reset the content nav to have just this page
-        // we wouldn't want the back button to show in this scenario
-        this.nav.setRoot(page.component);
-    };
-    MyApp.prototype.openPageLogin = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_9__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */]);
-    };
-    MyApp.prototype.terminarSesion = function () {
-        this.autenticacionService.terminarSesion();
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
-    ], MyApp.prototype, "nav", void 0);
-    MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\apptest\worldcupbet\src\app\app.html"*/'<ion-menu [content]="content">\n  <ion-header no-border no-margin>\n    <ion-toolbar color="primary">\n      <ion-title text-center>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content class="menubg">\n    <ion-list no-lines>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon name="{{p.icono}}" item-start></ion-icon>{{p.title}}\n      </button>\n      <hr>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngIf="usuarioConectado"\n              (click)="openPageBets()">\n        <ion-icon name="cash" item-start></ion-icon>\n        Participa!!!\n      </button>\n      <button menuClose ion-item\n              detail-none color="botones"\n              *ngIf="!usuarioConectado"\n              (click)="openPageLogin()">\n        <ion-icon name="log-in" item-start></ion-icon>\n        Iniciar Sesión</button>\n      <button menuClose ion-item\n              detail-none color="resaltar"\n              *ngIf="usuarioConectado"\n              (click)="terminarSesion()">\n        <ion-icon name="log-out"\n                  item-start></ion-icon>\n        Terminar Sesión</button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\app\app.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_11__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */]])
-    ], MyApp);
-    return MyApp;
-}());
-
-//# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 294:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Countries; });
-var Countries = [
-    {
-        "id": 2,
-        "name": "Poland",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": "EMEA",
-            "fifa": "POL",
-            "iso": "POL",
-            "longitude": "19.37775993347168",
-            "latitude": "52.147850036621094"
-        }
-    },
-    {
-        "id": 5,
-        "name": "Brazil",
-        "extra": {
-            "continent": "Americas",
-            "sub_region": "South America",
-            "world_region": "AMER",
-            "fifa": "BRA",
-            "iso": "BRA",
-            "longitude": "-52.97311782836914",
-            "latitude": "-10.81045150756836"
-        }
-    },
-    {
-        "id": 11,
-        "name": "Germany",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Western Europe",
-            "world_region": "EMEA",
-            "fifa": "GER",
-            "iso": "DEU",
-            "longitude": "10.382203102111816",
-            "latitude": "51.20246505737305"
-        }
-    },
-    {
-        "id": 17,
-        "name": "France",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Western Europe",
-            "world_region": "EMEA",
-            "fifa": "FRA",
-            "iso": "FRA",
-            "longitude": "2.3382623195648193",
-            "latitude": "46.63727951049805"
-        }
-    },
-    {
-        "id": 20,
-        "name": "Portugal",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Southern Europe",
-            "world_region": "EMEA",
-            "fifa": "POR",
-            "iso": "PRT",
-            "longitude": "-8.009422302246094",
-            "latitude": "39.64200973510742"
-        }
-    },
-    {
-        "id": 23,
-        "name": "Côte d'Ivoire",
-        "extra": {
-            "continent": "Africa",
-            "sub_region": "Western Africa",
-            "world_region": "EMEA",
-            "fifa": "CIV",
-            "iso": "CIV",
-            "longitude": "-5.552574634552002",
-            "latitude": "7.598755359649658"
-        }
-    },
-    {
-        "id": 26,
-        "name": "Mali",
-        "extra": {
-            "continent": "Africa",
-            "sub_region": "Western Africa",
-            "world_region": "EMEA",
-            "fifa": "MLI",
-            "iso": "MLI",
-            "longitude": "-3.5273818969726562",
-            "latitude": "17.35776710510254"
-        }
-    },
-    {
-        "id": 32,
-        "name": "Spain",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Southern Europe",
-            "world_region": "EMEA",
-            "fifa": "ESP",
-            "iso": "ESP",
-            "longitude": "-3.550692558288574",
-            "latitude": "40.396026611328125"
-        }
-    },
-    {
-        "id": 38,
-        "name": "Netherlands",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Western Europe",
-            "world_region": "EMEA",
-            "fifa": "NED",
-            "iso": "NLD",
-            "longitude": "5.5281572341918945",
-            "latitude": "52.34225845336914"
-        }
-    },
-    {
-        "id": 41,
-        "name": "Europe",
-        "extra": null
-    },
-    {
-        "id": 44,
-        "name": "Argentina",
-        "extra": {
-            "continent": "Americas",
-            "sub_region": "South America",
-            "world_region": "AMER",
-            "fifa": "ARG",
-            "iso": "ARG",
-            "longitude": "-64.85450744628906",
-            "latitude": "-37.071964263916016"
-        }
-    },
-    {
-        "id": 47,
-        "name": "Sweden",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Northern Europe",
-            "world_region": "EMEA",
-            "fifa": "SWE",
-            "iso": "SWE",
-            "longitude": "16.798059463500977",
-            "latitude": "62.67497253417969"
-        }
-    },
-    {
-        "id": 62,
-        "name": "Switzerland",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Western Europe",
-            "world_region": "EMEA",
-            "fifa": "SUI",
-            "iso": "CHE",
-            "longitude": "8.222854614257812",
-            "latitude": "46.80379867553711"
-        }
-    },
-    {
-        "id": 80,
-        "name": "Chile",
-        "extra": {
-            "continent": "Americas",
-            "sub_region": "South America",
-            "world_region": "AMER",
-            "fifa": "CHI",
-            "iso": "CHL",
-            "longitude": "-71.67467498779297",
-            "latitude": "-35.78622817993164"
-        }
-    },
-    {
-        "id": 86,
-        "name": "Ukraine",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": "EMEA",
-            "fifa": "UKR",
-            "iso": "UKR",
-            "longitude": "31.47578239440918",
-            "latitude": "48.92656326293945"
-        }
-    },
-    {
-        "id": 98,
-        "name": "Australia",
-        "extra": {
-            "continent": "Oceania",
-            "sub_region": "Australia and New Zealand",
-            "world_region": "APAC",
-            "fifa": "AUS",
-            "iso": "AUS",
-            "longitude": "134.50411987304688",
-            "latitude": "-25.585241317749023"
-        }
-    },
-    {
-        "id": 107,
-        "name": "Iraq",
-        "extra": {
-            "continent": "Asia",
-            "sub_region": "Western Asia",
-            "world_region": "EMEA",
-            "fifa": "IRQ",
-            "iso": "IRQ",
-            "longitude": "43.77495574951172",
-            "latitude": "33.044586181640625"
-        }
-    },
-    {
-        "id": 116,
-        "name": "Cyprus",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": "EMEA",
-            "fifa": "CYP",
-            "iso": "CYP",
-            "longitude": "33.486717224121094",
-            "latitude": "35.11473846435547"
-        }
-    },
-    {
-        "id": 119,
-        "name": "Georgia",
-        "extra": {
-            "continent": "Asia",
-            "sub_region": "Western Asia",
-            "world_region": "EMEA",
-            "fifa": "GEO",
-            "iso": "GEO",
-            "longitude": "43.3713615",
-            "latitude": "42.3207845"
-        }
-    },
-    {
-        "id": 122,
-        "name": "Kosovo",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": null,
-            "fifa": null,
-            "iso": "UNK",
-            "longitude": null,
-            "latitude": null
-        }
-    },
-    {
-        "id": 125,
-        "name": "Greece",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Southern Europe",
-            "world_region": "EMEA",
-            "fifa": "GRE",
-            "iso": "GRC",
-            "longitude": "21.897409439086914",
-            "latitude": "39.68437194824219"
-        }
-    },
-    {
-        "id": 143,
-        "name": "Austria",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Western Europe",
-            "world_region": "EMEA",
-            "fifa": "AUT",
-            "iso": "AUT",
-            "longitude": "14.14021110534668",
-            "latitude": "47.58843994140625"
-        }
-    },
-    {
-        "id": 146,
-        "name": "South Africa",
-        "extra": {
-            "continent": "Africa",
-            "sub_region": "Southern Africa",
-            "world_region": "EMEA",
-            "fifa": "RSA",
-            "iso": "ZAF",
-            "longitude": "25.06287956237793",
-            "latitude": "-29.046184539794922"
-        }
-    },
-    {
-        "id": 155,
-        "name": "Romania",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": "EMEA",
-            "fifa": "ROU",
-            "iso": "ROU",
-            "longitude": "25.005935668945312",
-            "latitude": "45.83774185180664"
-        }
-    },
-    {
-        "id": 158,
-        "name": "Uruguay",
-        "extra": {
-            "continent": "Americas",
-            "sub_region": "South America",
-            "world_region": "AMER",
-            "fifa": "URU",
-            "iso": "URY",
-            "longitude": "-56.055908203125",
-            "latitude": "-32.96965408325195"
-        }
-    },
-    {
-        "id": 200,
-        "name": "Senegal",
-        "extra": {
-            "continent": "Africa",
-            "sub_region": "Western Africa",
-            "world_region": "EMEA",
-            "fifa": "SEN",
-            "iso": "SEN",
-            "longitude": "-14.531643867492676",
-            "latitude": "14.36251163482666"
-        }
-    },
-    {
-        "id": 212,
-        "name": "Belarus",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": "EMEA",
-            "fifa": "BLR",
-            "iso": "BLR",
-            "longitude": "28.054094314575195",
-            "latitude": "53.54347229003906"
-        }
-    },
-    {
-        "id": 224,
-        "name": "Bulgaria",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": "EMEA",
-            "fifa": "BUL",
-            "iso": "BGR",
-            "longitude": "25.283733367919922",
-            "latitude": "42.7661018371582"
-        }
-    },
-    {
-        "id": 227,
-        "name": "Russia",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": "EMEA",
-            "fifa": "RUS",
-            "iso": "RUS",
-            "longitude": "103.75398254394531",
-            "latitude": "63.125186920166016"
-        }
-    },
-    {
-        "id": 245,
-        "name": "Czech Republic",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": "EMEA",
-            "fifa": "CZE",
-            "iso": "CZE",
-            "longitude": "15.331501007080078",
-            "latitude": "49.739105224609375"
-        }
-    },
-    {
-        "id": 251,
-        "name": "Italy",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Southern Europe",
-            "world_region": "EMEA",
-            "fifa": "ITA",
-            "iso": "ITA",
-            "longitude": "12.493823051452637",
-            "latitude": "42.7669792175293"
-        }
-    },
-    {
-        "id": 266,
-        "name": "Croatia",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Southern Europe",
-            "world_region": "EMEA",
-            "fifa": "CRO",
-            "iso": "HRV",
-            "longitude": "15.734503746032715",
-            "latitude": "45.444305419921875"
-        }
-    },
-    {
-        "id": 275,
-        "name": "Venezuela",
-        "extra": {
-            "continent": "Americas",
-            "sub_region": "South America",
-            "world_region": "AMER",
-            "fifa": "VEN",
-            "iso": "VEN",
-            "longitude": "-66.14541625976562",
-            "latitude": "7.665388584136963"
-        }
-    },
-    {
-        "id": 296,
-        "name": "Serbia",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Southern Europe",
-            "world_region": "EMEA",
-            "fifa": "SRB",
-            "iso": "SRB",
-            "longitude": "20.797958374023438",
-            "latitude": "44.23297119140625"
-        }
-    },
-    {
-        "id": 311,
-        "name": "New Caledonia",
-        "extra": {
-            "continent": "Oceania",
-            "sub_region": "Melanesia",
-            "world_region": "APAC",
-            "fifa": "NCL",
-            "iso": "NCL",
-            "longitude": "165.298583984375",
-            "latitude": "-21.31782341003418"
-        }
-    },
-    {
-        "id": 320,
-        "name": "Denmark",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Northern Europe",
-            "world_region": "EMEA",
-            "fifa": "DEN",
-            "iso": "DNK",
-            "longitude": "9.555907249450684",
-            "latitude": "56.10176086425781"
-        }
-    },
-    {
-        "id": 338,
-        "name": "Peru",
-        "extra": {
-            "continent": "Americas",
-            "sub_region": "South America",
-            "world_region": "AMER",
-            "fifa": "PER",
-            "iso": "PER",
-            "longitude": "-74.422119140625",
-            "latitude": "-9.212532997131348"
-        }
-    },
-    {
-        "id": 353,
-        "name": "Colombia",
-        "extra": {
-            "continent": "Americas",
-            "sub_region": "South America",
-            "world_region": "AMER",
-            "fifa": "COL",
-            "iso": "COL",
-            "longitude": "-73.27796936035156",
-            "latitude": "3.9976072311401367"
-        }
-    },
-    {
-        "id": 401,
-        "name": "Slovakia",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Eastern Europe",
-            "world_region": "EMEA",
-            "fifa": "SVK",
-            "iso": "SVK",
-            "longitude": "19.48488998413086",
-            "latitude": "48.70748519897461"
-        }
-    },
-    {
-        "id": 404,
-        "name": "Turkey",
-        "extra": {
-            "continent": "Asia",
-            "sub_region": "Western Asia",
-            "world_region": "EMEA",
-            "fifa": "TUR",
-            "iso": "TUR",
-            "longitude": "34.93033981323242",
-            "latitude": "39.05101013183594"
-        }
-    },
-    {
-        "id": 455,
-        "name": "Republic of Ireland",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Northern Europe",
-            "world_region": "EMEA",
-            "fifa": "IRL",
-            "iso": "IRL",
-            "longitude": "-8.196102142333984",
-            "latitude": "53.1827278137207"
-        }
-    },
-    {
-        "id": 458,
-        "name": "Mexico",
-        "extra": {
-            "continent": "Americas",
-            "sub_region": "Central America",
-            "world_region": "AMER",
-            "fifa": "MEX",
-            "iso": "MEX",
-            "longitude": "-102.6333999633789",
-            "latitude": "23.909093856811523"
-        }
-    },
-    {
-        "id": 459,
-        "name": "Ecuador",
-        "extra": {
-            "continent": "Americas",
-            "sub_region": "South America",
-            "world_region": "AMER",
-            "fifa": "ECU",
-            "iso": "ECU",
-            "longitude": "-78.87104034423828",
-            "latitude": "-1.421528935432434"
-        }
-    },
-    {
-        "id": 462,
-        "name": "England",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Northern Europe",
-            "world_region": "EMEA",
-            "fifa": "ENG,NIR,SCO,WAL",
-            "iso": "GBR",
-            "longitude": "-2.2125117778778076",
-            "latitude": "54.56088638305664"
-        }
-    },
-    {
-        "id": 468,
-        "name": "Ghana",
-        "extra": {
-            "continent": "Africa",
-            "sub_region": "Western Africa",
-            "world_region": "EMEA",
-            "fifa": "GHA",
-            "iso": "GHA",
-            "longitude": "-1.2043862342834473",
-            "latitude": "7.921330451965332"
-        }
-    },
-    {
-        "id": 479,
-        "name": "Japan",
-        "extra": {
-            "continent": "Asia",
-            "sub_region": "Eastern Asia",
-            "world_region": "APAC",
-            "fifa": "JPN",
-            "iso": "JPN",
-            "longitude": "139.0772705078125",
-            "latitude": "36.281646728515625"
-        }
-    },
-    {
-        "id": 488,
-        "name": "Iran",
-        "extra": {
-            "continent": "Asia",
-            "sub_region": "Southern Asia",
-            "world_region": "EMEA",
-            "fifa": "IRN",
-            "iso": "IRN",
-            "longitude": "54.2942008972168",
-            "latitude": "32.50077819824219"
-        }
-    },
-    {
-        "id": 491,
-        "name": "Northern Ireland",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Northern Europe",
-            "world_region": "EMEA",
-            "fifa": "IRL",
-            "iso": "IRL",
-            "longitude": "-8.196102142333984",
-            "latitude": "53.1827278137207"
-        }
-    },
-    {
-        "id": 507,
-        "name": "Bosnia and Herzegovina",
-        "extra": {
-            "continent": "Europe",
-            "sub_region": "Southern Europe",
-            "world_region": "EMEA",
-            "fifa": "BIH",
-            "iso": "BIH",
-            "longitude": "17.790241241455078",
-            "latitude": "44.16533279418945"
-        }
-    },
-    {
-        "id": 515,
-        "name": "Wales",
-        "extra": null
-    }
-];
-//# sourceMappingURL=countries.js.map
-
-/***/ }),
-
-/***/ 295:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TOKEN; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TEMPORADA; });
-/* unused harmony export LIGA_ID */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return URL_SQUAD; });
-/* unused harmony export URL_VENUES */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return URL_TEAMS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return URL_PLAYERS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return URL_STANDINGS; });
-var TOKEN = 'PNXpSNzfU3uJ1x2IItfvTrIG7Ogxz55fPBLIkXDzkzwF7rlK85zCzK92z0WJ';
-var TEMPORADA = '892';
-var LIGA_ID = '732';
-var URL_SQUAD = 'https://soccer.sportmonks.com/api/v2.0/squad/season/';
-var URL_VENUES = 'https://soccer.sportmonks.com/api/v2.0/venues/';
-var URL_TEAMS = 'https://soccer.sportmonks.com/api/v2.0/teams/';
-var URL_PLAYERS = 'https://soccer.sportmonks.com/api/v2.0/players/';
-var URL_STANDINGS = "https://soccer.sportmonks.com/api/v2.0/standings/season/";
-//# sourceMappingURL=config.js.map
-
-/***/ }),
-
-/***/ 307:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaPartidosPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__ = __webpack_require__(308);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_fixtures__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_equiposMonks__ = __webpack_require__(103);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var ListaPartidosPage = /** @class */ (function () {
-    function ListaPartidosPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.junio = __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__["a" /* Fechas */].Junio;
-        this.julio = __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__["a" /* Fechas */].Julio;
-        this.mes = this.junio;
-        this.fixture = __WEBPACK_IMPORTED_MODULE_3__app_config_fixtures__["a" /* Fixtures */];
-        this.equipos = __WEBPACK_IMPORTED_MODULE_4__app_config_equiposMonks__["a" /* EquiposMonks */];
-    }
-    ListaPartidosPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ListaPartidosPage');
-    };
-    ListaPartidosPage.prototype.getDatesBetween = function () {
-        // getDatesBetween(from: Date, to: Date) : Date[] {
-        var from = new Date(2018, 6, 14);
-        console.log('from', from);
-        var to = new Date(2018, 7, 15);
-        var year = from.getFullYear();
-        var month = from.getMonth();
-        var day = from.getDate();
-        var dates = [from];
-        while (dates[dates.length - 1] < to) {
-            var dia = new Date(year, month, ++day);
-            console.log('Dia generado', dia);
-            dates.push(dia);
-        }
-        // return dates;
-    };
-    ListaPartidosPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-lista-partidos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\lista-partidos\lista-partidos.html"*/'<div>\n  <ion-segment [(ngModel)]="mes" color="light" mode="ios">\n    <ion-segment-button *ngFor ="let dia of mes" value="\'ju\' + {{dia}}">\n      {{dia}}\n    </ion-segment-button>\n  </ion-segment>\n</div>\n<div>\n  <button ion-button (onclick)="getDatesBetween()" >Ver</button>\n</div>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\lista-partidos\lista-partidos.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], ListaPartidosPage);
-    return ListaPartidosPage;
-}());
-
-//# sourceMappingURL=lista-partidos.js.map
-
-/***/ }),
-
-/***/ 308:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Fechas; });
-var Fechas = { "Junio": [
-        14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30
-    ],
-    "Julio": [
-        1, 2, 3, 6, 7, 10, 11, 14, 15
-    ]
-};
-//# sourceMappingURL=fechas.js.map
-
-/***/ }),
-
-/***/ 309:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BetsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the BetsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var BetsPage = /** @class */ (function () {
-    function BetsPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    BetsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad BetsPage');
-    };
-    BetsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-bets',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Apuestas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], BetsPage);
-    return BetsPage;
-}());
-
-//# sourceMappingURL=bets.js.map
+//# sourceMappingURL=rest-service.js.map
 
 /***/ })
 

@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 
-import {TEMPORADA, TOKEN,
-        URL_PLAYERS, URL_SQUAD,
-        URL_STANDINGS, URL_TEAMS
-  } from "../../app/config/config";
+import {
+  TEMPORADA, TOKEN, URL_FIXTURES,
+  URL_PLAYERS, URL_SQUAD,
+  URL_STANDINGS, URL_TEAMS
+} from "../../app/config/config";
 
 @Injectable()
 export class RestServiceProvider {
@@ -37,4 +38,11 @@ export class RestServiceProvider {
     console.log('Ver TEAM Url Rest', url);
     return this.http.get(url);
   }
+
+  getFixturesFromTo(fromD: string, toD: string) {
+    let url = URL_FIXTURES + fromD + '/' + toD + '?api_token=' + TOKEN;
+    console.log('Ver FIXTURES Url Rest', url);
+    return this.http.get(url);
+  }
+
 }
