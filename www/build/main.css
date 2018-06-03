@@ -36108,6 +36108,50 @@ ion-navbar.toolbar {
   background-color: #6f1112;
 }
 
+page-bets ion-segment {
+  display: block;
+  white-space: nowrap;
+  font-size: 0;
+  overflow: auto;
+  background-color: #6c0601;
+  margin: 0;
+}
+
+page-bets ion-avatar {
+  margin: 0 !important;
+  padding: 0px;
+  font-size: 2px;
+}
+
+page-bets ion-item {
+  height: 54px;
+}
+
+page-bets .background {
+  background-color: #6c0601;
+}
+
+page-bets .field__input {
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  width: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+page-bets input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+page-bets input::-webkit-outer-spin-button,
+page-bets input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 page-estadio-geopos {
   background-color: transparent !important;
 }

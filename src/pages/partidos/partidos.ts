@@ -4,7 +4,6 @@ import { NavController, NavParams } from 'ionic-angular';
 import { RestServiceProvider } from "../../providers/rest-service/rest-service";
 
 import { EquiposMonks } from "../../app/config/equiposMonks";
-import { Venues } from "../../app/config/venues";
 
 @Component({
   selector: 'page-partidos',
@@ -16,25 +15,30 @@ export class PartidosPage {
   public fixtures: any;
   public fixturesLoaded: Promise<boolean>;
   private equipos = EquiposMonks;
-  private stadiums = Venues;
   public dias: Date[]  = this.getDatesBetween();
+  private obsFix;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public restService: RestServiceProvider) {
-    this.getFixturesFromTo();
+
   }
 
   ionViewDidLoad() {
+    this.obsFix = this.getFixturesFromTo();
     console.log('ionViewDidLoad PartidosPage');
   }
 
+  ionViewWillLeave() {
+    this.obsFix.unsubscribe();
+  }
+
   getFixturesFromTo() {
-    this.restService.getFixturesFromTo('2018-06-14', '2018-07-15')
+    return this.restService.getFixturesFromTo('2018-06-14', '2018-07-15')
       .subscribe(programacion => {
         this.fixtures = programacion['data'];
-        console.log('JSON FIXTURES en subscribe - fixtures.ts',
-          this.fixtures);
+        // console.log('JSON FIXTURES en subscribe - fixtures.ts',
+        //   this.fixtures);
         this.fixturesLoaded = Promise.resolve(true);
       });
   }
@@ -69,16 +73,6 @@ export class PartidosPage {
     return nomEq;
   }
 
-  cargarCiudad(id: number): string {
-    let ciudad = null;
-    this.stadiums.forEach( campo => {
-      if (campo.id === id) {
-        ciudad = campo.city;
-      }
-    });
-    return ciudad;
-  }
-
   getDia(fixture: any): string {
     let fechaDia: string;
     let diaArray = fixture.time.starting_at.date.split('-');
@@ -91,6 +85,7 @@ export class PartidosPage {
     let fechaDia: string;
     let fechaDiaDate = new Date(dia.getFullYear() ,dia.getMonth(), dia.getDate());
     fechaDia = 'fe' + (fechaDiaDate.getMonth() + 1) + fechaDiaDate.getDate();
+    // console.log('OItro dentro de PARTIDOS TS', fechaDia);
     return fechaDia;
   }
 

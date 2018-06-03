@@ -1,12 +1,77 @@
 <ion-header no-border no-margin>
-  <ion-navbar color="primary">
+  <ion-toolbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title text-center>Apuestas</ion-title>
-  </ion-navbar>
+    <ion-title text-center>Predicciones</ion-title>
+  </ion-toolbar>
 </ion-header>
-
-<ion-content padding>
-
+<ion-footer padding-left>
+  <div color="primary">
+    <ion-segment [(ngModel)]="grupos" color="light" mode="ios">
+      <ion-segment-button value="185">A</ion-segment-button>
+      <ion-segment-button value="186">B</ion-segment-button>
+      <ion-segment-button value="187">C</ion-segment-button>
+      <ion-segment-button value="188">D</ion-segment-button>
+      <ion-segment-button value="189">E</ion-segment-button>
+      <ion-segment-button value="190">F</ion-segment-button>
+      <ion-segment-button value="191">G</ion-segment-button>
+      <ion-segment-button value="192">H</ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-footer>
+<ion-content class="background" no-padding no-margin>
+  <br>
+  <div *ngFor="let fixture of fixtures">
+    <!--<div>-->
+    <div [hidden]="grupos !== fixture.group_id.toString()">
+      <ion-list no-padding no-margin
+                no-lines>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-10 no-padding no-margin>
+              <ion-item text-right no-padding no-margin>
+                <ion-avatar item-end>
+                  <img src="{{getSrcBanderaEquipo(fixture.localteam_id)}}">
+                </ion-avatar>
+                <p text-wrap>{{getNombreEquipo(fixture.localteam_id)}} </p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 no-padding no-margin>
+              <ion-item text-center no-padding no-margin>
+                <ion-input type="number" min="0" max="12"
+                           required clearOnEdit
+                           [(ngModel)]="fixture.scores.localteam_score"></ion-input>
+                <h3>:</h3>
+                <ion-input type="number" min="0" max="12"
+                           required clearOnEdit
+                           [(ngModel)]="fixture.scores.visitorteam_score"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col col-10 no-padding no-margin>
+              <ion-item text-left no-padding no-margin>
+                <ion-avatar item-start>
+                  <img src="{{getSrcBanderaEquipo(fixture.visitorteam_id)}}">
+                </ion-avatar>
+                <p margin-left="1px" text-wrap> {{getNombreEquipo(fixture.visitorteam_id)}}</p>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+    </div>
+    <ion-fab right bottom>
+      <button ion-fab color="botones" (click)="guardarBets(fixtures)">
+        <ion-icon name="cloud-upload"></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+  <div color="light" padding>
+    <ion-item color="resaltar" no-border no-lines style="height: auto;">
+      <h3>Nota:</h3>
+      <p text-wrap>Ingresa tus resultados y luego presiona el
+        boton de subir a la nube. <br>Además, puede cambiar sus predicciones las veces que desee hasta
+        un día antes de la inauguración</p>
+    </ion-item>
+  </div>
 </ion-content>

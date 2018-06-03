@@ -3,9 +3,10 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import firebase from "firebase";
-
 import { AutenticacionServiceProvider } from "../providers/autenticacion-service/autenticacion-service";
+import { GlobalsProvider } from "../providers/globals/globals";
+import firebase from "firebase";
+import 'firebase/firestore';
 
 import { HomePage } from '../pages/home/home';
 import { PartidosPage } from "../pages/partidos/partidos";
@@ -14,6 +15,7 @@ import { EquipoPage } from "../pages/equipo/equipo";
 import { GruposPage } from "../pages/grupos/grupos";
 import { IniciarSesionPage } from "../pages/iniciar-sesion/iniciar-sesion";
 import { BetsPage } from "../pages/bets/bets";
+
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +31,8 @@ export class MyApp {
   constructor(public platform: Platform,
               public statusBar: StatusBar,
               public splashScreen: SplashScreen,
-              public autenticacionService: AutenticacionServiceProvider) {
+              public autenticacionService: AutenticacionServiceProvider,
+              public globalProvider: GlobalsProvider ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -55,6 +58,11 @@ export class MyApp {
       storageBucket: "worldcupbet-c1705.appspot.com",
       messagingSenderId: "1043577611235"
     });
+
+    const settings = { timestampsInSnapshots: true };
+    this.globalProvider.firestoreDB = firebase.firestore();
+    this.globalProvider.firestoreDB.settings(settings);
+
     /**
      * Verificar el estado de la sesión
      */
@@ -66,7 +74,7 @@ export class MyApp {
         }
         else {
           this.usuarioConectado = false;
-          // this.contenido.setRoot(this.iniciarSesion);
+          this.nav.setRoot(this.rootPage);
         }
       }
     );

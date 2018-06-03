@@ -5,9 +5,9 @@ webpackJsonp([0],{
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AutenticacionServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -46,402 +46,244 @@ var AutenticacionServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 107:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 122:
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquiposMonks; });
-var EquiposMonks = [
-    {
-        "id": 15251,
-        "legacy_id": 1355,
-        "name": "Uruguay",
-        "short_code": "URY",
-        "twitter": null,
-        "country_id": 158,
-        "national_team": true,
-        "founded": 1900,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/19/15251.png",
-        "venue_id": 10900
-    },
-    {
-        "id": 18546,
-        "legacy_id": 2027,
-        "name": "Egypt",
-        "short_code": "EGY",
-        "twitter": null,
-        "country_id": 886,
-        "national_team": true,
-        "founded": 1921,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18546.png",
-        "venue_id": 58
-    },
-    {
-        "id": 18551,
-        "legacy_id": 1354,
-        "name": "Morocco",
-        "short_code": "MAR",
-        "twitter": null,
-        "country_id": 1424,
-        "national_team": true,
-        "founded": 1955,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
-        "venue_id": 1679
-    },
-    {
-        "id": 18554,
-        "legacy_id": 1348,
-        "name": "Tunisia",
-        "short_code": "TUN",
-        "twitter": null,
-        "country_id": 1439,
-        "national_team": true,
-        "founded": 1957,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
-        "venue_id": 2562
-    },
-    {
-        "id": 18558,
-        "legacy_id": 1846,
-        "name": "Senegal",
-        "short_code": "SEN",
-        "twitter": null,
-        "country_id": 200,
-        "national_team": true,
-        "founded": 1960,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18558.png",
-        "venue_id": 14382
-    },
-    {
-        "id": 18562,
-        "legacy_id": 2048,
-        "name": "Saudi Arabia",
-        "short_code": "SAU",
-        "twitter": null,
-        "country_id": 35376,
-        "national_team": true,
-        "founded": 1956,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18562.png",
-        "venue_id": 1503
-    },
-    {
-        "id": 18564,
-        "legacy_id": 211,
-        "name": "Sweden",
-        "short_code": "SWE",
-        "twitter": null,
-        "country_id": 47,
-        "national_team": true,
-        "founded": 1904,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18564.png",
-        "venue_id": 1668
-    },
-    {
-        "id": 18567,
-        "legacy_id": 1837,
-        "name": "Korea Republic",
-        "short_code": "KOR",
-        "twitter": null,
-        "country_id": 712,
-        "national_team": true,
-        "founded": 1933,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
-        "venue_id": 175
-    },
-    {
-        "id": 18576,
-        "legacy_id": 1356,
-        "name": "Mexico",
-        "short_code": "MEX",
-        "twitter": null,
-        "country_id": 458,
-        "national_team": true,
-        "founded": 1927,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
-        "venue_id": 1599
-    },
-    {
-        "id": 18583,
-        "legacy_id": 202,
-        "name": "Denmark",
-        "short_code": "DNK",
-        "twitter": null,
-        "country_id": 320,
-        "national_team": true,
-        "founded": 1889,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
-        "venue_id": 5660
-    },
-    {
-        "id": 18588,
-        "legacy_id": 206,
-        "name": "Croatia",
-        "short_code": "CRO",
-        "twitter": null,
-        "country_id": 266,
-        "national_team": true,
-        "founded": 1912,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18588.png",
-        "venue_id": 176
-    },
-    {
-        "id": 18597,
-        "legacy_id": 1347,
-        "name": "Japan",
-        "short_code": "JPN",
-        "twitter": null,
-        "country_id": 479,
-        "national_team": true,
-        "founded": 1921,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18597.png",
-        "venue_id": 14408
-    },
-    {
-        "id": 18598,
-        "legacy_id": 1211,
-        "name": "Costa Rica",
-        "short_code": "CRI",
-        "twitter": null,
-        "country_id": 1739,
-        "national_team": true,
-        "founded": 1921,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
-        "venue_id": 10981
-    },
-    {
-        "id": 18635,
-        "legacy_id": 212,
-        "name": "Iceland",
-        "short_code": "ICE",
-        "twitter": null,
-        "country_id": 1796,
-        "national_team": true,
-        "founded": 1947,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18635.png",
-        "venue_id": 7000
-    },
-    {
-        "id": 18644,
-        "legacy_id": 1350,
-        "name": "Argentina",
-        "short_code": "ARG",
-        "twitter": null,
-        "country_id": 44,
-        "national_team": true,
-        "founded": 1893,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
-        "venue_id": 6569
-    },
-    {
-        "id": 18645,
-        "legacy_id": 208,
-        "name": "England",
-        "short_code": "ENG",
-        "twitter": null,
-        "country_id": 462,
-        "national_team": true,
-        "founded": 1863,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18645.png",
-        "venue_id": 1315
-    },
-    {
-        "id": 18647,
-        "legacy_id": 209,
-        "name": "France",
-        "short_code": "FRA",
-        "twitter": null,
-        "country_id": 17,
-        "national_team": true,
-        "founded": 1919,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18647.png",
-        "venue_id": 14433
-    },
-    {
-        "id": 18652,
-        "legacy_id": 1342,
-        "name": "Iran",
-        "short_code": "IRN",
-        "twitter": null,
-        "country_id": 488,
-        "national_team": true,
-        "founded": 1920,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
-        "venue_id": 1984
-    },
-    {
-        "id": 18660,
-        "legacy_id": 200,
-        "name": "Germany",
-        "short_code": "GER",
-        "twitter": null,
-        "country_id": 11,
-        "national_team": true,
-        "founded": 1900,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
-        "venue_id": 1944
-    },
-    {
-        "id": 18699,
-        "legacy_id": 199,
-        "name": "Poland",
-        "short_code": "POL",
-        "twitter": null,
-        "country_id": 2,
-        "national_team": true,
-        "founded": 1919,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
-        "venue_id": 14452
-    },
-    {
-        "id": 18701,
-        "legacy_id": 201,
-        "name": "Portugal",
-        "short_code": "POR",
-        "twitter": null,
-        "country_id": 20,
-        "national_team": true,
-        "founded": 1914,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
-        "venue_id": 14455
-    },
-    {
-        "id": 18702,
-        "legacy_id": 198,
-        "name": "Russia",
-        "short_code": "RUS",
-        "twitter": null,
-        "country_id": 227,
-        "national_team": true,
-        "founded": 1912,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18702.png",
-        "venue_id": 177923
-    },
-    {
-        "id": 18704,
-        "legacy_id": 1341,
-        "name": "Brazil",
-        "short_code": "BRA",
-        "twitter": null,
-        "country_id": 5,
-        "national_team": true,
-        "founded": 1914,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18704.png",
-        "venue_id": 392
-    },
-    {
-        "id": 18708,
-        "legacy_id": 230,
-        "name": "Switzerland",
-        "short_code": "SWI",
-        "twitter": null,
-        "country_id": 62,
-        "national_team": true,
-        "founded": 1895,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18708.png",
-        "venue_id": 9576
-    },
-    {
-        "id": 18710,
-        "legacy_id": 204,
-        "name": "Spain",
-        "short_code": "ESP",
-        "twitter": null,
-        "country_id": 32,
-        "national_team": true,
-        "founded": 1913,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18710.png",
-        "venue_id": 2020
-    },
-    {
-        "id": 18717,
-        "legacy_id": 1367,
-        "name": "Panama",
-        "short_code": "PAN",
-        "twitter": null,
-        "country_id": 65437,
-        "national_team": true,
-        "founded": 1937,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
-        "venue_id": 6860
-    },
-    {
-        "id": 18720,
-        "legacy_id": 1820,
-        "name": "Colombia",
-        "short_code": "COL",
-        "twitter": null,
-        "country_id": 353,
-        "national_team": true,
-        "founded": 1924,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18720.png",
-        "venue_id": 5048
-    },
-    {
-        "id": 18730,
-        "legacy_id": 1332,
-        "name": "Australia",
-        "short_code": "AUS",
-        "twitter": null,
-        "country_id": 98,
-        "national_team": true,
-        "founded": 1961,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
-        "venue_id": 14477
-    },
-    {
-        "id": 18737,
-        "legacy_id": 1335,
-        "name": "Nigeria",
-        "short_code": "NGA",
-        "twitter": null,
-        "country_id": 716,
-        "national_team": true,
-        "founded": 1945,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
-        "venue_id": 12733
-    },
-    {
-        "id": 18743,
-        "legacy_id": 219,
-        "name": "Belgium",
-        "short_code": "BEL",
-        "twitter": null,
-        "country_id": 556,
-        "national_team": true,
-        "founded": 1895,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18743.png",
-        "venue_id": 2318
-    },
-    {
-        "id": 18775,
-        "legacy_id": 1364,
-        "name": "Peru",
-        "short_code": "PER",
-        "twitter": null,
-        "country_id": 338,
-        "national_team": true,
-        "founded": 1922,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18775.png",
-        "venue_id": 11432
-    },
-    {
-        "id": 18873,
-        "legacy_id": 248,
-        "name": "Serbia",
-        "short_code": "SRB",
-        "twitter": null,
-        "country_id": 296,
-        "national_team": true,
-        "founded": 1919,
-        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
-        "venue_id": 1590
-    }
-];
-//# sourceMappingURL=equiposMonks.js.map
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 122;
 
 /***/ }),
 
-/***/ 108:
+/***/ 164:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 164;
+
+/***/ }),
+
+/***/ 210:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\home\home.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>World Cupbet</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="background">\n\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\home\home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 211:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PartidosPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_equiposMonks__ = __webpack_require__(54);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PartidosPage = /** @class */ (function () {
+    function PartidosPage(navCtrl, navParams, restService) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.restService = restService;
+        this.diaSemana = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
+        this.equipos = __WEBPACK_IMPORTED_MODULE_3__app_config_equiposMonks__["a" /* EquiposMonks */];
+        this.dias = this.getDatesBetween();
+    }
+    PartidosPage.prototype.ionViewDidLoad = function () {
+        this.obsFix = this.getFixturesFromTo();
+        console.log('ionViewDidLoad PartidosPage');
+    };
+    PartidosPage.prototype.ionViewWillLeave = function () {
+        this.obsFix.unsubscribe();
+    };
+    PartidosPage.prototype.getFixturesFromTo = function () {
+        var _this = this;
+        return this.restService.getFixturesFromTo('2018-06-14', '2018-07-15')
+            .subscribe(function (programacion) {
+            _this.fixtures = programacion['data'];
+            // console.log('JSON FIXTURES en subscribe - fixtures.ts',
+            //   this.fixtures);
+            _this.fixturesLoaded = Promise.resolve(true);
+        });
+    };
+    PartidosPage.prototype.getDatesBetween = function () {
+        var from = new Date('2018/06/14');
+        var to = new Date('2018/07/15');
+        var year = from.getFullYear();
+        var month = from.getMonth();
+        var day = from.getDate();
+        var dates = [from];
+        while (dates[dates.length - 1] < to) {
+            var dia = new Date(year, month, ++day);
+            dates.push(dia);
+        }
+        return dates;
+    };
+    PartidosPage.prototype.getSrcBanderaEquipo = function (id) {
+        var srcB = null;
+        this.equipos.forEach(function (equipo) {
+            if (equipo.id === id)
+                srcB = equipo.logo_path;
+        });
+        return srcB;
+    };
+    PartidosPage.prototype.getNombreEquipo = function (id) {
+        var nomEq = null;
+        this.equipos.forEach(function (equipo) {
+            if (equipo.id === id)
+                nomEq = equipo.name;
+        });
+        return nomEq;
+    };
+    PartidosPage.prototype.getDia = function (fixture) {
+        var fechaDia;
+        var diaArray = fixture.time.starting_at.date.split('-');
+        var dia = new Date(diaArray[0], diaArray[1], diaArray[2]);
+        fechaDia = 'fe' + dia.getMonth() + dia.getDate();
+        return fechaDia;
+    };
+    PartidosPage.prototype.getDiaD = function (dia) {
+        var fechaDia;
+        var fechaDiaDate = new Date(dia.getFullYear(), dia.getMonth(), dia.getDate());
+        fechaDia = 'fe' + (fechaDiaDate.getMonth() + 1) + fechaDiaDate.getDate();
+        // console.log('OItro dentro de PARTIDOS TS', fechaDia);
+        return fechaDia;
+    };
+    PartidosPage.prototype.getHoraLocal = function (hora) {
+        var diaTmp = new Date();
+        var horaArray = hora.split(':');
+        diaTmp.setHours(parseInt(horaArray[0]), parseInt(horaArray[1]), parseInt(horaArray[2]), 0);
+        var options = {
+            weekday: "long", year: "numeric", month: "short",
+            day: "numeric", hour: "2-digit", minute: "2-digit"
+        };
+        diaTmp.toLocaleTimeString('es-BO', options);
+        var horaLocal = ("0" + (diaTmp.getHours() - 7)).slice(-2) + ':' + ("0" + diaTmp.getMinutes()).slice(-2);
+        return horaLocal;
+    };
+    PartidosPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-partidos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/'<ion-header no-border no-margin>\n  <ion-toolbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Junio/Julio</ion-title>\n  </ion-toolbar>\n<div color="primary">\n  <ion-segment [(ngModel)]="fechas" color="light" mode="ios">\n    <ion-segment-button\n                        *ngFor ="let dia of dias"\n                        value="{{getDiaD(dia)}}">\n      {{diaSemana[dia.getDay()]}}<br>{{dia.getDate()}}\n    </ion-segment-button>\n  </ion-segment>\n</div>\n</ion-header>\n\n<ion-content class="background" no-padding no-margin>\n  <br>\n  <div *ngFor="let fixture of fixtures">\n    <div [hidden]="fechas !== getDia(fixture)">\n      <ion-list no-padding no-margin\n                no-lines>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-right no-padding no-margin>\n                <ion-avatar item-end>\n                  <img src="{{getSrcBanderaEquipo(fixture.localteam_id)}}">\n                </ion-avatar>\n                <p text-wrap>{{getNombreEquipo(fixture.localteam_id)}} </p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-4 no-padding no-margin>\n              <ion-item text-center no-padding no-margin>\n                <p>{{fixture.scores.localteam_score + \' - \' + fixture.scores.visitorteam_score}}</p>\n                <p>{{getHoraLocal(fixture.time.starting_at.time)}}</p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-left no-padding no-margin>\n                <ion-avatar item-start>\n                  <img src="{{getSrcBanderaEquipo(fixture.visitorteam_id)}}">\n                </ion-avatar>\n                <p margin-left="1px" text-wrap> {{getNombreEquipo(fixture.visitorteam_id)}}</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-list>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */]])
+    ], PartidosPage);
+    return PartidosPage;
+}());
+
+//# sourceMappingURL=partidos.js.map
+
+/***/ }),
+
+/***/ 212:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadiosPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_venues__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__ = __webpack_require__(214);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var EstadiosPage = /** @class */ (function () {
+    function EstadiosPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.estadiums = __WEBPACK_IMPORTED_MODULE_2__app_config_venues__["a" /* Venues */];
+    }
+    EstadiosPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EstadiosPage');
+    };
+    /**
+     * Funcion para poner en PUSH las ubicaciones
+     */
+    EstadiosPage.prototype.pushUbicaciones = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */]);
+    };
+    EstadiosPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-estadios',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Estadios</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg">\n  <ion-fab bottom right>\n    <button color="botones" ion-fab (click)="pushUbicaciones()">\n      <ion-icon name="pin"></ion-icon>\n    </button>\n  </ion-fab>\n  <div>\n    <ion-card *ngFor ="let campo of estadiums">\n      <ion-card-title text-center color="primary">\n        <h1>{{campo.name}}</h1>\n      </ion-card-title>\n      <img src="{{campo.image_path}}"/>\n      <ion-card-content>\n        <ion-grid text-left>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Ciudad: </ion-col>\n            <ion-col>{{campo.city}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Dirección: </ion-col>\n            <ion-col>{{campo.address}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Capacidad: </ion-col>\n            <ion-col>{{campo.capacity}} personas</ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card-content>\n    </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], EstadiosPage);
+    return EstadiosPage;
+}());
+
+//# sourceMappingURL=estadios.js.map
+
+/***/ }),
+
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -608,259 +450,15 @@ var Venues = [
 
 /***/ }),
 
-/***/ 119:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 119;
-
-/***/ }),
-
-/***/ 161:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 161;
-
-/***/ }),
-
-/***/ 207:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\home\home.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>World Cupbet</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="background">\n\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\home\home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
-    ], HomePage);
-    return HomePage;
-}());
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
-/***/ 208:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PartidosPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_equiposMonks__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_venues__ = __webpack_require__(108);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var PartidosPage = /** @class */ (function () {
-    function PartidosPage(navCtrl, navParams, restService) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.restService = restService;
-        this.diaSemana = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
-        this.equipos = __WEBPACK_IMPORTED_MODULE_3__app_config_equiposMonks__["a" /* EquiposMonks */];
-        this.stadiums = __WEBPACK_IMPORTED_MODULE_4__app_config_venues__["a" /* Venues */];
-        this.dias = this.getDatesBetween();
-        this.getFixturesFromTo();
-    }
-    PartidosPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PartidosPage');
-    };
-    PartidosPage.prototype.getFixturesFromTo = function () {
-        var _this = this;
-        this.restService.getFixturesFromTo('2018-06-14', '2018-07-15')
-            .subscribe(function (programacion) {
-            _this.fixtures = programacion['data'];
-            console.log('JSON FIXTURES en subscribe - fixtures.ts', _this.fixtures);
-            _this.fixturesLoaded = Promise.resolve(true);
-        });
-    };
-    PartidosPage.prototype.getDatesBetween = function () {
-        var from = new Date('2018/06/14');
-        var to = new Date('2018/07/15');
-        var year = from.getFullYear();
-        var month = from.getMonth();
-        var day = from.getDate();
-        var dates = [from];
-        while (dates[dates.length - 1] < to) {
-            var dia = new Date(year, month, ++day);
-            dates.push(dia);
-        }
-        return dates;
-    };
-    PartidosPage.prototype.getSrcBanderaEquipo = function (id) {
-        var srcB = null;
-        this.equipos.forEach(function (equipo) {
-            if (equipo.id === id)
-                srcB = equipo.logo_path;
-        });
-        return srcB;
-    };
-    PartidosPage.prototype.getNombreEquipo = function (id) {
-        var nomEq = null;
-        this.equipos.forEach(function (equipo) {
-            if (equipo.id === id)
-                nomEq = equipo.name;
-        });
-        return nomEq;
-    };
-    PartidosPage.prototype.cargarCiudad = function (id) {
-        var ciudad = null;
-        this.stadiums.forEach(function (campo) {
-            if (campo.id === id) {
-                ciudad = campo.city;
-            }
-        });
-        return ciudad;
-    };
-    PartidosPage.prototype.getDia = function (fixture) {
-        var fechaDia;
-        var diaArray = fixture.time.starting_at.date.split('-');
-        var dia = new Date(diaArray[0], diaArray[1], diaArray[2]);
-        fechaDia = 'fe' + dia.getMonth() + dia.getDate();
-        return fechaDia;
-    };
-    PartidosPage.prototype.getDiaD = function (dia) {
-        var fechaDia;
-        var fechaDiaDate = new Date(dia.getFullYear(), dia.getMonth(), dia.getDate());
-        fechaDia = 'fe' + (fechaDiaDate.getMonth() + 1) + fechaDiaDate.getDate();
-        return fechaDia;
-    };
-    PartidosPage.prototype.getHoraLocal = function (hora) {
-        var diaTmp = new Date();
-        var horaArray = hora.split(':');
-        diaTmp.setHours(parseInt(horaArray[0]), parseInt(horaArray[1]), parseInt(horaArray[2]), 0);
-        var options = {
-            weekday: "long", year: "numeric", month: "short",
-            day: "numeric", hour: "2-digit", minute: "2-digit"
-        };
-        diaTmp.toLocaleTimeString('es-BO', options);
-        var horaLocal = ("0" + (diaTmp.getHours() - 7)).slice(-2) + ':' + ("0" + diaTmp.getMinutes()).slice(-2);
-        return horaLocal;
-    };
-    PartidosPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-partidos',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/'<ion-header no-border no-margin>\n  <ion-toolbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!--<ion-buttons left>-->\n      <!--<button ion-button icon-only small >-->\n        <!--<ion-icon name="arrow-dropleft"></ion-icon>-->\n      <!--</button>-->\n    <!--</ion-buttons>-->\n\n    <ion-title text-center>Junio/Julio</ion-title>\n\n    <!--<ion-buttons right>-->\n      <!--<button ion-button icon-only small (click)="navigateJulio()">-->\n        <!--<ion-icon name="arrow-dropright"></ion-icon>-->\n      <!--</button>-->\n    <!--</ion-buttons>-->\n  </ion-toolbar>\n<div color="primary">\n  <ion-segment [(ngModel)]="fechas" color="light" mode="ios">\n    <ion-segment-button\n                        *ngFor ="let dia of dias"\n                        value="{{getDiaD(dia)}}">\n      {{diaSemana[dia.getDay()]}}<br>{{dia.getDate()}}\n    </ion-segment-button>\n  </ion-segment>\n</div>\n</ion-header>\n\n<ion-content class="background" no-padding no-margin>\n  <br>\n  <div *ngFor="let fixture of fixtures">\n    <div [hidden]="fechas !== getDia(fixture)">\n      <ion-list no-padding no-margin\n                no-lines>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-right no-padding no-margin>\n                <ion-avatar item-end>\n                  <img src="{{getSrcBanderaEquipo(fixture.localteam_id)}}">\n                </ion-avatar>\n                <p text-wrap>{{getNombreEquipo(fixture.localteam_id)}} </p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-4 no-padding no-margin>\n              <ion-item text-center no-padding no-margin>\n                <p>{{fixture.scores.localteam_score + \' - \' + fixture.scores.visitorteam_score}}</p>\n                <p>{{getHoraLocal(fixture.time.starting_at.time)}}</p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-left no-padding no-margin>\n                <ion-avatar item-start>\n                  <img src="{{getSrcBanderaEquipo(fixture.visitorteam_id)}}">\n                </ion-avatar>\n                <p margin-left="1px" text-wrap> {{getNombreEquipo(fixture.visitorteam_id)}}</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-list>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\partidos\partidos.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__["a" /* RestServiceProvider */]])
-    ], PartidosPage);
-    return PartidosPage;
-}());
-
-//# sourceMappingURL=partidos.js.map
-
-/***/ }),
-
-/***/ 209:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadiosPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_venues__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__ = __webpack_require__(210);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var EstadiosPage = /** @class */ (function () {
-    function EstadiosPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.estadiums = __WEBPACK_IMPORTED_MODULE_2__app_config_venues__["a" /* Venues */];
-    }
-    EstadiosPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad EstadiosPage');
-    };
-    /**
-     * Funcion para poner en PUSH las ubicaciones
-     */
-    EstadiosPage.prototype.pushUbicaciones = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */]);
-    };
-    EstadiosPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-estadios',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Estadios</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg">\n  <ion-fab bottom right>\n    <button color="botones" ion-fab (click)="pushUbicaciones()">\n      <ion-icon name="pin"></ion-icon>\n    </button>\n  </ion-fab>\n  <div>\n    <ion-card *ngFor ="let campo of estadiums">\n      <ion-card-title text-center color="primary">\n        <h1>{{campo.name}}</h1>\n      </ion-card-title>\n      <img src="{{campo.image_path}}"/>\n      <ion-card-content>\n        <ion-grid text-left>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Ciudad: </ion-col>\n            <ion-col>{{campo.city}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Dirección: </ion-col>\n            <ion-col>{{campo.address}}</ion-col>\n          </ion-row>\n          <ion-row no-margin nowrap>\n            <ion-col col-9>Capacidad: </ion-col>\n            <ion-col>{{campo.capacity}} personas</ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card-content>\n    </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\estadios\estadios.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], EstadiosPage);
-    return EstadiosPage;
-}());
-
-//# sourceMappingURL=estadios.js.map
-
-/***/ }),
-
-/***/ 210:
+/***/ 214:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstadioGeoposPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_venues__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_venues__ = __webpack_require__(213);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -943,15 +541,15 @@ var EstadioGeoposPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 212:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jugadores_jugadores__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jugadores_jugadores__ = __webpack_require__(217);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -992,7 +590,7 @@ var EquipoPage = /** @class */ (function () {
         }
     };
     EquipoPage.prototype.jugadores = function (equipo, id) {
-        console.log('Equipo:', equipo, id);
+        // console.log('Equipo:', equipo, id);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__jugadores_jugadores__["a" /* JugadoresPage */], {
             equipo_name: equipo,
             equipo_id: id
@@ -1012,16 +610,16 @@ var EquipoPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 213:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JugadoresPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_countries__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__estadisticas_estadisticas__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_countries__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_service_rest_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__estadisticas_estadisticas__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1056,7 +654,8 @@ var JugadoresPage = /** @class */ (function () {
             _this.squadJson = plantel['data'];
             _this.getJugadoresEq(plantel['data']);
             _this.datosJugadoresEq = plantel['data'];
-            console.log('JSON getSquad en subscribe - jugadores.ts', _this.datosJugadoresEq);
+            // console.log('JSON getSquad en subscribe - jugadores.ts',
+            //   this.datosJugadoresEq);
             _this.squadLoaded = Promise.resolve(true);
         });
     };
@@ -1081,7 +680,7 @@ var JugadoresPage = /** @class */ (function () {
                 //   player.datoActual = datosPlayer;
                 Object.assign(player, datosPlayer);
                 _this.getTeam(datosPlayer['player_id'], player);
-                console.log('En squad se encontro el jugdor', datosPlayer['player_id']);
+                // console.log('En squad se encontro el jugdor', datosPlayer['player_id'])
             }, function (error) {
                 console.log('error al encontrar jugadores por equipo');
             });
@@ -1102,7 +701,9 @@ var JugadoresPage = /** @class */ (function () {
                 if (pais.id === dato.country_id)
                     player.equipo_pais_name = pais.name;
             });
-            console.log('Datos equipo actual', _this.eq_jug_name, _this.eq_img_path);
+            // console.log('Datos equipo actual',
+            //           this.eq_jug_name,
+            //           this.eq_img_path);
             _this.jugadorLoaded = Promise.resolve(true);
         }, function (error) {
             _this.eq_jug_name = null;
@@ -1131,7 +732,7 @@ var JugadoresPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 214:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1174,14 +775,14 @@ var EstadisticasPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 215:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GruposPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_service_rest_service__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1228,7 +829,7 @@ var GruposPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1236,6 +837,9 @@ var GruposPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase_firestore__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_globals_globals__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_config_fixtures__ = __webpack_require__(221);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1248,12 +852,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var IniciarSesionPage = /** @class */ (function () {
-    function IniciarSesionPage(navCtrl, navParams, autenticacionService, alertaCtrl) {
+    function IniciarSesionPage(navCtrl, navParams, autenticacionService, alertaCtrl, globalProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.autenticacionService = autenticacionService;
         this.alertaCtrl = alertaCtrl;
+        this.globalProvider = globalProvider;
+        this.fixtures = __WEBPACK_IMPORTED_MODULE_5__app_config_fixtures__["a" /* Fixtures */];
+        this.db = this.globalProvider.firestoreDB;
     }
     IniciarSesionPage.prototype.iniciarSesion = function (formLogin) {
         var _this = this;
@@ -1272,7 +882,12 @@ var IniciarSesionPage = /** @class */ (function () {
     IniciarSesionPage.prototype.registrarUsuario = function (formulario) {
         var _this = this;
         this.autenticacionService.registrarUsuario(formulario.value.correo, formulario.value.clave)
-            .then(function (info) { return console.log(info); })
+            .then(function (info) {
+            _this.db.collection('apuestas')
+                .doc(formulario.value.correo)
+                .set(_this.fixtures);
+            console.log(info);
+        })
             .catch(function (error) {
             var alerta = _this.alertaCtrl.create({
                 title: 'ERROR DE INICIO DE SESION',
@@ -1289,7 +904,8 @@ var IniciarSesionPage = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_globals_globals__["a" /* GlobalsProvider */]])
     ], IniciarSesionPage);
     return IniciarSesionPage;
 }());
@@ -1298,13 +914,2671 @@ var IniciarSesionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 217:
+/***/ 221:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Fixtures; });
+var Fixtures = {
+    "data": [
+        {
+            "id": 8636002,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 185,
+            "aggregate_id": null,
+            "venue_id": 186523,
+            "referee_id": null,
+            "localteam_id": 18702,
+            "visitorteam_id": 18562,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-14 15:00:00",
+                    "date": "2018-06-14",
+                    "time": "15:00:00",
+                    "timestamp": 1528988400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636003,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 185,
+            "aggregate_id": null,
+            "venue_id": 219224,
+            "referee_id": null,
+            "localteam_id": 18546,
+            "visitorteam_id": 15251,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-15 12:00:00",
+                    "date": "2018-06-15",
+                    "time": "12:00:00",
+                    "timestamp": 1529064000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636004,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 186,
+            "aggregate_id": null,
+            "venue_id": 8895,
+            "referee_id": null,
+            "localteam_id": 18551,
+            "visitorteam_id": 18652,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-15 15:00:00",
+                    "date": "2018-06-15",
+                    "time": "15:00:00",
+                    "timestamp": 1529074800,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636005,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 186,
+            "aggregate_id": null,
+            "venue_id": 20259,
+            "referee_id": null,
+            "localteam_id": 18701,
+            "visitorteam_id": 18710,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-15 18:00:00",
+                    "date": "2018-06-15",
+                    "time": "18:00:00",
+                    "timestamp": 1529085600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636006,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 187,
+            "aggregate_id": null,
+            "venue_id": 8869,
+            "referee_id": null,
+            "localteam_id": 18647,
+            "visitorteam_id": 18730,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-16 10:00:00",
+                    "date": "2018-06-16",
+                    "time": "10:00:00",
+                    "timestamp": 1529143200,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636007,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 188,
+            "aggregate_id": null,
+            "venue_id": 1609,
+            "referee_id": null,
+            "localteam_id": 18644,
+            "visitorteam_id": 18635,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-16 13:00:00",
+                    "date": "2018-06-16",
+                    "time": "13:00:00",
+                    "timestamp": 1529154000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636008,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 187,
+            "aggregate_id": null,
+            "venue_id": 219225,
+            "referee_id": null,
+            "localteam_id": 18775,
+            "visitorteam_id": 18583,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-16 16:00:00",
+                    "date": "2018-06-16",
+                    "time": "16:00:00",
+                    "timestamp": 1529164800,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636009,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 188,
+            "aggregate_id": null,
+            "venue_id": 3948,
+            "referee_id": null,
+            "localteam_id": 18588,
+            "visitorteam_id": 18737,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-16 19:00:00",
+                    "date": "2018-06-16",
+                    "time": "19:00:00",
+                    "timestamp": 1529175600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636010,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 189,
+            "aggregate_id": null,
+            "venue_id": 219226,
+            "referee_id": null,
+            "localteam_id": 18598,
+            "visitorteam_id": 18873,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-17 12:00:00",
+                    "date": "2018-06-17",
+                    "time": "12:00:00",
+                    "timestamp": 1529236800,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636011,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 190,
+            "aggregate_id": null,
+            "venue_id": 186523,
+            "referee_id": null,
+            "localteam_id": 18660,
+            "visitorteam_id": 18576,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-17 15:00:00",
+                    "date": "2018-06-17",
+                    "time": "15:00:00",
+                    "timestamp": 1529247600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636012,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 189,
+            "aggregate_id": null,
+            "venue_id": 219227,
+            "referee_id": null,
+            "localteam_id": 18704,
+            "visitorteam_id": 18708,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-17 18:00:00",
+                    "date": "2018-06-17",
+                    "time": "18:00:00",
+                    "timestamp": 1529258400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636013,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 190,
+            "aggregate_id": null,
+            "venue_id": 219228,
+            "referee_id": null,
+            "localteam_id": 18564,
+            "visitorteam_id": 18567,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-18 12:00:00",
+                    "date": "2018-06-18",
+                    "time": "12:00:00",
+                    "timestamp": 1529323200,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636014,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 191,
+            "aggregate_id": null,
+            "venue_id": 20259,
+            "referee_id": null,
+            "localteam_id": 18743,
+            "visitorteam_id": 18717,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-18 15:00:00",
+                    "date": "2018-06-18",
+                    "time": "15:00:00",
+                    "timestamp": 1529334000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636015,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 191,
+            "aggregate_id": null,
+            "venue_id": 219229,
+            "referee_id": null,
+            "localteam_id": 18554,
+            "visitorteam_id": 18645,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-18 18:00:00",
+                    "date": "2018-06-18",
+                    "time": "18:00:00",
+                    "timestamp": 1529344800,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636016,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 192,
+            "aggregate_id": null,
+            "venue_id": 219225,
+            "referee_id": null,
+            "localteam_id": 18720,
+            "visitorteam_id": 18597,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-19 12:00:00",
+                    "date": "2018-06-19",
+                    "time": "12:00:00",
+                    "timestamp": 1529409600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636017,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 28695,
+            "group_id": 192,
+            "aggregate_id": null,
+            "venue_id": 1609,
+            "referee_id": null,
+            "localteam_id": 18699,
+            "visitorteam_id": 18558,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-19 15:00:00",
+                    "date": "2018-06-19",
+                    "time": "15:00:00",
+                    "timestamp": 1529420400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636018,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 185,
+            "aggregate_id": null,
+            "venue_id": 8895,
+            "referee_id": null,
+            "localteam_id": 18702,
+            "visitorteam_id": 18546,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-19 18:00:00",
+                    "date": "2018-06-19",
+                    "time": "18:00:00",
+                    "timestamp": 1529431200,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636019,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 186,
+            "aggregate_id": null,
+            "venue_id": 186523,
+            "referee_id": null,
+            "localteam_id": 18701,
+            "visitorteam_id": 18551,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-20 12:00:00",
+                    "date": "2018-06-20",
+                    "time": "12:00:00",
+                    "timestamp": 1529496000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636020,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 185,
+            "aggregate_id": null,
+            "venue_id": 219227,
+            "referee_id": null,
+            "localteam_id": 15251,
+            "visitorteam_id": 18562,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-20 15:00:00",
+                    "date": "2018-06-20",
+                    "time": "15:00:00",
+                    "timestamp": 1529506800,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636021,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 186,
+            "aggregate_id": null,
+            "venue_id": 8869,
+            "referee_id": null,
+            "localteam_id": 18652,
+            "visitorteam_id": 18710,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-20 18:00:00",
+                    "date": "2018-06-20",
+                    "time": "18:00:00",
+                    "timestamp": 1529517600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636022,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 187,
+            "aggregate_id": null,
+            "venue_id": 219226,
+            "referee_id": null,
+            "localteam_id": 18583,
+            "visitorteam_id": 18730,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-21 12:00:00",
+                    "date": "2018-06-21",
+                    "time": "12:00:00",
+                    "timestamp": 1529582400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636023,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 187,
+            "aggregate_id": null,
+            "venue_id": 219224,
+            "referee_id": null,
+            "localteam_id": 18647,
+            "visitorteam_id": 18775,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-21 15:00:00",
+                    "date": "2018-06-21",
+                    "time": "15:00:00",
+                    "timestamp": 1529593200,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636024,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 188,
+            "aggregate_id": null,
+            "venue_id": 219228,
+            "referee_id": null,
+            "localteam_id": 18644,
+            "visitorteam_id": 18588,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-21 18:00:00",
+                    "date": "2018-06-21",
+                    "time": "18:00:00",
+                    "timestamp": 1529604000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636025,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 189,
+            "aggregate_id": null,
+            "venue_id": 8895,
+            "referee_id": null,
+            "localteam_id": 18704,
+            "visitorteam_id": 18598,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-22 12:00:00",
+                    "date": "2018-06-22",
+                    "time": "12:00:00",
+                    "timestamp": 1529668800,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636026,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 188,
+            "aggregate_id": null,
+            "venue_id": 219229,
+            "referee_id": null,
+            "localteam_id": 18737,
+            "visitorteam_id": 18635,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-22 15:00:00",
+                    "date": "2018-06-22",
+                    "time": "15:00:00",
+                    "timestamp": 1529679600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636027,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 189,
+            "aggregate_id": null,
+            "venue_id": 3948,
+            "referee_id": null,
+            "localteam_id": 18873,
+            "visitorteam_id": 18708,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-22 18:00:00",
+                    "date": "2018-06-22",
+                    "time": "18:00:00",
+                    "timestamp": 1529690400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636028,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 191,
+            "aggregate_id": null,
+            "venue_id": 1609,
+            "referee_id": null,
+            "localteam_id": 18743,
+            "visitorteam_id": 18554,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-23 12:00:00",
+                    "date": "2018-06-23",
+                    "time": "12:00:00",
+                    "timestamp": 1529755200,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636029,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 190,
+            "aggregate_id": null,
+            "venue_id": 219227,
+            "referee_id": null,
+            "localteam_id": 18567,
+            "visitorteam_id": 18576,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-23 15:00:00",
+                    "date": "2018-06-23",
+                    "time": "15:00:00",
+                    "timestamp": 1529766000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636030,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 190,
+            "aggregate_id": null,
+            "venue_id": 20259,
+            "referee_id": null,
+            "localteam_id": 18660,
+            "visitorteam_id": 18564,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-23 18:00:00",
+                    "date": "2018-06-23",
+                    "time": "18:00:00",
+                    "timestamp": 1529776800,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636031,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 191,
+            "aggregate_id": null,
+            "venue_id": 219228,
+            "referee_id": null,
+            "localteam_id": 18645,
+            "visitorteam_id": 18717,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-24 12:00:00",
+                    "date": "2018-06-24",
+                    "time": "12:00:00",
+                    "timestamp": 1529841600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636032,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 192,
+            "aggregate_id": null,
+            "venue_id": 219224,
+            "referee_id": null,
+            "localteam_id": 18597,
+            "visitorteam_id": 18558,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-24 15:00:00",
+                    "date": "2018-06-24",
+                    "time": "15:00:00",
+                    "timestamp": 1529852400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636033,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140842,
+            "group_id": 192,
+            "aggregate_id": null,
+            "venue_id": 8869,
+            "referee_id": null,
+            "localteam_id": 18699,
+            "visitorteam_id": 18720,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-24 18:00:00",
+                    "date": "2018-06-24",
+                    "time": "18:00:00",
+                    "timestamp": 1529863200,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636034,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 185,
+            "aggregate_id": null,
+            "venue_id": 219226,
+            "referee_id": null,
+            "localteam_id": 15251,
+            "visitorteam_id": 18702,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-25 14:00:00",
+                    "date": "2018-06-25",
+                    "time": "14:00:00",
+                    "timestamp": 1529935200,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636035,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 185,
+            "aggregate_id": null,
+            "venue_id": 219229,
+            "referee_id": null,
+            "localteam_id": 18562,
+            "visitorteam_id": 18546,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-25 14:00:00",
+                    "date": "2018-06-25",
+                    "time": "14:00:00",
+                    "timestamp": 1529935200,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636036,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 186,
+            "aggregate_id": null,
+            "venue_id": 219225,
+            "referee_id": null,
+            "localteam_id": 18652,
+            "visitorteam_id": 18701,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-25 18:00:00",
+                    "date": "2018-06-25",
+                    "time": "18:00:00",
+                    "timestamp": 1529949600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636037,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 186,
+            "aggregate_id": null,
+            "venue_id": 3948,
+            "referee_id": null,
+            "localteam_id": 18710,
+            "visitorteam_id": 18551,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-25 18:00:00",
+                    "date": "2018-06-25",
+                    "time": "18:00:00",
+                    "timestamp": 1529949600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636038,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 187,
+            "aggregate_id": null,
+            "venue_id": 186523,
+            "referee_id": null,
+            "localteam_id": 18583,
+            "visitorteam_id": 18647,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-26 14:00:00",
+                    "date": "2018-06-26",
+                    "time": "14:00:00",
+                    "timestamp": 1530021600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636039,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 187,
+            "aggregate_id": null,
+            "venue_id": 20259,
+            "referee_id": null,
+            "localteam_id": 18730,
+            "visitorteam_id": 18775,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-26 14:00:00",
+                    "date": "2018-06-26",
+                    "time": "14:00:00",
+                    "timestamp": 1530021600,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636040,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 188,
+            "aggregate_id": null,
+            "venue_id": 8895,
+            "referee_id": null,
+            "localteam_id": 18737,
+            "visitorteam_id": 18644,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-26 18:00:00",
+                    "date": "2018-06-26",
+                    "time": "18:00:00",
+                    "timestamp": 1530036000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636041,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 188,
+            "aggregate_id": null,
+            "venue_id": 219227,
+            "referee_id": null,
+            "localteam_id": 18635,
+            "visitorteam_id": 18588,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-26 18:00:00",
+                    "date": "2018-06-26",
+                    "time": "18:00:00",
+                    "timestamp": 1530036000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636042,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 190,
+            "aggregate_id": null,
+            "venue_id": 219224,
+            "referee_id": null,
+            "localteam_id": 18576,
+            "visitorteam_id": 18564,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-27 14:00:00",
+                    "date": "2018-06-27",
+                    "time": "14:00:00",
+                    "timestamp": 1530108000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636043,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 190,
+            "aggregate_id": null,
+            "venue_id": 8869,
+            "referee_id": null,
+            "localteam_id": 18567,
+            "visitorteam_id": 18660,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-27 14:00:00",
+                    "date": "2018-06-27",
+                    "time": "14:00:00",
+                    "timestamp": 1530108000,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636044,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 189,
+            "aggregate_id": null,
+            "venue_id": 1609,
+            "referee_id": null,
+            "localteam_id": 18873,
+            "visitorteam_id": 18704,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-27 18:00:00",
+                    "date": "2018-06-27",
+                    "time": "18:00:00",
+                    "timestamp": 1530122400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636045,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 189,
+            "aggregate_id": null,
+            "venue_id": 219228,
+            "referee_id": null,
+            "localteam_id": 18708,
+            "visitorteam_id": 18598,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-27 18:00:00",
+                    "date": "2018-06-27",
+                    "time": "18:00:00",
+                    "timestamp": 1530122400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636046,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 192,
+            "aggregate_id": null,
+            "venue_id": 219229,
+            "referee_id": null,
+            "localteam_id": 18597,
+            "visitorteam_id": 18699,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-28 14:00:00",
+                    "date": "2018-06-28",
+                    "time": "14:00:00",
+                    "timestamp": 1530194400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636047,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 192,
+            "aggregate_id": null,
+            "venue_id": 219226,
+            "referee_id": null,
+            "localteam_id": 18558,
+            "visitorteam_id": 18720,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-28 14:00:00",
+                    "date": "2018-06-28",
+                    "time": "14:00:00",
+                    "timestamp": 1530194400,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636048,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 191,
+            "aggregate_id": null,
+            "venue_id": 219225,
+            "referee_id": null,
+            "localteam_id": 18717,
+            "visitorteam_id": 18554,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-28 18:00:00",
+                    "date": "2018-06-28",
+                    "time": "18:00:00",
+                    "timestamp": 1530208800,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        },
+        {
+            "id": 8636049,
+            "league_id": 732,
+            "season_id": 892,
+            "stage_id": 1733,
+            "round_id": 140843,
+            "group_id": 191,
+            "aggregate_id": null,
+            "venue_id": 3948,
+            "referee_id": null,
+            "localteam_id": 18645,
+            "visitorteam_id": 18743,
+            "weather_report": null,
+            "commentaries": false,
+            "attendance": null,
+            "pitch": null,
+            "winning_odds_calculated": false,
+            "formations": {
+                "localteam_formation": null,
+                "visitorteam_formation": null
+            },
+            "scores": {
+                "localteam_score": 0,
+                "visitorteam_score": 0,
+                "localteam_pen_score": 0,
+                "visitorteam_pen_score": 0,
+                "ht_score": "",
+                "ft_score": null,
+                "et_score": null
+            },
+            "time": {
+                "status": "NS",
+                "starting_at": {
+                    "date_time": "2018-06-28 18:00:00",
+                    "date": "2018-06-28",
+                    "time": "18:00:00",
+                    "timestamp": 1530208800,
+                    "timezone": "UTC"
+                },
+                "minute": null,
+                "second": null,
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null
+            },
+            "coaches": {
+                "localteam_coach_id": null,
+                "visitorteam_coach_id": null
+            },
+            "standings": {
+                "localteam_position": null,
+                "visitorteam_position": null
+            },
+            "deleted": false
+        }
+    ]
+};
+//# sourceMappingURL=fixtures.js.map
+
+/***/ }),
+
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BetsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_firebase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase_firestore__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_globals_globals__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1316,25 +3590,82 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the BetsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
+
+
+
 var BetsPage = /** @class */ (function () {
-    function BetsPage(navCtrl, navParams) {
+    function BetsPage(navCtrl, navParams, alertaCtrl, globalProvider) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.alertaCtrl = alertaCtrl;
+        this.globalProvider = globalProvider;
+        this.equipos = __WEBPACK_IMPORTED_MODULE_2__app_config_equiposMonks__["a" /* EquiposMonks */];
+        var user = __WEBPACK_IMPORTED_MODULE_3_firebase___default.a.auth().currentUser;
+        this.userLogin = user.email;
+        this.db = this.globalProvider.firestoreDB;
+        // const settings = { timestampsInSnapshots: true };
+        // this.db.settings( settings );
+        console.log('en bets.ts verificar login-correo', this.userLogin);
+        this.db.collection('apuestas').doc(this.userLogin)
+            .get()
+            .then(function (partidos) {
+            _this.fixtures = partidos.data().data;
+            console.log('Fixtures - constructor de bets.ts', partidos.data());
+        });
     }
     BetsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad BetsPage');
     };
+    BetsPage.prototype.ionViewWillEnter = function () {
+        this.grupos = '185';
+    };
+    BetsPage.prototype.getSrcBanderaEquipo = function (id) {
+        var srcB = null;
+        this.equipos.forEach(function (equipo) {
+            if (equipo.id === id)
+                srcB = equipo.logo_path;
+        });
+        return srcB;
+    };
+    BetsPage.prototype.getNombreEquipo = function (id) {
+        var nomEq = null;
+        this.equipos.forEach(function (equipo) {
+            if (equipo.id === id)
+                nomEq = equipo.name;
+        });
+        return nomEq;
+    };
+    BetsPage.prototype.guardarBets = function (fixtureBet) {
+        var _this = this;
+        var fix = { 'data': fixtureBet };
+        // fix.data.push(fixtureBet);
+        console.log('Un breve control - mus be delete', fix);
+        this.db.collection('apuestas').doc(this.userLogin)
+            .update(fix)
+            .then(function (dato) {
+            var alerta = _this.alertaCtrl.create({
+                title: 'GUARDADO RESULTADOS',
+                subTitle: 'Sus predicciones se guardaron correctamente',
+                message: 'Puede camnbiarlos si desea hacerlo, podrá efectuar sus actualizaciones ' +
+                    'hasta un día antes de la inauguración',
+                buttons: ['Ok']
+            });
+            alerta.present();
+        })
+            .catch(function (error) {
+            console.log('Error en el update ', error);
+        });
+    };
     BetsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-bets',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/'<ion-header no-border no-margin>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Apuestas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/,
+            selector: 'page-bets',template:/*ion-inline-start:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/'<ion-header no-border no-margin>\n  <ion-toolbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title text-center>Predicciones</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-footer padding-left>\n  <div color="primary">\n    <ion-segment [(ngModel)]="grupos" color="light" mode="ios">\n      <ion-segment-button value="185">A</ion-segment-button>\n      <ion-segment-button value="186">B</ion-segment-button>\n      <ion-segment-button value="187">C</ion-segment-button>\n      <ion-segment-button value="188">D</ion-segment-button>\n      <ion-segment-button value="189">E</ion-segment-button>\n      <ion-segment-button value="190">F</ion-segment-button>\n      <ion-segment-button value="191">G</ion-segment-button>\n      <ion-segment-button value="192">H</ion-segment-button>\n    </ion-segment>\n  </div>\n</ion-footer>\n<ion-content class="background" no-padding no-margin>\n  <br>\n  <div *ngFor="let fixture of fixtures">\n    <!--<div>-->\n    <div [hidden]="grupos !== fixture.group_id.toString()">\n      <ion-list no-padding no-margin\n                no-lines>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-right no-padding no-margin>\n                <ion-avatar item-end>\n                  <img src="{{getSrcBanderaEquipo(fixture.localteam_id)}}">\n                </ion-avatar>\n                <p text-wrap>{{getNombreEquipo(fixture.localteam_id)}} </p>\n              </ion-item>\n            </ion-col>\n            <ion-col col-4 no-padding no-margin>\n              <ion-item text-center no-padding no-margin>\n                <ion-input type="number" min="0" max="12"\n                           required clearOnEdit\n                           [(ngModel)]="fixture.scores.localteam_score"></ion-input>\n                <h3>:</h3>\n                <ion-input type="number" min="0" max="12"\n                           required clearOnEdit\n                           [(ngModel)]="fixture.scores.visitorteam_score"></ion-input>\n              </ion-item>\n            </ion-col>\n            <ion-col col-10 no-padding no-margin>\n              <ion-item text-left no-padding no-margin>\n                <ion-avatar item-start>\n                  <img src="{{getSrcBanderaEquipo(fixture.visitorteam_id)}}">\n                </ion-avatar>\n                <p margin-left="1px" text-wrap> {{getNombreEquipo(fixture.visitorteam_id)}}</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-list>\n    </div>\n    <ion-fab right bottom>\n      <button ion-fab color="botones" (click)="guardarBets(fixtures)">\n        <ion-icon name="cloud-upload"></ion-icon>\n      </button>\n    </ion-fab>\n  </div>\n  <div color="light" padding>\n    <ion-item color="resaltar" no-border no-lines style="height: auto;">\n      <h3>Nota:</h3>\n      <p text-wrap>Ingresa tus resultados y luego presiona el\n        boton de subir a la nube. <br>Además, puede cambiar sus predicciones las veces que desee hasta\n        un día antes de la inauguración</p>\n    </ion-item>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\apptest\worldcupbet\src\pages\bets\bets.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_globals_globals__["a" /* GlobalsProvider */]])
     ], BetsPage);
     return BetsPage;
 }());
@@ -1343,13 +3674,13 @@ var BetsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 218:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(245);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1357,7 +3688,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 239:
+/***/ 245:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1365,30 +3696,32 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_google_maps__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_rest_service_rest_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_google_maps__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_rest_service_rest_service__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_globals_globals__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_partidos_partidos__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_estadios_estadios__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_estadio_geopos_estadio_geopos__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_lista_partidos_lista_partidos__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_grupos_grupos__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_equipo_equipo__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_jugadores_jugadores__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_bets_bets__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_estadisticas_estadisticas__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1417,39 +3750,39 @@ var AppModule = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__["a" /* PartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__["a" /* EstadiosPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__["a" /* GruposPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__["a" /* EquipoPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__["a" /* JugadoresPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__["a" /* BetsPage */]
+                __WEBPACK_IMPORTED_MODULE_11__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_partidos_partidos__["a" /* PartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_estadios_estadios__["a" /* EstadiosPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_grupos_grupos__["a" /* GruposPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_equipo_equipo__["a" /* EquipoPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_jugadores_jugadores__["a" /* JugadoresPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_bets_bets__["a" /* BetsPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: []
-                }),
+                })
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_partidos_partidos__["a" /* PartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_estadios_estadios__["a" /* EstadiosPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_grupos_grupos__["a" /* GruposPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_equipo_equipo__["a" /* EquipoPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_jugadores_jugadores__["a" /* JugadoresPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_bets_bets__["a" /* BetsPage */]
+                __WEBPACK_IMPORTED_MODULE_11__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_partidos_partidos__["a" /* PartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_estadios_estadios__["a" /* EstadiosPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_estadio_geopos_estadio_geopos__["a" /* EstadioGeoposPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_lista_partidos_lista_partidos__["a" /* ListaPartidosPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_grupos_grupos__["a" /* GruposPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_equipo_equipo__["a" /* EquipoPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_jugadores_jugadores__["a" /* JugadoresPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_estadisticas_estadisticas__["a" /* EstadisticasPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_bets_bets__["a" /* BetsPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -1457,7 +3790,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__ionic_native_google_maps__["a" /* GoogleMaps */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_8__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_9__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */]
+                __WEBPACK_IMPORTED_MODULE_9__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_10__providers_globals_globals__["a" /* GlobalsProvider */]
             ]
         })
     ], AppModule);
@@ -1468,25 +3802,27 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 293:
+/***/ 299:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_partidos_partidos__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_estadios_estadios__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_equipo_equipo__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_grupos_grupos__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_bets_bets__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_autenticacion_service_autenticacion_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_globals_globals__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_firebase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_firebase_firestore__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_partidos_partidos__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_estadios_estadios__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_equipo_equipo__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_grupos_grupos__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_iniciar_sesion_iniciar_sesion__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_bets_bets__ = __webpack_require__(222);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1509,22 +3845,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var MyApp = /** @class */ (function () {
-    function MyApp(platform, statusBar, splashScreen, autenticacionService) {
+    function MyApp(platform, statusBar, splashScreen, autenticacionService, globalProvider) {
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
         this.autenticacionService = autenticacionService;
+        this.globalProvider = globalProvider;
         this.usuarioConectado = false;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */];
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
-            { title: 'Inicio', icono: 'home', component: __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */] },
-            { title: 'Partidos', icono: 'football', component: __WEBPACK_IMPORTED_MODULE_7__pages_partidos_partidos__["a" /* PartidosPage */] },
-            { title: 'Estadios', icono: 'map', component: __WEBPACK_IMPORTED_MODULE_8__pages_estadios_estadios__["a" /* EstadiosPage */] },
-            { title: 'Equipos', icono: 'people', component: __WEBPACK_IMPORTED_MODULE_9__pages_equipo_equipo__["a" /* EquipoPage */] },
-            { title: 'Fase de Grupos', icono: 'globe', component: __WEBPACK_IMPORTED_MODULE_10__pages_grupos_grupos__["a" /* GruposPage */] },
+            { title: 'Inicio', icono: 'home', component: __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */] },
+            { title: 'Partidos', icono: 'football', component: __WEBPACK_IMPORTED_MODULE_9__pages_partidos_partidos__["a" /* PartidosPage */] },
+            { title: 'Estadios', icono: 'map', component: __WEBPACK_IMPORTED_MODULE_10__pages_estadios_estadios__["a" /* EstadiosPage */] },
+            { title: 'Equipos', icono: 'people', component: __WEBPACK_IMPORTED_MODULE_11__pages_equipo_equipo__["a" /* EquipoPage */] },
+            { title: 'Fase de Grupos', icono: 'globe', component: __WEBPACK_IMPORTED_MODULE_12__pages_grupos_grupos__["a" /* GruposPage */] },
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -1532,7 +3871,7 @@ var MyApp = /** @class */ (function () {
         /**
          * Firebase Conexión
          */
-        __WEBPACK_IMPORTED_MODULE_4_firebase___default.a.initializeApp({
+        __WEBPACK_IMPORTED_MODULE_6_firebase___default.a.initializeApp({
             apiKey: "AIzaSyCzW8yPu3Dlztw_A4uxjF26NoAsIKMP_OM",
             authDomain: "worldcupbet-c1705.firebaseapp.com",
             databaseURL: "https://worldcupbet-c1705.firebaseio.com",
@@ -1540,17 +3879,20 @@ var MyApp = /** @class */ (function () {
             storageBucket: "worldcupbet-c1705.appspot.com",
             messagingSenderId: "1043577611235"
         });
+        var settings = { timestampsInSnapshots: true };
+        this.globalProvider.firestoreDB = __WEBPACK_IMPORTED_MODULE_6_firebase___default.a.firestore();
+        this.globalProvider.firestoreDB.settings(settings);
         /**
          * Verificar el estado de la sesión
          */
-        __WEBPACK_IMPORTED_MODULE_4_firebase___default.a.auth().onAuthStateChanged(function (usuario) {
+        __WEBPACK_IMPORTED_MODULE_6_firebase___default.a.auth().onAuthStateChanged(function (usuario) {
             if (usuario != null) {
                 _this.usuarioConectado = true;
-                _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */]);
+                _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */]);
             }
             else {
                 _this.usuarioConectado = false;
-                // this.contenido.setRoot(this.iniciarSesion);
+                _this.nav.setRoot(_this.rootPage);
             }
         });
         this.platform.ready().then(function () {
@@ -1566,10 +3908,10 @@ var MyApp = /** @class */ (function () {
         this.nav.setRoot(page.component);
     };
     MyApp.prototype.openPageLogin = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_11__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */]);
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_13__pages_iniciar_sesion_iniciar_sesion__["a" /* IniciarSesionPage */]);
     };
     MyApp.prototype.openPageBets = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_12__pages_bets_bets__["a" /* BetsPage */]);
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_14__pages_bets_bets__["a" /* BetsPage */]);
     };
     MyApp.prototype.terminarSesion = function () {
         this.autenticacionService.terminarSesion();
@@ -1584,7 +3926,8 @@ var MyApp = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */]])
+            __WEBPACK_IMPORTED_MODULE_4__providers_autenticacion_service_autenticacion_service__["a" /* AutenticacionServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_globals_globals__["a" /* GlobalsProvider */]])
     ], MyApp);
     return MyApp;
 }());
@@ -1593,7 +3936,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 305:
+/***/ 310:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1619,7 +3962,7 @@ var URL_FIXTURES = "https://soccer.sportmonks.com/api/v2.0/fixtures/between/";
 
 /***/ }),
 
-/***/ 306:
+/***/ 311:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2264,16 +4607,16 @@ var Countries = [
 
 /***/ }),
 
-/***/ 307:
+/***/ 312:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaPartidosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__ = __webpack_require__(308);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_fixtures__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_equiposMonks__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_fechas__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_config_fixtures__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_config_equiposMonks__ = __webpack_require__(54);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2330,7 +4673,7 @@ var ListaPartidosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 308:
+/***/ 313:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2346,2665 +4689,45 @@ var Fechas = { "Junio": [
 
 /***/ }),
 
-/***/ 309:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Fixtures; });
-var Fixtures = [
-    {
-        "id": 8636002,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 185,
-        "aggregate_id": null,
-        "venue_id": 186523,
-        "referee_id": null,
-        "localteam_id": 18702,
-        "visitorteam_id": 18562,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-14 15:00:00",
-                "date": "2018-06-14",
-                "time": "15:00:00",
-                "timestamp": 1528988400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636003,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 185,
-        "aggregate_id": null,
-        "venue_id": 219224,
-        "referee_id": null,
-        "localteam_id": 18546,
-        "visitorteam_id": 15251,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-15 12:00:00",
-                "date": "2018-06-15",
-                "time": "12:00:00",
-                "timestamp": 1529064000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636004,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 186,
-        "aggregate_id": null,
-        "venue_id": 8895,
-        "referee_id": null,
-        "localteam_id": 18551,
-        "visitorteam_id": 18652,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-15 15:00:00",
-                "date": "2018-06-15",
-                "time": "15:00:00",
-                "timestamp": 1529074800,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636005,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 186,
-        "aggregate_id": null,
-        "venue_id": 20259,
-        "referee_id": null,
-        "localteam_id": 18701,
-        "visitorteam_id": 18710,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-15 18:00:00",
-                "date": "2018-06-15",
-                "time": "18:00:00",
-                "timestamp": 1529085600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636006,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 187,
-        "aggregate_id": null,
-        "venue_id": 8869,
-        "referee_id": null,
-        "localteam_id": 18647,
-        "visitorteam_id": 18730,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-16 10:00:00",
-                "date": "2018-06-16",
-                "time": "10:00:00",
-                "timestamp": 1529143200,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636007,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 188,
-        "aggregate_id": null,
-        "venue_id": 1609,
-        "referee_id": null,
-        "localteam_id": 18644,
-        "visitorteam_id": 18635,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-16 13:00:00",
-                "date": "2018-06-16",
-                "time": "13:00:00",
-                "timestamp": 1529154000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636008,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 187,
-        "aggregate_id": null,
-        "venue_id": 219225,
-        "referee_id": null,
-        "localteam_id": 18775,
-        "visitorteam_id": 18583,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-16 16:00:00",
-                "date": "2018-06-16",
-                "time": "16:00:00",
-                "timestamp": 1529164800,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636009,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 188,
-        "aggregate_id": null,
-        "venue_id": 3948,
-        "referee_id": null,
-        "localteam_id": 18588,
-        "visitorteam_id": 18737,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-16 19:00:00",
-                "date": "2018-06-16",
-                "time": "19:00:00",
-                "timestamp": 1529175600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636010,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 189,
-        "aggregate_id": null,
-        "venue_id": 219226,
-        "referee_id": null,
-        "localteam_id": 18598,
-        "visitorteam_id": 18873,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-17 12:00:00",
-                "date": "2018-06-17",
-                "time": "12:00:00",
-                "timestamp": 1529236800,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636011,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 190,
-        "aggregate_id": null,
-        "venue_id": 186523,
-        "referee_id": null,
-        "localteam_id": 18660,
-        "visitorteam_id": 18576,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-17 15:00:00",
-                "date": "2018-06-17",
-                "time": "15:00:00",
-                "timestamp": 1529247600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636012,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 189,
-        "aggregate_id": null,
-        "venue_id": 219227,
-        "referee_id": null,
-        "localteam_id": 18704,
-        "visitorteam_id": 18708,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-17 18:00:00",
-                "date": "2018-06-17",
-                "time": "18:00:00",
-                "timestamp": 1529258400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636013,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 190,
-        "aggregate_id": null,
-        "venue_id": 219228,
-        "referee_id": null,
-        "localteam_id": 18564,
-        "visitorteam_id": 18567,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-18 12:00:00",
-                "date": "2018-06-18",
-                "time": "12:00:00",
-                "timestamp": 1529323200,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636014,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 191,
-        "aggregate_id": null,
-        "venue_id": 20259,
-        "referee_id": null,
-        "localteam_id": 18743,
-        "visitorteam_id": 18717,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-18 15:00:00",
-                "date": "2018-06-18",
-                "time": "15:00:00",
-                "timestamp": 1529334000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636015,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 191,
-        "aggregate_id": null,
-        "venue_id": 219229,
-        "referee_id": null,
-        "localteam_id": 18554,
-        "visitorteam_id": 18645,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-18 18:00:00",
-                "date": "2018-06-18",
-                "time": "18:00:00",
-                "timestamp": 1529344800,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636016,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 192,
-        "aggregate_id": null,
-        "venue_id": 219225,
-        "referee_id": null,
-        "localteam_id": 18720,
-        "visitorteam_id": 18597,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-19 12:00:00",
-                "date": "2018-06-19",
-                "time": "12:00:00",
-                "timestamp": 1529409600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636017,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 28695,
-        "group_id": 192,
-        "aggregate_id": null,
-        "venue_id": 1609,
-        "referee_id": null,
-        "localteam_id": 18699,
-        "visitorteam_id": 18558,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-19 15:00:00",
-                "date": "2018-06-19",
-                "time": "15:00:00",
-                "timestamp": 1529420400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636018,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 185,
-        "aggregate_id": null,
-        "venue_id": 8895,
-        "referee_id": null,
-        "localteam_id": 18702,
-        "visitorteam_id": 18546,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-19 18:00:00",
-                "date": "2018-06-19",
-                "time": "18:00:00",
-                "timestamp": 1529431200,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636019,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 186,
-        "aggregate_id": null,
-        "venue_id": 186523,
-        "referee_id": null,
-        "localteam_id": 18701,
-        "visitorteam_id": 18551,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-20 12:00:00",
-                "date": "2018-06-20",
-                "time": "12:00:00",
-                "timestamp": 1529496000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636020,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 185,
-        "aggregate_id": null,
-        "venue_id": 219227,
-        "referee_id": null,
-        "localteam_id": 15251,
-        "visitorteam_id": 18562,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-20 15:00:00",
-                "date": "2018-06-20",
-                "time": "15:00:00",
-                "timestamp": 1529506800,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636021,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 186,
-        "aggregate_id": null,
-        "venue_id": 8869,
-        "referee_id": null,
-        "localteam_id": 18652,
-        "visitorteam_id": 18710,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-20 18:00:00",
-                "date": "2018-06-20",
-                "time": "18:00:00",
-                "timestamp": 1529517600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636022,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 187,
-        "aggregate_id": null,
-        "venue_id": 219226,
-        "referee_id": null,
-        "localteam_id": 18583,
-        "visitorteam_id": 18730,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-21 12:00:00",
-                "date": "2018-06-21",
-                "time": "12:00:00",
-                "timestamp": 1529582400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636023,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 187,
-        "aggregate_id": null,
-        "venue_id": 219224,
-        "referee_id": null,
-        "localteam_id": 18647,
-        "visitorteam_id": 18775,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-21 15:00:00",
-                "date": "2018-06-21",
-                "time": "15:00:00",
-                "timestamp": 1529593200,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636024,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 188,
-        "aggregate_id": null,
-        "venue_id": 219228,
-        "referee_id": null,
-        "localteam_id": 18644,
-        "visitorteam_id": 18588,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-21 18:00:00",
-                "date": "2018-06-21",
-                "time": "18:00:00",
-                "timestamp": 1529604000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636025,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 189,
-        "aggregate_id": null,
-        "venue_id": 8895,
-        "referee_id": null,
-        "localteam_id": 18704,
-        "visitorteam_id": 18598,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-22 12:00:00",
-                "date": "2018-06-22",
-                "time": "12:00:00",
-                "timestamp": 1529668800,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636026,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 188,
-        "aggregate_id": null,
-        "venue_id": 219229,
-        "referee_id": null,
-        "localteam_id": 18737,
-        "visitorteam_id": 18635,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-22 15:00:00",
-                "date": "2018-06-22",
-                "time": "15:00:00",
-                "timestamp": 1529679600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636027,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 189,
-        "aggregate_id": null,
-        "venue_id": 3948,
-        "referee_id": null,
-        "localteam_id": 18873,
-        "visitorteam_id": 18708,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-22 18:00:00",
-                "date": "2018-06-22",
-                "time": "18:00:00",
-                "timestamp": 1529690400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636028,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 191,
-        "aggregate_id": null,
-        "venue_id": 1609,
-        "referee_id": null,
-        "localteam_id": 18743,
-        "visitorteam_id": 18554,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-23 12:00:00",
-                "date": "2018-06-23",
-                "time": "12:00:00",
-                "timestamp": 1529755200,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636029,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 190,
-        "aggregate_id": null,
-        "venue_id": 219227,
-        "referee_id": null,
-        "localteam_id": 18567,
-        "visitorteam_id": 18576,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-23 15:00:00",
-                "date": "2018-06-23",
-                "time": "15:00:00",
-                "timestamp": 1529766000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636030,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 190,
-        "aggregate_id": null,
-        "venue_id": 20259,
-        "referee_id": null,
-        "localteam_id": 18660,
-        "visitorteam_id": 18564,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-23 18:00:00",
-                "date": "2018-06-23",
-                "time": "18:00:00",
-                "timestamp": 1529776800,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636031,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 191,
-        "aggregate_id": null,
-        "venue_id": 219228,
-        "referee_id": null,
-        "localteam_id": 18645,
-        "visitorteam_id": 18717,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-24 12:00:00",
-                "date": "2018-06-24",
-                "time": "12:00:00",
-                "timestamp": 1529841600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636032,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 192,
-        "aggregate_id": null,
-        "venue_id": 219224,
-        "referee_id": null,
-        "localteam_id": 18597,
-        "visitorteam_id": 18558,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-24 15:00:00",
-                "date": "2018-06-24",
-                "time": "15:00:00",
-                "timestamp": 1529852400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636033,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140842,
-        "group_id": 192,
-        "aggregate_id": null,
-        "venue_id": 8869,
-        "referee_id": null,
-        "localteam_id": 18699,
-        "visitorteam_id": 18720,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-24 18:00:00",
-                "date": "2018-06-24",
-                "time": "18:00:00",
-                "timestamp": 1529863200,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636034,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 185,
-        "aggregate_id": null,
-        "venue_id": 219226,
-        "referee_id": null,
-        "localteam_id": 15251,
-        "visitorteam_id": 18702,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-25 14:00:00",
-                "date": "2018-06-25",
-                "time": "14:00:00",
-                "timestamp": 1529935200,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636035,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 185,
-        "aggregate_id": null,
-        "venue_id": 219229,
-        "referee_id": null,
-        "localteam_id": 18562,
-        "visitorteam_id": 18546,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-25 14:00:00",
-                "date": "2018-06-25",
-                "time": "14:00:00",
-                "timestamp": 1529935200,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636036,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 186,
-        "aggregate_id": null,
-        "venue_id": 219225,
-        "referee_id": null,
-        "localteam_id": 18652,
-        "visitorteam_id": 18701,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-25 18:00:00",
-                "date": "2018-06-25",
-                "time": "18:00:00",
-                "timestamp": 1529949600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636037,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 186,
-        "aggregate_id": null,
-        "venue_id": 3948,
-        "referee_id": null,
-        "localteam_id": 18710,
-        "visitorteam_id": 18551,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-25 18:00:00",
-                "date": "2018-06-25",
-                "time": "18:00:00",
-                "timestamp": 1529949600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636038,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 187,
-        "aggregate_id": null,
-        "venue_id": 186523,
-        "referee_id": null,
-        "localteam_id": 18583,
-        "visitorteam_id": 18647,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-26 14:00:00",
-                "date": "2018-06-26",
-                "time": "14:00:00",
-                "timestamp": 1530021600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636039,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 187,
-        "aggregate_id": null,
-        "venue_id": 20259,
-        "referee_id": null,
-        "localteam_id": 18730,
-        "visitorteam_id": 18775,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-26 14:00:00",
-                "date": "2018-06-26",
-                "time": "14:00:00",
-                "timestamp": 1530021600,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636040,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 188,
-        "aggregate_id": null,
-        "venue_id": 8895,
-        "referee_id": null,
-        "localteam_id": 18737,
-        "visitorteam_id": 18644,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-26 18:00:00",
-                "date": "2018-06-26",
-                "time": "18:00:00",
-                "timestamp": 1530036000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636041,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 188,
-        "aggregate_id": null,
-        "venue_id": 219227,
-        "referee_id": null,
-        "localteam_id": 18635,
-        "visitorteam_id": 18588,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-26 18:00:00",
-                "date": "2018-06-26",
-                "time": "18:00:00",
-                "timestamp": 1530036000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636042,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 190,
-        "aggregate_id": null,
-        "venue_id": 219224,
-        "referee_id": null,
-        "localteam_id": 18576,
-        "visitorteam_id": 18564,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-27 14:00:00",
-                "date": "2018-06-27",
-                "time": "14:00:00",
-                "timestamp": 1530108000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636043,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 190,
-        "aggregate_id": null,
-        "venue_id": 8869,
-        "referee_id": null,
-        "localteam_id": 18567,
-        "visitorteam_id": 18660,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-27 14:00:00",
-                "date": "2018-06-27",
-                "time": "14:00:00",
-                "timestamp": 1530108000,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636044,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 189,
-        "aggregate_id": null,
-        "venue_id": 1609,
-        "referee_id": null,
-        "localteam_id": 18873,
-        "visitorteam_id": 18704,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-27 18:00:00",
-                "date": "2018-06-27",
-                "time": "18:00:00",
-                "timestamp": 1530122400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636045,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 189,
-        "aggregate_id": null,
-        "venue_id": 219228,
-        "referee_id": null,
-        "localteam_id": 18708,
-        "visitorteam_id": 18598,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-27 18:00:00",
-                "date": "2018-06-27",
-                "time": "18:00:00",
-                "timestamp": 1530122400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636046,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 192,
-        "aggregate_id": null,
-        "venue_id": 219229,
-        "referee_id": null,
-        "localteam_id": 18597,
-        "visitorteam_id": 18699,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-28 14:00:00",
-                "date": "2018-06-28",
-                "time": "14:00:00",
-                "timestamp": 1530194400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636047,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 192,
-        "aggregate_id": null,
-        "venue_id": 219226,
-        "referee_id": null,
-        "localteam_id": 18558,
-        "visitorteam_id": 18720,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-28 14:00:00",
-                "date": "2018-06-28",
-                "time": "14:00:00",
-                "timestamp": 1530194400,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636048,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 191,
-        "aggregate_id": null,
-        "venue_id": 219225,
-        "referee_id": null,
-        "localteam_id": 18717,
-        "visitorteam_id": 18554,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-28 18:00:00",
-                "date": "2018-06-28",
-                "time": "18:00:00",
-                "timestamp": 1530208800,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
-    },
-    {
-        "id": 8636049,
-        "league_id": 732,
-        "season_id": 892,
-        "stage_id": 1733,
-        "round_id": 140843,
-        "group_id": 191,
-        "aggregate_id": null,
-        "venue_id": 3948,
-        "referee_id": null,
-        "localteam_id": 18645,
-        "visitorteam_id": 18743,
-        "weather_report": null,
-        "commentaries": false,
-        "attendance": null,
-        "pitch": null,
-        "winning_odds_calculated": false,
-        "formations": {
-            "localteam_formation": null,
-            "visitorteam_formation": null
-        },
-        "scores": {
-            "localteam_score": 0,
-            "visitorteam_score": 0,
-            "localteam_pen_score": 0,
-            "visitorteam_pen_score": 0,
-            "ht_score": "",
-            "ft_score": null,
-            "et_score": null
-        },
-        "time": {
-            "status": "NS",
-            "starting_at": {
-                "date_time": "2018-06-28 18:00:00",
-                "date": "2018-06-28",
-                "time": "18:00:00",
-                "timestamp": 1530208800,
-                "timezone": "UTC"
-            },
-            "minute": null,
-            "second": null,
-            "added_time": null,
-            "extra_minute": null,
-            "injury_time": null
-        },
-        "coaches": {
-            "localteam_coach_id": null,
-            "visitorteam_coach_id": null
-        },
-        "standings": {
-            "localteam_position": null,
-            "visitorteam_position": null
-        },
-        "deleted": false
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalsProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var GlobalsProvider = /** @class */ (function () {
+    function GlobalsProvider() {
+        console.log('Hello GlobalsProvider Provider');
     }
-];
-//# sourceMappingURL=fixtures.js.map
+    GlobalsProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], GlobalsProvider);
+    return GlobalsProvider;
+}());
+
+//# sourceMappingURL=globals.js.map
 
 /***/ }),
 
-/***/ 52:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_config__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_config__ = __webpack_require__(310);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5024,27 +4747,27 @@ var RestServiceProvider = /** @class */ (function () {
     }
     RestServiceProvider.prototype.getSquad = function (team) {
         var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["e" /* URL_SQUAD */] + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["a" /* TEMPORADA */] + '/team/' + team + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver SQUAD Url Rest', url);
+        // console.log('Ver SQUAD Url Rest', url);
         return this.http.get(url);
     };
     RestServiceProvider.prototype.getJugador = function (id_jug) {
         var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["d" /* URL_PLAYERS */] + id_jug + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver Jugador Url Rest', url);
+        // console.log('Ver Jugador Url Rest', url);
         return this.http.get(url);
     };
     RestServiceProvider.prototype.getEquipo = function (id_equipo) {
         var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["g" /* URL_TEAMS */] + id_equipo + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver TEAM Url Rest', url);
+        // console.log('Ver TEAM Url Rest', url);
         return this.http.get(url);
     };
     RestServiceProvider.prototype.getStandingGrupos = function () {
         var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["f" /* URL_STANDINGS */] + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["a" /* TEMPORADA */] + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver TEAM Url Rest', url);
+        // console.log('Ver TEAM Url Rest', url);
         return this.http.get(url);
     };
     RestServiceProvider.prototype.getFixturesFromTo = function (fromD, toD) {
         var url = __WEBPACK_IMPORTED_MODULE_2__app_config_config__["c" /* URL_FIXTURES */] + fromD + '/' + toD + '?api_token=' + __WEBPACK_IMPORTED_MODULE_2__app_config_config__["b" /* TOKEN */];
-        console.log('Ver FIXTURES Url Rest', url);
+        // console.log('Ver FIXTURES Url Rest', url);
         return this.http.get(url);
     };
     RestServiceProvider = __decorate([
@@ -5056,7 +4779,402 @@ var RestServiceProvider = /** @class */ (function () {
 
 //# sourceMappingURL=rest-service.js.map
 
+/***/ }),
+
+/***/ 54:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquiposMonks; });
+var EquiposMonks = [
+    {
+        "id": 15251,
+        "legacy_id": 1355,
+        "name": "Uruguay",
+        "short_code": "URY",
+        "twitter": null,
+        "country_id": 158,
+        "national_team": true,
+        "founded": 1900,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/19/15251.png",
+        "venue_id": 10900
+    },
+    {
+        "id": 18546,
+        "legacy_id": 2027,
+        "name": "Egypt",
+        "short_code": "EGY",
+        "twitter": null,
+        "country_id": 886,
+        "national_team": true,
+        "founded": 1921,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18546.png",
+        "venue_id": 58
+    },
+    {
+        "id": 18551,
+        "legacy_id": 1354,
+        "name": "Morocco",
+        "short_code": "MAR",
+        "twitter": null,
+        "country_id": 1424,
+        "national_team": true,
+        "founded": 1955,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+        "venue_id": 1679
+    },
+    {
+        "id": 18554,
+        "legacy_id": 1348,
+        "name": "Tunisia",
+        "short_code": "TUN",
+        "twitter": null,
+        "country_id": 1439,
+        "national_team": true,
+        "founded": 1957,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+        "venue_id": 2562
+    },
+    {
+        "id": 18558,
+        "legacy_id": 1846,
+        "name": "Senegal",
+        "short_code": "SEN",
+        "twitter": null,
+        "country_id": 200,
+        "national_team": true,
+        "founded": 1960,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18558.png",
+        "venue_id": 14382
+    },
+    {
+        "id": 18562,
+        "legacy_id": 2048,
+        "name": "Saudi Arabia",
+        "short_code": "SAU",
+        "twitter": null,
+        "country_id": 35376,
+        "national_team": true,
+        "founded": 1956,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18562.png",
+        "venue_id": 1503
+    },
+    {
+        "id": 18564,
+        "legacy_id": 211,
+        "name": "Sweden",
+        "short_code": "SWE",
+        "twitter": null,
+        "country_id": 47,
+        "national_team": true,
+        "founded": 1904,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18564.png",
+        "venue_id": 1668
+    },
+    {
+        "id": 18567,
+        "legacy_id": 1837,
+        "name": "Korea Republic",
+        "short_code": "KOR",
+        "twitter": null,
+        "country_id": 712,
+        "national_team": true,
+        "founded": 1933,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
+        "venue_id": 175
+    },
+    {
+        "id": 18576,
+        "legacy_id": 1356,
+        "name": "Mexico",
+        "short_code": "MEX",
+        "twitter": null,
+        "country_id": 458,
+        "national_team": true,
+        "founded": 1927,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
+        "venue_id": 1599
+    },
+    {
+        "id": 18583,
+        "legacy_id": 202,
+        "name": "Denmark",
+        "short_code": "DNK",
+        "twitter": null,
+        "country_id": 320,
+        "national_team": true,
+        "founded": 1889,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+        "venue_id": 5660
+    },
+    {
+        "id": 18588,
+        "legacy_id": 206,
+        "name": "Croatia",
+        "short_code": "CRO",
+        "twitter": null,
+        "country_id": 266,
+        "national_team": true,
+        "founded": 1912,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18588.png",
+        "venue_id": 176
+    },
+    {
+        "id": 18597,
+        "legacy_id": 1347,
+        "name": "Japan",
+        "short_code": "JPN",
+        "twitter": null,
+        "country_id": 479,
+        "national_team": true,
+        "founded": 1921,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18597.png",
+        "venue_id": 14408
+    },
+    {
+        "id": 18598,
+        "legacy_id": 1211,
+        "name": "Costa Rica",
+        "short_code": "CRI",
+        "twitter": null,
+        "country_id": 1739,
+        "national_team": true,
+        "founded": 1921,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+        "venue_id": 10981
+    },
+    {
+        "id": 18635,
+        "legacy_id": 212,
+        "name": "Iceland",
+        "short_code": "ICE",
+        "twitter": null,
+        "country_id": 1796,
+        "national_team": true,
+        "founded": 1947,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18635.png",
+        "venue_id": 7000
+    },
+    {
+        "id": 18644,
+        "legacy_id": 1350,
+        "name": "Argentina",
+        "short_code": "ARG",
+        "twitter": null,
+        "country_id": 44,
+        "national_team": true,
+        "founded": 1893,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
+        "venue_id": 6569
+    },
+    {
+        "id": 18645,
+        "legacy_id": 208,
+        "name": "England",
+        "short_code": "ENG",
+        "twitter": null,
+        "country_id": 462,
+        "national_team": true,
+        "founded": 1863,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18645.png",
+        "venue_id": 1315
+    },
+    {
+        "id": 18647,
+        "legacy_id": 209,
+        "name": "France",
+        "short_code": "FRA",
+        "twitter": null,
+        "country_id": 17,
+        "national_team": true,
+        "founded": 1919,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18647.png",
+        "venue_id": 14433
+    },
+    {
+        "id": 18652,
+        "legacy_id": 1342,
+        "name": "Iran",
+        "short_code": "IRN",
+        "twitter": null,
+        "country_id": 488,
+        "national_team": true,
+        "founded": 1920,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
+        "venue_id": 1984
+    },
+    {
+        "id": 18660,
+        "legacy_id": 200,
+        "name": "Germany",
+        "short_code": "GER",
+        "twitter": null,
+        "country_id": 11,
+        "national_team": true,
+        "founded": 1900,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+        "venue_id": 1944
+    },
+    {
+        "id": 18699,
+        "legacy_id": 199,
+        "name": "Poland",
+        "short_code": "POL",
+        "twitter": null,
+        "country_id": 2,
+        "national_team": true,
+        "founded": 1919,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+        "venue_id": 14452
+    },
+    {
+        "id": 18701,
+        "legacy_id": 201,
+        "name": "Portugal",
+        "short_code": "POR",
+        "twitter": null,
+        "country_id": 20,
+        "national_team": true,
+        "founded": 1914,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
+        "venue_id": 14455
+    },
+    {
+        "id": 18702,
+        "legacy_id": 198,
+        "name": "Russia",
+        "short_code": "RUS",
+        "twitter": null,
+        "country_id": 227,
+        "national_team": true,
+        "founded": 1912,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18702.png",
+        "venue_id": 177923
+    },
+    {
+        "id": 18704,
+        "legacy_id": 1341,
+        "name": "Brazil",
+        "short_code": "BRA",
+        "twitter": null,
+        "country_id": 5,
+        "national_team": true,
+        "founded": 1914,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18704.png",
+        "venue_id": 392
+    },
+    {
+        "id": 18708,
+        "legacy_id": 230,
+        "name": "Switzerland",
+        "short_code": "SWI",
+        "twitter": null,
+        "country_id": 62,
+        "national_team": true,
+        "founded": 1895,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18708.png",
+        "venue_id": 9576
+    },
+    {
+        "id": 18710,
+        "legacy_id": 204,
+        "name": "Spain",
+        "short_code": "ESP",
+        "twitter": null,
+        "country_id": 32,
+        "national_team": true,
+        "founded": 1913,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18710.png",
+        "venue_id": 2020
+    },
+    {
+        "id": 18717,
+        "legacy_id": 1367,
+        "name": "Panama",
+        "short_code": "PAN",
+        "twitter": null,
+        "country_id": 65437,
+        "national_team": true,
+        "founded": 1937,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+        "venue_id": 6860
+    },
+    {
+        "id": 18720,
+        "legacy_id": 1820,
+        "name": "Colombia",
+        "short_code": "COL",
+        "twitter": null,
+        "country_id": 353,
+        "national_team": true,
+        "founded": 1924,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18720.png",
+        "venue_id": 5048
+    },
+    {
+        "id": 18730,
+        "legacy_id": 1332,
+        "name": "Australia",
+        "short_code": "AUS",
+        "twitter": null,
+        "country_id": 98,
+        "national_team": true,
+        "founded": 1961,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+        "venue_id": 14477
+    },
+    {
+        "id": 18737,
+        "legacy_id": 1335,
+        "name": "Nigeria",
+        "short_code": "NGA",
+        "twitter": null,
+        "country_id": 716,
+        "national_team": true,
+        "founded": 1945,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+        "venue_id": 12733
+    },
+    {
+        "id": 18743,
+        "legacy_id": 219,
+        "name": "Belgium",
+        "short_code": "BEL",
+        "twitter": null,
+        "country_id": 556,
+        "national_team": true,
+        "founded": 1895,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18743.png",
+        "venue_id": 2318
+    },
+    {
+        "id": 18775,
+        "legacy_id": 1364,
+        "name": "Peru",
+        "short_code": "PER",
+        "twitter": null,
+        "country_id": 338,
+        "national_team": true,
+        "founded": 1922,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18775.png",
+        "venue_id": 11432
+    },
+    {
+        "id": 18873,
+        "legacy_id": 248,
+        "name": "Serbia",
+        "short_code": "SRB",
+        "twitter": null,
+        "country_id": 296,
+        "national_team": true,
+        "founded": 1919,
+        "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+        "venue_id": 1590
+    }
+];
+//# sourceMappingURL=equiposMonks.js.map
+
 /***/ })
 
-},[218]);
+},[223]);
 //# sourceMappingURL=main.js.map

@@ -3,6 +3,10 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { NgForm } from "@angular/forms";
 
 import { AutenticacionServiceProvider } from '../../providers/autenticacion-service/autenticacion-service';
+import 'firebase/firestore';
+import { GlobalsProvider } from "../../providers/globals/globals";
+
+import { Fixtures } from "../../app/config/fixtures";
 
 @Component({
   selector: 'page-iniciar-sesion',
@@ -10,9 +14,14 @@ import { AutenticacionServiceProvider } from '../../providers/autenticacion-serv
 })
 export class IniciarSesionPage {
 
+  private fixtures = Fixtures;
+  public db;
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public autenticacionService: AutenticacionServiceProvider,
-              public alertaCtrl: AlertController) {
+              public alertaCtrl: AlertController,
+              public globalProvider: GlobalsProvider) {
+    this.db = this.globalProvider.firestoreDB;
   }
 
   iniciarSesion(formLogin: NgForm){
@@ -35,7 +44,12 @@ export class IniciarSesionPage {
     this.autenticacionService.registrarUsuario(
       formulario.value.correo,
       formulario.value.clave )
-      .then(info => console.log(info))
+      .then(info => {
+        this.db.collection('apuestas')
+            .doc(formulario.value.correo)
+            .set(this.fixtures);
+        console.log(info)
+      })
       .catch(error => {
         let alerta = this.alertaCtrl.create({
           title: 'ERROR DE INICIO DE SESION',

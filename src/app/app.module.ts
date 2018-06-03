@@ -11,6 +11,7 @@ import { GoogleMaps } from "@ionic-native/google-maps";
 
 import { RestServiceProvider } from '../providers/rest-service/rest-service';
 import { AutenticacionServiceProvider } from "../providers/autenticacion-service/autenticacion-service";
+import { GlobalsProvider } from '../providers/globals/globals';
 
 import { HomePage } from '../pages/home/home';
 import { PartidosPage } from "../pages/partidos/partidos";
@@ -23,7 +24,6 @@ import { JugadoresPage } from "../pages/jugadores/jugadores";
 import { IniciarSesionPage } from "../pages/iniciar-sesion/iniciar-sesion";
 import { BetsPage } from "../pages/bets/bets";
 import { EstadisticasPage } from "../pages/estadisticas/estadisticas";
-
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { EstadisticasPage } from "../pages/estadisticas/estadisticas";
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -66,7 +66,8 @@ import { EstadisticasPage } from "../pages/estadisticas/estadisticas";
     GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestServiceProvider,
-    AutenticacionServiceProvider
+    AutenticacionServiceProvider,
+    GlobalsProvider
   ]
 })
 export class AppModule {}

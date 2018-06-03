@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1043577611235",
+    "firebase_url": "https://worldcupbet-c1705.firebaseio.com",
+    "project_id": "worldcupbet-c1705",
+    "storage_bucket": "worldcupbet-c1705.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043577611235:android:291feb3703998101",
+        "android_client_info": {
+          "package_name": "io.solstud.worldcupbet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043577611235-26m2l6pqkgu8n71vquctehjd5e57a4a1.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1043577611235-26m2l6pqkgu8n71vquctehjd5e57a4a1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuXpZ4hZ0zm6-1F8HDSKRxZOZTpwzC0q4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
